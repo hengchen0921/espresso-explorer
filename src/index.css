@@ -1,0 +1,229 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Design tokens. The palette is intentionally narrow: a warm paper ground, a
+   near-black roasted brown for type and the 3D stage, and exactly one accent.
+   Everything else is a neutral pulled toward the same warm hue so nothing in
+   the UI reads as "default blue-grey".
+--------------------------------------------------------------------------- */
+@theme {
+  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", monospace;
+
+  --color-ink: #17120f;
+  --color-espresso: #241c18;
+  --color-bark: #3b2e27;
+  --color-ash: #574b43;
+  --color-stone: #7a6d63;
+  --color-mist: #b9ada0;
+  --color-crema: #e8dfd1;
+  --color-paper: #f7f3ec;
+  --color-linen: #fffdf9;
+
+  --color-copper: #c15a2b;
+  --color-copper-deep: #9c4520;
+  --color-copper-tint: #f3e1d5;
+  --color-steel: #a9b0b4;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-synthesis-weight: none;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overscroll-behavior-y: none;
+  }
+
+  /* Barely-there paper grain. Keeps large cream fields from looking like flat
+     CSS colour without costing a raster asset. */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  ::selection {
+    background-color: var(--color-copper);
+    color: var(--color-linen);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-copper);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-variation-settings: "SOFT" 0, "WONK" 1;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* The canvas owns its own cursor states; never show a text caret over it. */
+  canvas {
+    display: block;
+    touch-action: none;
+  }
+}
+
+@layer components {
+  /* Small mono label that sits above headings and beside numbers. Used often
+     enough to be worth a class. */
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-stone);
+  }
+
+  .hairline {
+    border-top: 1px solid color-mix(in oklab, var(--color-bark) 14%, transparent);
+  }
+
+  .hairline-dark {
+    border-top: 1px solid color-mix(in oklab, var(--color-crema) 16%, transparent);
+  }
+
+  /* Link that grows a copper rule from the left on hover. */
+  .link-underline {
+    background-image: linear-gradient(var(--color-copper), var(--color-copper));
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 0% 1px;
+    transition: background-size 0.4s var(--ease-out-expo);
+  }
+  .link-underline:hover,
+  .link-underline:focus-visible {
+    background-size: 100% 1px;
+  }
+}
+
+@layer utilities {
+  .stage-vignette {
+    background:
+      radial-gradient(120% 90% at 50% 8%, #322620 0%, #1d1613 45%, #14100e 100%);
+  }
+
+  .animate-rise {
+    animation: rise 0.7s var(--ease-out-expo) both;
+  }
+
+  .animate-fade {
+    animation: fade 0.5s var(--ease-out-expo) both;
+  }
+
+  .animate-sheet {
+    animation: sheet 0.42s var(--ease-out-expo) both;
+  }
+
+  .animate-panel {
+    animation: panel 0.42s var(--ease-out-expo) both;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 14px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes sheet {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes panel {
+  from {
+    opacity: 0;
+    transform: translate3d(18px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Hotspot ring. Two offset iterations so the pulse reads as a slow sonar ping
+   rather than a blinking dot. */
+@keyframes ping-ring {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.55;
+  }
+  70%,
+  100% {
+    transform: scale(2.1);
+    opacity: 0;
+  }
+}
+
+.hotspot-ring {
+  animation: ping-ring 2.8s var(--ease-out-expo) infinite;
+}
+
+.hotspot-ring-delayed {
+  animation: ping-ring 2.8s var(--ease-out-expo) infinite;
+  animation-delay: 1.4s;
+}

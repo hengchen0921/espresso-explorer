@@ -1,0 +1,5 @@
+export { MachineModel } from './MachineModel'
+export { getModelDefinition, hasModel, modelDefinitions } from './registry'
+export { PartInteractionContext, usePartInteraction } from './PartContext'
+export { frame, normal } from './framing'
+export type { MachineModelDefinition, PartAnchor, ModelSource, Vec3, SurfaceKey } from './types'

@@ -1,0 +1,66 @@
+[
+  {
+    "id": "boiler",
+    "name": "Boiler & Heating System",
+    "shortName": "Boiler",
+    "system": "Thermal",
+    "fn": "Brings water to roughly 93 °C for brewing and, on nearly every home machine, doubles as the steam generator for milk. Its size and material decide how much heat energy the machine can bank and how fast it recovers after a shot.",
+    "whyItMatters": "This is the single biggest driver of how a machine feels to live with. A small thermoblock is ready in seconds but has almost no reserve, so back-to-back drinks arrive at drifting temperatures. A heavy brass boiler holds temperature beautifully mid-shot and asks for twenty minutes of warm-up in return. Whichever you choose, on a single-boiler machine you will brew, wait for the element to climb to steam temperature, steam, then wait again for it to fall back. If you make one milk drink a morning that wait is invisible. If you make four, it is the thing that will make you resent the machine."
+  },
+  {
+    "id": "group-head",
+    "name": "Group Head",
+    "shortName": "Group head",
+    "system": "Brew",
+    "fn": "The fixed brewing chamber the portafilter locks into. Water arrives here from the boiler, spreads across the coffee bed through a dispersion screen, and leaves under roughly nine bar of pressure.",
+    "whyItMatters": "Mass and material are what you are actually buying. A chrome-plated brass group holds enough heat to keep the puck stable through a thirty-second shot; a light aluminium or plastic-bodied group loses temperature the moment cold water hits it, which is why some machines taste sour on the first shot and fine on the third. Look too for a three-way solenoid valve: it dumps residual pressure after the shot so you knock out a dry puck instead of a wet slurry — a small thing that you will notice twice a day for years."
+  },
+  {
+    "id": "portafilter",
+    "name": "Portafilter",
+    "shortName": "Portafilter",
+    "system": "Brew",
+    "fn": "The handled basket that holds your ground coffee and clamps into the group head. You grind into it, tamp in it, lock it in, and pull the shot through it.",
+    "whyItMatters": "The diameter quietly locks you into an ecosystem. 58 mm is the commercial standard, so every tamper, distribution tool, precision basket and bottomless portafilter on the market fits. 54 mm and 51 mm work perfectly well but the accessory aisle narrows sharply, and you will pay more for less choice. Check the baskets it ships with, too: pressurised (dual-wall) baskets manufacture crema through a tiny hole and forgive a bad grinder — wonderful on day one, a hard ceiling by month three, because they hide every variable you would otherwise learn to control."
+  },
+  {
+    "id": "steam-wand",
+    "name": "Steam Wand",
+    "shortName": "Steam wand",
+    "system": "Milk",
+    "fn": "Injects pressurised steam below the surface of cold milk, spinning it into a vortex that folds air into the liquid and heats it at the same time.",
+    "whyItMatters": "There are two kinds and they produce different drinks. A panarello — the plastic sleeve that draws its own air — makes stiff, dry, bubbly foam that sits on top of a coffee. A bare commercial wand asks you to find the right angle and depth yourself and rewards you with glossy microfoam you can actually pour patterns with. If latte art is anywhere in your ambitions, a panarello will stop you. Articulation matters too: a wand on a ball joint that swings clear of the drip tray is a daily quality-of-life win over one fixed at an awkward angle."
+  },
+  {
+    "id": "water-reservoir",
+    "name": "Water Reservoir",
+    "shortName": "Reservoir",
+    "system": "Water",
+    "fn": "Holds the cold water the pump draws from, usually as a removable plastic tank with a pickup tube and, on better machines, a low-level sensor.",
+    "whyItMatters": "Capacity sets how often you refill, but placement is what people actually complain about. A rear-mounted tank on a machine pushed against a wall means dragging the machine forward every other day; a tank you can lift out one-handed from the side or top is worth more than an extra half litre. Check for a low-water cutoff, because machines without one will happily run the pump dry. And whatever the tank holds, fill it with filtered water — scale is the leading cause of death for home espresso machines, and no warranty covers it."
+  },
+  {
+    "id": "drip-tray",
+    "name": "Drip Tray",
+    "shortName": "Drip tray",
+    "system": "Chassis",
+    "fn": "A removable tray under a slotted grate that catches purge water, group flushes, and whatever misses the cup.",
+    "whyItMatters": "An honest proxy for how carefully a machine was designed around real routines. Deep trays mean emptying twice a week instead of daily, and a float that pops up through the grate when it is full will save your countertop at least once. The dimension nobody checks until it is too late is the gap between the grate and the group head: it decides which of your cups actually fit, and slim machines frequently cannot clear a tall travel mug without the tray coming out entirely."
+  },
+  {
+    "id": "grinder",
+    "name": "Integrated Burr Grinder",
+    "shortName": "Grinder",
+    "system": "Grind",
+    "fn": "A conical burr set under a bean hopper that grinds on demand and doses straight down into the portafilter, with a dial that changes the gap between the burrs.",
+    "whyItMatters": "Grind quality matters more than machine quality for espresso — a superb machine fed by a bad grinder makes bad coffee, and the reverse is far less true. An integrated grinder buys you counter space, one purchase instead of two, and a tidy workflow. What you give up is adjustment resolution at the fine end, where espresso actually lives, and the freedom to upgrade one half of the setup later. It is the right trade for most first machines and the wrong one if you already own something good."
+  },
+  {
+    "id": "control-panel",
+    "name": "Controls & Instrumentation",
+    "shortName": "Controls",
+    "system": "Interface",
+    "fn": "The switches, dials and readouts you use to start a shot, engage the steam circuit, and see what the machine is doing while it does it.",
+    "whyItMatters": "Instrumentation is the difference between adjusting and guessing. A pressure gauge tells you whether your grind is choking the machine or gushing through it, before you taste anything. A shot timer turns 'about right' into a repeatable number. Bare rocker switches give you neither, which is fine once you have built the instinct and frustrating while you are learning. Separately, check whether the brew switch is a real manual switch or a volumetric button — manual gives you full control over shot length, volumetrics give you consistency without attention."
+  }
+]

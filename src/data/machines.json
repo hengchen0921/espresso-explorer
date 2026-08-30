@@ -1,0 +1,1812 @@
+[
+  {
+    "id": "breville-barista-express",
+    "brand": "Breville",
+    "name": "Barista Express",
+    "modelCode": "BES870XL",
+    "price": 699,
+    "category": "All-in-one",
+    "categoryNote": "Machine and burr grinder in one chassis",
+    "releaseYear": 2012,
+    "finish": "brushed-steel",
+    "skillFloor": "gentle",
+    "tagline": "The machine that taught a generation to pull shots.",
+    "summary": "Breville's bestseller is really two appliances sharing a case: a conical burr grinder that doses straight down into the portafilter, and a single-thermocoil espresso machine built around it. It is the least fussy path from whole beans to a drinkable flat white, and the reason it still outsells everything is that the grinder — normally the expensive half of the purchase — is already in the box.",
+    "bestFor": "First-time buyers who want one box on the counter and no separate grinder decision.",
+    "verdict": "Buy it if you want the entire workflow solved on day one. Skip it if you already own a decent grinder, because you would be paying roughly $300 for a burr set you do not need, and a dedicated machine at that price will out-steam it comfortably.",
+    "pros": [
+      "Grinding, dosing, tamping and brewing solved inside a 33 cm footprint",
+      "PID-backed thermocoil holds brew temperature far steadier than the price suggests",
+      "The largest tutorial and accessory ecosystem of any home machine — every problem you hit is already on video"
+    ],
+    "cons": [
+      "54 mm portafilter locks you out of the 58 mm accessory market",
+      "One heating system for brewing and steam means a real wait between the two",
+      "Steam power is modest; anything larger than a 6 oz jug heats before it textures"
+    ],
+    "specs": {
+      "heating": "Single thermocoil, PID",
+      "heatUpSeconds": 45,
+      "portafilterMm": 54,
+      "basketType": "Pressurised + single-wall",
+      "pumpBar": 15,
+      "tankLitres": 2,
+      "pid": true,
+      "grinder": true,
+      "steamWand": "360° swivel, single hole",
+      "instrumentation": "gauge",
+      "wattage": 1600,
+      "weightKg": 10.2,
+      "widthCm": 33,
+      "depthCm": 31,
+      "heightCm": 40
+    },
+    "parts": [
+      {
+        "partId": "boiler",
+        "component": "Single stainless-steel thermocoil with digital PID",
+        "spec": "Single stainless thermocoil, PID controlled",
+        "figures": [
+          {
+            "label": "Type",
+            "value": "Flow-through thermocoil"
+          },
+          {
+            "label": "Element",
+            "value": "1,600 W, stainless"
+          },
+          {
+            "label": "Control",
+            "value": "Digital PID with user temperature offset"
+          },
+          {
+            "label": "Brew ready",
+            "value": "≈45 seconds from cold"
+          }
+        ],
+        "capability": "Water is heated as it flows through a coiled stainless tube, so there is no tank of hot water to bring up to temperature and nothing for scale to settle in. The PID holds the brew set point tightly enough that shot-to-shot temperature is not the variable you will be fighting, and you can nudge the target up or down from the front panel if your beans want it. What it cannot do is serve both circuits at once — the same coil makes brew water and steam, so it has to climb to steam temperature after the shot and fall back before the next one, and it carries no thermal reserve for a run of four drinks.",
+        "note": "A thermocoil heats water as it flows past the element rather than storing a tankful, so the Express is brew-ready in about 45 seconds. The trade is that it has to change modes to make steam, and that mode change is where the waiting lives."
+      },
+      {
+        "partId": "group-head",
+        "component": "54 mm aluminium group with low-pressure pre-infusion",
+        "spec": "54 mm with low-pressure pre-infusion",
+        "figures": [
+          {
+            "label": "Diameter",
+            "value": "54 mm"
+          },
+          {
+            "label": "Material",
+            "value": "Aluminium"
+          },
+          {
+            "label": "Pre-infusion",
+            "value": "Low pressure, timed"
+          },
+          {
+            "label": "Shower screen",
+            "value": "Removable, single centre screw"
+          }
+        ],
+        "capability": "Runs water through the puck at low pressure for a few seconds before the pump ramps to full nine bar, which lets the bed settle evenly and quietly forgives a tamp that is not quite level. The screen comes out with one screw for cleaning, which matters more than it sounds — this is the part that clogs first and the reason a neglected machine starts channelling. Being aluminium rather than brass it stores far less heat than a commercial group, so the first shot after the machine has sat idle will run cooler than the second unless you pull a blank flush first.",
+        "note": "Pre-infusion ramps pressure gently before hitting full nine bar, which papers over slightly uneven tamping. It is a large part of why this machine is so forgiving of beginners."
+      },
+      {
+        "partId": "portafilter",
+        "component": "54 mm stainless portafilter with four baskets",
+        "spec": "54 mm, pressurised and single-wall baskets included",
+        "figures": [
+          {
+            "label": "Diameter",
+            "value": "54 mm"
+          },
+          {
+            "label": "Baskets",
+            "value": "1-cup and 2-cup, pressurised and single-wall"
+          },
+          {
+            "label": "Typical dose",
+            "value": "18–19 g in the single-wall double"
+          },
+          {
+            "label": "Accessories",
+            "value": "Breville 54 mm aftermarket only"
+          }
+        ],
+        "capability": "Four baskets in the box: a pressurised pair that makes crema out of almost any grind, and a single-wall pair that does not. The pressurised baskets restrict flow through one small hole downstream of the coffee, so grind size barely changes the result — forgiving on day one, and a ceiling by month three. Moving to the single-wall baskets is where this machine actually starts making espresso, and where the integrated grinder starts to matter. Bottomless portafilters and precision baskets exist in 54 mm but come from a handful of third parties rather than the whole market.",
+        "note": "It ships with both kinds. Start on the pressurised baskets, then move to single-wall once the grinder is dialled in — that transition is the actual learning curve of this machine."
+      },
+      {
+        "partId": "steam-wand",
+        "component": "360° swivel arm with a single-hole tip",
+        "spec": "360° swivel arm, single-hole tip",
+        "figures": [
+          {
+            "label": "Tip",
+            "value": "Single hole"
+          },
+          {
+            "label": "Movement",
+            "value": "Full 360° swivel"
+          },
+          {
+            "label": "Comfortable jug",
+            "value": "Up to about 180 ml / 6 oz"
+          },
+          {
+            "label": "Purge",
+            "value": "Manual, via the steam dial"
+          }
+        ],
+        "capability": "A bare tip rather than a frothing sleeve, so it will build real microfoam that pours patterns — the technique transfers to any machine you buy later. Power is the limit rather than design: with one hole fed by a thermocoil, a 6 oz jug textures nicely and anything larger reaches drinking temperature before the milk has finished folding air in. The arm swings a full circle and clears the drip tray, and it needs purging before and after every use like any real wand.",
+        "note": "Enough to build proper microfoam in a 6 oz jug if you are patient with it. Fill a 12 oz jug and the milk will reach temperature before it has finished texturing."
+      },
+      {
+        "partId": "water-reservoir",
+        "component": "2.0 L removable rear tank with filter holder",
+        "spec": "2.0 L, rear-mounted, removable",
+        "figures": [
+          {
+            "label": "Capacity",
+            "value": "2.0 L / 67 oz"
+          },
+          {
+            "label": "Position",
+            "value": "Rear, lifts out upward"
+          },
+          {
+            "label": "Filtration",
+            "value": "Holder for a replaceable Breville water filter"
+          },
+          {
+            "label": "Warning",
+            "value": "Low-water indicator on the panel"
+          }
+        ],
+        "capability": "Two litres is four or five days of drinks for one person, and the tank carries a holder for a replaceable filter — worth using, because scale is what kills these machines and no warranty covers it. It lifts out upward, which is the problem: the machine has to come forward off the wall first, every time. There is a low-water indicator, so you will not run the pump dry.",
+        "note": "Rear placement is this machine's worst ergonomic decision. Pushed back against a wall, every refill means pulling ten kilos of machine forward across the counter."
+      },
+      {
+        "partId": "drip-tray",
+        "component": "Removable tray with pop-up full indicator",
+        "spec": "Removable, with pop-up full indicator",
+        "figures": [
+          {
+            "label": "Indicator",
+            "value": "Red 'Empty Me!' float through the grate"
+          },
+          {
+            "label": "Grate",
+            "value": "Stainless, over a moulded tray"
+          },
+          {
+            "label": "Cup clearance",
+            "value": "Espresso and small latte cups"
+          },
+          {
+            "label": "Removal",
+            "value": "Slides straight out forward"
+          }
+        ],
+        "capability": "The float is the good part — a red tab rises through the grate before the tray overflows, which is one countertop flood you will not have. The tray itself is shallow, because the grinder chassis has taken the height it would otherwise have had, so it needs emptying more often than the depth of the machine suggests. A tall travel mug will not fit under the group with the tray in place; you take the tray out and put the mug on the base.",
+        "note": "The float that rises through the grate is genuinely useful. The tray itself is shallow, because the grinder chassis has taken the height it would otherwise have had."
+      },
+      {
+        "partId": "grinder",
+        "component": "Integrated conical burr grinder, 16 settings",
+        "spec": "Conical burr, 16 grind settings, 250 g hopper",
+        "figures": [
+          {
+            "label": "Burrs",
+            "value": "Stainless conical"
+          },
+          {
+            "label": "Grind settings",
+            "value": "16 outer steps"
+          },
+          {
+            "label": "Hopper",
+            "value": "250 g / ½ lb, locking"
+          },
+          {
+            "label": "Dosing",
+            "value": "Timed, straight into the portafilter"
+          }
+        ],
+        "capability": "Grinds on demand into the portafilter held in a cradle, with a dial for grind size and a second for dose time, so there is no separate appliance and no transferring grounds. Sixteen steps is the constraint: espresso lives in a narrow band and you will eventually want a setting between 4 and 5 that does not exist, at which point you adjust dose and tamp instead. The hopper locks off so you can swap beans without emptying it, and the burrs come out for cleaning — do it, because stale grounds in the chute are the usual reason a machine 'suddenly' starts running fast.",
+        "note": "Sixteen steps is coarse resolution for espresso. You will eventually want a setting between 4 and 5 and discover there isn't one — the standard workaround is adjusting dose and tamp instead."
+      },
+      {
+        "partId": "control-panel",
+        "component": "Analogue extraction gauge with 1- and 2-cup volumetric buttons",
+        "spec": "Analogue pressure gauge, single and double shot buttons",
+        "figures": [
+          {
+            "label": "Instrument",
+            "value": "Analogue pressure gauge, espresso range marked"
+          },
+          {
+            "label": "Shot buttons",
+            "value": "1-cup and 2-cup, volumes programmable"
+          },
+          {
+            "label": "Manual override",
+            "value": "Press and hold"
+          },
+          {
+            "label": "Also on the panel",
+            "value": "Filter-size and grind-amount dials"
+          }
+        ],
+        "capability": "The gauge reads pressure at the group during the shot, with the useful band marked on the dial. That is a live diagnosis rather than a decoration: needle low and the shot gushing means the grind is too coarse, needle pinned means it is too fine, and you learn to read it before you taste anything. Both shot buttons remember a programmed volume, and holding either one gives you manual control over shot length when you want it.",
+        "note": "The gauge is the strongest reason to pick this over the Barista Pro. It is a live readout of whether your grind is choking the machine or gushing through it, which an LCD shot timer cannot tell you."
+      }
+    ]
+  },
+  {
+    "id": "breville-barista-pro",
+    "brand": "Breville",
+    "name": "Barista Pro",
+    "modelCode": "BES878",
+    "price": 849,
+    "category": "All-in-one",
+    "categoryNote": "Machine and burr grinder in one chassis",
+    "releaseYear": 2019,
+    "finish": "graphite",
+    "skillFloor": "gentle",
+    "tagline": "The Express with the waiting taken out.",
+    "summary": "Mechanically this is a Barista Express with two changes that matter. The thermocoil is replaced by Breville's ThermoJet, which reaches brew temperature in about three seconds from cold, and the pressure gauge gives way to an LCD showing shot time and grind setting. Same 54 mm basket, same design philosophy, a noticeably faster morning.",
+    "bestFor": "People sold on the all-in-one idea who make several milk drinks back to back.",
+    "verdict": "The upgrade you are buying is time, not cup quality — the brew path is essentially unchanged. If your machine sits cold until 7am and you want espresso by 7:01, the extra $150 is well spent. If you habitually switch it on and go take a shower, save the money and buy the Express.",
+    "pros": [
+      "Three-second heat-up genuinely changes the shape of the morning routine",
+      "Switches from brewing to steaming far faster than the Express",
+      "Thirty grind settings and an on-screen shot timer take real guesswork out of dialling in"
+    ],
+    "cons": [
+      "Still 54 mm, and still one heating system doing two jobs",
+      "The LCD reads more kitchen-appliance than instrument next to a pressure gauge",
+      "Deeper body than the Express — measure your cupboard clearance before buying"
+    ],
+    "specs": {
+      "heating": "ThermoJet three-element",
+      "heatUpSeconds": 3,
+      "portafilterMm": 54,
+      "basketType": "Pressurised + single-wall",
+      "pumpBar": 15,
+      "tankLitres": 2,
+      "pid": true,
+      "grinder": true,
+      "steamWand": "360° swivel, single hole",
+      "instrumentation": "lcd",
+      "wattage": 1680,
+      "weightKg": 9.5,
+      "widthCm": 35,
+      "depthCm": 40,
+      "heightCm": 41
+    },
+    "parts": [
+      {
+        "partId": "boiler",
+        "component": "ThermoJet three-element flow heater",
+        "spec": "ThermoJet three-element heater",
+        "figures": [
+          {
+            "label": "Type",
+            "value": "ThermoJet flow heater"
+          },
+          {
+            "label": "Elements",
+            "value": "Three, in series"
+          },
+          {
+            "label": "Brew ready",
+            "value": "≈3 seconds from cold"
+          },
+          {
+            "label": "Brew → steam",
+            "value": "Seconds, not a wait"
+          }
+        ],
+        "capability": "Three small elements in series bring water to brew temperature almost instantly — this component, on its own, is the entire difference between this machine and the Barista Express. It crosses over to steam nearly as fast, so a flat white becomes one continuous sequence instead of a shot followed by a pause. The catch is unchanged: it is still a single heating system doing two jobs with no stored hot water behind it, so a long run of drinks will drift, and what you have bought is time rather than a better shot.",
+        "note": "Reaches brew temperature in roughly three seconds from cold and crosses over to steam far quicker than a thermocoil. This component, on its own, is the entire argument for the Pro."
+      },
+      {
+        "partId": "group-head",
+        "component": "54 mm aluminium group with low-pressure pre-infusion",
+        "spec": "54 mm with low-pressure pre-infusion",
+        "figures": [
+          {
+            "label": "Diameter",
+            "value": "54 mm"
+          },
+          {
+            "label": "Material",
+            "value": "Aluminium"
+          },
+          {
+            "label": "Pre-infusion",
+            "value": "Low pressure, timed"
+          },
+          {
+            "label": "Shared with",
+            "value": "Barista Express — identical brew path"
+          }
+        ],
+        "capability": "Mechanically the same group as the Barista Express: same 54 mm bore, same pre-infusion routine, same removable screen. Shots taste the same across the two machines and every accessory is interchangeable — nothing downstream of the heater changed between them. Because the ThermoJet recovers faster the group spends less time cooling between drinks, which slightly softens the first-shot temperature dip, but it is still aluminium and a blank flush before the first coffee of the day is still the right habit.",
+        "note": "The same brew path as the Express — same baskets, same pre-infusion, same shots in the cup. Nothing downstream of the heater changed."
+      },
+      {
+        "partId": "portafilter",
+        "component": "54 mm stainless portafilter with four baskets",
+        "spec": "54 mm, pressurised and single-wall baskets included",
+        "figures": [
+          {
+            "label": "Diameter",
+            "value": "54 mm"
+          },
+          {
+            "label": "Baskets",
+            "value": "1-cup and 2-cup, pressurised and single-wall"
+          },
+          {
+            "label": "Typical dose",
+            "value": "18–19 g in the single-wall double"
+          },
+          {
+            "label": "Interchangeable",
+            "value": "With the Barista Express"
+          }
+        ],
+        "capability": "Identical to the Express portafilter, which is quietly useful: baskets, tampers and bottomless portafilters for either machine are the same parts, and there is a healthy secondhand supply because the two models have sold in such numbers. The same progression applies — start on the pressurised baskets, move to single-wall once the grinder is dialled in — and the extra grind resolution on this machine makes that transition less frustrating.",
+        "note": "Fully interchangeable with the Barista Express, which makes baskets, tampers and bottomless portafilters easy to find secondhand."
+      },
+      {
+        "partId": "steam-wand",
+        "component": "360° swivel arm, single-hole tip, ThermoJet-fed",
+        "spec": "360° swivel arm, single hole, faster recovery",
+        "figures": [
+          {
+            "label": "Tip",
+            "value": "Single hole"
+          },
+          {
+            "label": "Movement",
+            "value": "Full 360° swivel"
+          },
+          {
+            "label": "Comfortable jug",
+            "value": "Up to about 240 ml / 8 oz"
+          },
+          {
+            "label": "Recovery",
+            "value": "Ready to steam seconds after a shot"
+          }
+        ],
+        "capability": "The same wand hardware as the Express with a much faster supply behind it, so steam arrives sooner and holds up slightly better through a jug. It builds proper pourable microfoam rather than dry froth, and an 8 oz jug is comfortable where the Express starts struggling at 6. It is still a home wand fed by a flow heater — two large jugs back to back is beyond it.",
+        "note": "More steam available sooner thanks to the ThermoJet, so you spend less time waiting between shot and milk. It is still a home wand rather than a café one."
+      },
+      {
+        "partId": "water-reservoir",
+        "component": "2.0 L removable rear tank with filter holder",
+        "spec": "2.0 L, rear-mounted, removable",
+        "figures": [
+          {
+            "label": "Capacity",
+            "value": "2.0 L / 67 oz"
+          },
+          {
+            "label": "Position",
+            "value": "Rear, lifts out upward"
+          },
+          {
+            "label": "Filtration",
+            "value": "Holder for a replaceable Breville water filter"
+          },
+          {
+            "label": "Clearance needed",
+            "value": "Body is 40 cm deep before you open the lid"
+          }
+        ],
+        "capability": "The same tank as the Express on a body nine centimetres deeper, which makes the rear placement worse rather than better — measure the run from your wall to the counter edge before buying, and add room to lift the lid. Use the filter and use filtered water; a flow heater has narrow passages and scale closes them.",
+        "note": "The same rear-tank compromise as the Express, now on a body 9 cm deeper. Leave clearance behind the machine or plan on moving it every refill."
+      },
+      {
+        "partId": "drip-tray",
+        "component": "Removable tray with pop-up full indicator",
+        "spec": "Removable, with pop-up full indicator",
+        "figures": [
+          {
+            "label": "Indicator",
+            "value": "Red float through the grate"
+          },
+          {
+            "label": "Grate",
+            "value": "Stainless, over a moulded tray"
+          },
+          {
+            "label": "Cup clearance",
+            "value": "Espresso and latte cups; not a travel mug"
+          },
+          {
+            "label": "Removal",
+            "value": "Slides straight out forward"
+          }
+        ],
+        "capability": "Slightly deeper than the Express tray and otherwise the same idea: a float warns you before it overflows, and it slides out forward for emptying. The clearance above it still assumes a cup rather than a mug, so tall vessels mean pulling the tray out and standing them on the base.",
+        "note": "Slightly deeper than the Express tray. The clearance above it still assumes an espresso cup rather than a travel mug."
+      },
+      {
+        "partId": "grinder",
+        "component": "Integrated conical burr grinder, 30 settings",
+        "spec": "Conical burr, 30 grind settings, 250 g hopper",
+        "figures": [
+          {
+            "label": "Burrs",
+            "value": "Stainless conical"
+          },
+          {
+            "label": "Grind settings",
+            "value": "30 outer steps"
+          },
+          {
+            "label": "Hopper",
+            "value": "250 g / ½ lb, locking"
+          },
+          {
+            "label": "Readout",
+            "value": "Grind size and dose time shown on the LCD"
+          }
+        ],
+        "capability": "The same burr set as the Express with roughly twice the adjustment resolution, and that is where the difference shows: chasing a two-second change in shot time is realistic here, where on sixteen steps you jump straight past it. The LCD remembers grind size and dose time between drinks, so returning to a bean you liked last week is a matter of reading a number rather than counting clicks.",
+        "note": "Twice the resolution of the Express, and the difference is real once you are chasing a two-second change in shot time rather than a ten-second one."
+      },
+      {
+        "partId": "control-panel",
+        "component": "Backlit LCD with shot timer and grind readout",
+        "spec": "Backlit LCD with shot timer and grind readout",
+        "figures": [
+          {
+            "label": "Display",
+            "value": "Backlit LCD"
+          },
+          {
+            "label": "Shot timer",
+            "value": "Counts up live during extraction"
+          },
+          {
+            "label": "Grind readout",
+            "value": "Shows size and dose time"
+          },
+          {
+            "label": "Shot buttons",
+            "value": "1-cup and 2-cup, programmable"
+          }
+        ],
+        "capability": "Times the shot as it pulls and shows the grind settings you last used, which turns 'about right' into a number you can repeat. For someone learning, that is a clearer instrument than a gauge — shot time is the variable most guides talk about. What it cannot tell you is what the pressure is doing mid-shot, so a choking puck reads as a slow timer rather than as an obvious cause, which is the one thing the Express's gauge does better.",
+        "note": "Counts your shot as it pulls and remembers grind size between drinks. Clearer than a gauge while you are learning, less diagnostic once you know what a gauge is telling you."
+      }
+    ]
+  },
+  {
+    "id": "gaggia-classic-pro",
+    "brand": "Gaggia",
+    "name": "Classic Pro",
+    "modelCode": "RI9380",
+    "price": 449,
+    "category": "Single boiler",
+    "categoryNote": "Commercial parts, manual control",
+    "releaseYear": 2019,
+    "finish": "stainless",
+    "skillFloor": "steep",
+    "tagline": "A commercial portafilter on a home budget.",
+    "summary": "The Classic Pro is the cheapest honest way into the 58 mm world. An aluminium boiler, a chrome-plated brass group head, a three-way solenoid valve that leaves a dry puck, and a genuine commercial steam wand — the parts list reads closer to a café machine than to anything else at this price. In exchange it automates nothing at all.",
+    "bestFor": "Tinkerers who are buying a separate grinder anyway and expect to modify the machine later.",
+    "verdict": "Buy it as a platform rather than an appliance. It is the most modified home espresso machine in existence — PID kits, OPV springs, bottomless portafilters, silvia-style wands — and it will still be worth repairing in ten years. Do not buy it expecting convenience, and do not buy it without budgeting for a grinder.",
+    "pros": [
+      "58 mm commercial portafilter opens up the entire accessory market",
+      "Three-way solenoid releases pressure after the shot, so pucks knock out dry",
+      "Endlessly serviceable and moddable; spare parts are cheap and universally available"
+    ],
+    "cons": [
+      "No PID from the factory, so brew temperature drifts and you learn to temperature-surf",
+      "The small boiler steams one jug well, then needs time to recover",
+      "Not a standalone purchase — it is unusable without a real grinder beside it"
+    ],
+    "specs": {
+      "heating": "Aluminium single boiler",
+      "heatUpSeconds": 300,
+      "portafilterMm": 58,
+      "basketType": "Single-wall commercial",
+      "pumpBar": 15,
+      "tankLitres": 2.1,
+      "pid": false,
+      "grinder": false,
+      "steamWand": "Commercial, two hole",
+      "instrumentation": "switches",
+      "wattage": 1425,
+      "weightKg": 7.5,
+      "widthCm": 24,
+      "depthCm": 30,
+      "heightCm": 38
+    },
+    "parts": [
+      {
+        "partId": "boiler",
+        "component": "Aluminium single boiler with twin thermostats",
+        "spec": "Aluminium single boiler, ~100 ml, thermostat controlled",
+        "figures": [
+          {
+            "label": "Material",
+            "value": "Aluminium"
+          },
+          {
+            "label": "Capacity",
+            "value": "≈100 ml"
+          },
+          {
+            "label": "Control",
+            "value": "Separate brew and steam thermostats"
+          },
+          {
+            "label": "Warm-up",
+            "value": "≈5 min to brew, ≈30 s more to steam"
+          }
+        ],
+        "capability": "A small aluminium vessel with two mechanical thermostats — one holding brew temperature, one switching the machine over for steam. It heats quickly for a boiler and it will steam a jug properly, which no thermoblock at this price will. What it will not do is hold a set point: a bimetallic thermostat swings several degrees either side of its trigger, so your brew temperature depends on where in that cycle you happen to start the shot. That single fact is why PID kits for this machine exist in such numbers, and why owners without one learn to time the shot to the heating light.",
+        "note": "Small, so it heats in about five minutes, but it swings several degrees either side of the thermostat's set point. That swing is why Classic owners talk about temperature surfing — timing the shot to the heating light rather than to a number."
+      },
+      {
+        "partId": "group-head",
+        "component": "58 mm chrome-plated brass group with three-way solenoid valve",
+        "spec": "58 mm chrome-plated brass, three-way solenoid",
+        "figures": [
+          {
+            "label": "Diameter",
+            "value": "58 mm"
+          },
+          {
+            "label": "Material",
+            "value": "Chrome-plated brass"
+          },
+          {
+            "label": "Valve",
+            "value": "Three-way solenoid"
+          },
+          {
+            "label": "Screen",
+            "value": "Removable brass dispersion plate and screen"
+          }
+        ],
+        "capability": "A commercial-diameter brass group bolted straight to the boiler — not an E61, so there is no thermosyphon keeping it warm, but far more mass than any aluminium group at this price. The three-way solenoid is the standout feature: the instant the shot ends it vents the pressure still trapped above the puck into the drip tray, so the puck knocks out as a dry disc instead of a slurry. The dispersion plate and screen come apart with one screw, which is why a fifteen-year-old Classic can be brought back to as-new flow for the price of a few parts.",
+        "note": "A commercial-specification group on a $449 machine, and the single best thing about it. The solenoid vents residual pressure the instant the shot ends, so the puck knocks out as a dry disc rather than a slurry."
+      },
+      {
+        "partId": "portafilter",
+        "component": "58 mm chrome-plated brass commercial portafilter",
+        "spec": "58 mm commercial, chrome-plated brass",
+        "figures": [
+          {
+            "label": "Diameter",
+            "value": "58 mm"
+          },
+          {
+            "label": "Material",
+            "value": "Chrome-plated brass"
+          },
+          {
+            "label": "Baskets",
+            "value": "Single-wall single and double, plus a pressurised basket"
+          },
+          {
+            "label": "Fits",
+            "value": "Any 58 mm tamper, distributor or precision basket"
+          }
+        ],
+        "capability": "Heavy chromed brass with the same bore as a café machine, which is the single strongest reason to buy this machine at all. Every 58 mm tamper, distribution tool, precision basket, bottomless portafilter and naked spout ever made will fit it, so upgrades cost what a competitive market says they cost rather than what one manufacturer decides. It ships with a pressurised basket for the first week and single-wall baskets for everything after that; the brass mass also means it holds heat, so leave it locked in the group while the machine warms up.",
+        "note": "This is the reason to buy the machine. Every 58 mm tamper, distribution tool, precision basket and bottomless portafilter ever made will fit it."
+      },
+      {
+        "partId": "steam-wand",
+        "component": "Commercial two-hole wand (2019 'Pro' revision)",
+        "spec": "Commercial two-hole tip, no frother sleeve",
+        "figures": [
+          {
+            "label": "Tip",
+            "value": "Two-hole commercial"
+          },
+          {
+            "label": "Movement",
+            "value": "Ball joint, limited arc"
+          },
+          {
+            "label": "Steam thermostat",
+            "value": "Dedicated, ≈145 °C"
+          },
+          {
+            "label": "Comfortable jug",
+            "value": "Up to about 350 ml"
+          }
+        ],
+        "capability": "The 2019 revision that gives the machine its 'Pro' name replaced the old plastic frothing sleeve with a bare commercial tip, and it makes genuine pourable microfoam. Two holes deliver enough dry steam to spin a 350 ml jug into a proper vortex without stalling. The limit is the boiler behind it rather than the wand itself: after one jug the machine wants half a minute to recover, and it will not produce milk drinks for four people in a row. Switching to steam also takes the boiler well past brew temperature, so a cooling flush before the next shot is mandatory rather than optional.",
+        "note": "The 2019 'Pro' revision replaced the old panarello with a real wand, and it textures milk properly. What limits you here is boiler recovery between jugs, not the wand itself."
+      },
+      {
+        "partId": "water-reservoir",
+        "component": "2.1 L top-loading removable tank",
+        "spec": "2.1 L, top-loading, removable",
+        "figures": [
+          {
+            "label": "Capacity",
+            "value": "2.1 L — the largest here"
+          },
+          {
+            "label": "Access",
+            "value": "Lifts out through the top panel"
+          },
+          {
+            "label": "Sensor",
+            "value": "None — no low-water cutoff"
+          },
+          {
+            "label": "Pickup",
+            "value": "Silicone hose, cheap to replace"
+          }
+        ],
+        "capability": "The biggest tank in this group and the easiest to fill: lift the lid and take the tank out, or simply pour into it in place without moving the machine off the counter. There is no low-water switch, so running it dry is possible and will make the pump scream — an audible warning rather than a protected condition. The pickup is a standard silicone tube and one of many parts on this machine you replace for a few pounds instead of booking a service.",
+        "note": "Lifts straight out of the top without moving the machine — quietly better ergonomics than either Breville's rear tank, and the largest reservoir in this group."
+      },
+      {
+        "partId": "drip-tray",
+        "component": "Stainless steel removable tray and grate",
+        "spec": "Stainless steel, removable, no float",
+        "figures": [
+          {
+            "label": "Material",
+            "value": "Stainless steel throughout"
+          },
+          {
+            "label": "Indicator",
+            "value": "None"
+          },
+          {
+            "label": "Fills faster because",
+            "value": "The solenoid vents into it after every shot"
+          },
+          {
+            "label": "Cup clearance",
+            "value": "Takes a normal cappuccino cup"
+          }
+        ],
+        "capability": "Solid stainless rather than moulded plastic, which matters here specifically because the three-way solenoid dumps a splash of water into it after every single shot — this tray fills noticeably faster than one on a machine without a solenoid. There is no float, so emptying it is a habit you build rather than a prompt you get. It lifts straight out and goes in the sink.",
+        "note": "Deep enough to be forgiving of purging and flushing. There is no full indicator, so remembering to empty it is entirely your problem."
+      },
+      {
+        "partId": "control-panel",
+        "component": "Three illuminated rocker switches",
+        "spec": "Three rocker switches: power, brew, steam",
+        "figures": [
+          {
+            "label": "Switches",
+            "value": "Power, brew, steam"
+          },
+          {
+            "label": "Instrumentation",
+            "value": "None"
+          },
+          {
+            "label": "PID",
+            "value": "Not fitted — aftermarket kits are common"
+          },
+          {
+            "label": "OPV",
+            "value": "Factory-set high; adjustable to ≈9 bar"
+          }
+        ],
+        "capability": "Power, brew, steam, and a heating light that goes out when the thermostat is satisfied. That light is your only instrument: temperature surfing means flushing, waiting for the light to go out, and starting the shot at a repeatable point in the cycle. Everything you might want beyond it — a PID, a pressure gauge, a shot timer — is an aftermarket part with a large community behind it. The over-pressure valve is also adjustable, and dropping it from the factory setting to around nine bar is the most common modification after a PID.",
+        "note": "No gauge, no timer, no temperature display. You are the control system, which is exactly why a PID kit is the first thing most owners add."
+      }
+    ]
+  },
+  {
+    "id": "lelit-anna",
+    "brand": "Lelit",
+    "name": "Anna",
+    "modelCode": "PL41TEM",
+    "price": 549,
+    "category": "Single boiler",
+    "categoryNote": "Factory PID, Italian-built",
+    "releaseYear": 2019,
+    "finish": "stainless",
+    "skillFloor": "moderate",
+    "tagline": "The Gaggia's missing PID, fitted at the factory.",
+    "summary": "A small Italian single boiler that arrives with the one thing the Gaggia Classic and the Silvia both ask you to add yourself: a proper PID, with the brew temperature displayed on the front panel. A 0.27-litre brass boiler under a stainless case, a commercial-style wand, and the largest water tank in this comparison, in a footprint smaller than the Gaggia's.",
+    "bestFor": "Someone who wants a stable brew temperature without taking the machine apart to get it.",
+    "verdict": "The rational answer to the Classic Pro if you do not want the modding hobby that comes with it. About $100 more buys you the PID, a bigger tank and a smaller footprint. What you give up is one millimetre: the Anna takes 57 mm baskets, and that puts you outside the 58 mm accessory market which is precisely what makes the Gaggia and the Silvia so easy to live with.",
+    "pros": [
+      "Factory PID with a temperature readout — no kit, no soldering, no warranty risk",
+      "0.27 L brass boiler holds temperature far better than an aluminium one",
+      "2.7 L tank, the largest here, in the second-smallest footprint"
+    ],
+    "cons": [
+      "57 mm portafilter — narrowly but definitively outside the 58 mm ecosystem",
+      "Small boiler recovers slowly between milk drinks",
+      "Thinner spares and community support than Gaggia or Rancilio"
+    ],
+    "specs": {
+      "heating": "0.27 L brass boiler, PID",
+      "heatUpSeconds": 420,
+      "portafilterMm": 57,
+      "basketType": "Single-wall + pressurised",
+      "pumpBar": 15,
+      "tankLitres": 2.7,
+      "pid": true,
+      "grinder": false,
+      "steamWand": "Commercial, single hole",
+      "instrumentation": "lcd",
+      "wattage": 1000,
+      "weightKg": 9,
+      "widthCm": 24.5,
+      "depthCm": 26.5,
+      "heightCm": 30.5
+    },
+    "parts": [
+      {
+        "partId": "boiler",
+        "component": "0.27 L brass boiler with electronic PID control",
+        "spec": "0.27 L brass boiler, PID controlled",
+        "figures": [
+          {
+            "label": "Material",
+            "value": "Brass"
+          },
+          {
+            "label": "Capacity",
+            "value": "0.27 L"
+          },
+          {
+            "label": "Control",
+            "value": "Electronic PID, displayed on the front"
+          },
+          {
+            "label": "Warm-up",
+            "value": "≈7 min to a stable group"
+          }
+        ],
+        "capability": "Brass rather than aluminium, so it banks meaningfully more heat than the Gaggia's boiler, and a PID rather than a bimetallic thermostat, so it holds its set point instead of swinging several degrees around it. You can read the actual temperature on the front and change the target without opening anything. What it cannot do is escape being small: it steams one jug well and then wants time back.",
+        "note": "This component is the entire argument for the machine. Everywhere else the Anna is a competent small Italian single boiler; here it is doing at the factory what Gaggia and Rancilio owners pay a Sunday and a kit to achieve."
+      },
+      {
+        "partId": "group-head",
+        "component": "57 mm chrome-plated brass group",
+        "spec": "57 mm chrome-plated brass",
+        "figures": [
+          {
+            "label": "Diameter",
+            "value": "57 mm"
+          },
+          {
+            "label": "Material",
+            "value": "Chrome-plated brass"
+          },
+          {
+            "label": "Valve",
+            "value": "Three-way solenoid"
+          },
+          {
+            "label": "Screen",
+            "value": "Removable screen and dispersion plate"
+          }
+        ],
+        "capability": "A brass group bolted to the boiler with a three-way solenoid behind it, so pressure vents after the shot and the puck knocks out dry — the same arrangement that makes the Gaggia pleasant to use twice a day. Brass mass plus PID control means the temperature at the puck is the most predictable of any machine here under $900.",
+        "note": "Mechanically this is a very good group. The problem is not the group, it is the number stamped on it: 57 mm, one short of the standard everything is built around."
+      },
+      {
+        "partId": "portafilter",
+        "component": "57 mm chrome-plated brass portafilter",
+        "spec": "57 mm, single-wall and pressurised baskets",
+        "figures": [
+          {
+            "label": "Diameter",
+            "value": "57 mm"
+          },
+          {
+            "label": "Material",
+            "value": "Chrome-plated brass"
+          },
+          {
+            "label": "Baskets",
+            "value": "Single-wall double plus a pressurised basket"
+          },
+          {
+            "label": "Fits",
+            "value": "Lelit 57 mm parts only"
+          }
+        ],
+        "capability": "Heavy chromed brass, indistinguishable in feel from a 58 mm commercial portafilter — and incompatible with every one of them. Lelit sells 57 mm baskets, tampers and bottomless portafilters, and a handful of third parties do too, but you are choosing from a shelf rather than a market. A 58 mm tamper will not seat; a 57 mm tamper leaves more gap in a 58 mm basket than you want.",
+        "note": "This is the single spec that should decide whether you buy the Anna or the Classic Pro. If you expect to accumulate accessories, the extra millimetre on the Gaggia is worth more than the PID you would have to add to it."
+      },
+      {
+        "partId": "steam-wand",
+        "component": "Commercial single-hole wand with hot-water function",
+        "spec": "Commercial, single hole, doubles as hot water",
+        "figures": [
+          {
+            "label": "Tip",
+            "value": "Single hole, commercial"
+          },
+          {
+            "label": "Movement",
+            "value": "Ball joint"
+          },
+          {
+            "label": "Second function",
+            "value": "Dispenses hot water for americanos"
+          },
+          {
+            "label": "Comfortable jug",
+            "value": "Up to about 300 ml"
+          }
+        ],
+        "capability": "A bare commercial tip on a ball joint that also serves as the hot-water outlet, so one wand covers milk and americanos. Steam is dry and adequate for a 300 ml jug of pourable microfoam. Recovery is the limit, as on every small single boiler: one drink at a time, with a pause and a cooling flush before the next shot.",
+        "note": "Sharing the wand between steam and hot water is a sensible compromise at this size, but it does mean purging carefully — nobody wants a milky americano."
+      },
+      {
+        "partId": "water-reservoir",
+        "component": "2.7 L top-loading removable tank",
+        "spec": "2.7 L, top-loading, removable",
+        "figures": [
+          {
+            "label": "Capacity",
+            "value": "2.7 L — the largest here"
+          },
+          {
+            "label": "Access",
+            "value": "Through the top panel"
+          },
+          {
+            "label": "Sensor",
+            "value": "Low-water cutoff fitted"
+          },
+          {
+            "label": "Practical",
+            "value": "A week for one person"
+          }
+        ],
+        "capability": "The biggest reservoir in this comparison, in the second-smallest machine, reached through the top so nothing has to move on the counter. Unlike the Gaggia and the Silvia it has a low-water cutoff, so the pump stops rather than running dry — a small piece of engineering that quietly protects the most likely failure point.",
+        "note": "Largest tank, smallest fuss, and a cutoff neither Italian rival fits. If refilling annoys you, this is the machine that annoys you least."
+      },
+      {
+        "partId": "drip-tray",
+        "component": "Stainless removable tray with cup grate",
+        "spec": "Stainless steel, removable",
+        "figures": [
+          {
+            "label": "Material",
+            "value": "Stainless steel"
+          },
+          {
+            "label": "Indicator",
+            "value": "None"
+          },
+          {
+            "label": "Solenoid purge",
+            "value": "Vents into this tray after every shot"
+          },
+          {
+            "label": "Cup clearance",
+            "value": "Espresso and cappuccino cups"
+          }
+        ],
+        "capability": "Stainless, removable, and fed by the three-way solenoid after every shot, so it fills faster than the tray on a machine without one. No float, so emptying it is a routine you build. Clearance under the group suits a cappuccino cup rather than a tall glass.",
+        "note": "Same story as the Gaggia: the solenoid that makes the pucks dry also makes the tray fill quickly. It is a fair trade and worth knowing about before you find out."
+      },
+      {
+        "partId": "control-panel",
+        "component": "Two switches with a PID temperature display",
+        "spec": "Two switches, PID readout",
+        "figures": [
+          {
+            "label": "Switches",
+            "value": "Power and brew"
+          },
+          {
+            "label": "Display",
+            "value": "PID temperature readout on the front"
+          },
+          {
+            "label": "Adjustable",
+            "value": "Brew set point, from the panel"
+          },
+          {
+            "label": "Shot timer",
+            "value": "None"
+          }
+        ],
+        "capability": "Two switches and a small display showing the boiler temperature and letting you change the target without opening the case. That readout is the difference between guessing and knowing: you can see the machine come up to temperature, see it recover after steaming, and set it two degrees cooler for a darker roast. There is no shot timer and no pressure gauge, so extraction itself is still unmeasured.",
+        "note": "Instrumentation is where this machine puts its money, and it puts it in the right place. Temperature is the variable that ruins shots on machines at this price; extraction pressure is the one you can learn to read by eye."
+      }
+    ]
+  },
+  {
+    "id": "rancilio-silvia",
+    "brand": "Rancilio",
+    "name": "Silvia",
+    "modelCode": "V6",
+    "price": 895,
+    "category": "Single boiler",
+    "categoryNote": "Commercial group head, no automation",
+    "releaseYear": 1997,
+    "finish": "stainless",
+    "skillFloor": "steep",
+    "tagline": "Fourteen kilos of thermal mass and no excuses.",
+    "summary": "Silvia has been in continuous production since 1997 with only incremental revisions, and the reason is what is inside: a 0.3-litre brass boiler and a full-size chrome brass group head taken from Rancilio's commercial line. That mass is why the group holds temperature through a shot, and equally why the machine wants twenty minutes before you use it.",
+    "bestFor": "Someone who wants café-grade thermal behaviour and is willing to build a routine around a warm-up.",
+    "verdict": "Still the best pure brew group under a thousand dollars, and the absence of a PID is the entire argument against it. Budget for a PID kit, step up to the Silvia Pro X, or accept that a good shot begins with watching a clock. Any of the three is a defensible choice; pretending the warm-up does not exist is not.",
+    "pros": [
+      "Commercial 58 mm brass group head with outstanding stability mid-shot",
+      "Articulating commercial steam wand that produces genuinely dry, powerful steam",
+      "Built to be rebuilt — twenty-year-old units are still in daily service on original frames"
+    ],
+    "cons": [
+      "No PID: you temperature-surf, or you add one",
+      "Twenty minutes before the group head reaches thermal equilibrium",
+      "Single boiler, so brewing and steaming still trade off against each other"
+    ],
+    "specs": {
+      "heating": "0.3 L brass single boiler",
+      "heatUpSeconds": 1200,
+      "portafilterMm": 58,
+      "basketType": "Single-wall commercial",
+      "pumpBar": 15,
+      "tankLitres": 2,
+      "pid": false,
+      "grinder": false,
+      "steamWand": "Articulating commercial",
+      "instrumentation": "switches",
+      "wattage": 1150,
+      "weightKg": 14,
+      "widthCm": 23,
+      "depthCm": 29,
+      "heightCm": 34
+    },
+    "parts": [
+      {
+        "partId": "boiler",
+        "component": "0.3 L marine-grade brass boiler",
+        "spec": "0.3 L brass boiler, thermostat controlled",
+        "figures": [
+          {
+            "label": "Material",
+            "value": "Brass"
+          },
+          {
+            "label": "Capacity",
+            "value": "0.3 L"
+          },
+          {
+            "label": "Control",
+            "value": "Separate brew and steam thermostats"
+          },
+          {
+            "label": "Warm-up",
+            "value": "≈20 min for the group to stabilise"
+          }
+        ],
+        "capability": "Three hundred millilitres of water inside a brass casting is a great deal of stored energy for a home machine, and the whole design is built around it: temperature at the coffee bed barely moves across a thirty-second shot, and the machine will pull several shots in a row without sagging. The cost is that it is not usable the moment you switch it on — the water reaches temperature long before the brass around it does, and the group needs about twenty minutes to reach equilibrium. Like the Gaggia it is thermostat-controlled rather than PID-controlled, so the set point still cycles; the mass hides that during a shot but not between them.",
+        "note": "Brass banks far more heat energy than aluminium, so the temperature at the coffee bed barely moves across a thirty-second shot. The price is a twenty-minute warm-up and the same thermostat drift the Gaggia has."
+      },
+      {
+        "partId": "group-head",
+        "component": "58 mm chrome-plated brass commercial group",
+        "spec": "58 mm commercial chrome-plated brass",
+        "figures": [
+          {
+            "label": "Diameter",
+            "value": "58 mm"
+          },
+          {
+            "label": "Material",
+            "value": "Chrome-plated brass"
+          },
+          {
+            "label": "Origin",
+            "value": "Shared with Rancilio's commercial line"
+          },
+          {
+            "label": "Screen",
+            "value": "Removable screen and dispersion block"
+          }
+        ],
+        "capability": "Not a domestic group scaled up — it is the casting Rancilio uses on café machines, bolted directly to the boiler and heated by it. The result is thermal stability of a kind nothing else near this price offers: once warm, the group is at temperature and stays there, which is why Silvia shots repeat so well. There is no solenoid, so pressure bleeds off slowly after the shot and the puck comes out wetter than the Gaggia's — a minor daily annoyance rather than a flaw in the coffee.",
+        "note": "Identical in size and mass to the group on Rancilio's commercial machines. This is the best brew group available at this price, and the component the entire machine is built to justify."
+      },
+      {
+        "partId": "portafilter",
+        "component": "58 mm heavy chrome-plated brass portafilter",
+        "spec": "58 mm commercial, heavy chrome-plated brass",
+        "figures": [
+          {
+            "label": "Diameter",
+            "value": "58 mm"
+          },
+          {
+            "label": "Material",
+            "value": "Chrome-plated brass"
+          },
+          {
+            "label": "Baskets",
+            "value": "Single-wall single and double"
+          },
+          {
+            "label": "Fits",
+            "value": "The entire 58 mm accessory market"
+          }
+        ],
+        "capability": "Heavy enough to be a thermal component in its own right, which is why the standard advice is to leave it locked into the group for the whole warm-up rather than sitting on the counter — a cold portafilter pulls heat straight out of the first shot. It takes every 58 mm tamper, distribution tool, precision basket and bottomless portafilter made, and after nearly thirty years in production those parts are everywhere and cheap secondhand.",
+        "note": "Substantial enough to hold its own heat between shots, which is why experienced owners leave it locked into the group throughout the warm-up rather than sitting on the counter."
+      },
+      {
+        "partId": "steam-wand",
+        "component": "Articulating commercial wand, single-hole tip",
+        "spec": "Articulating commercial wand, single hole",
+        "figures": [
+          {
+            "label": "Tip",
+            "value": "Single hole"
+          },
+          {
+            "label": "Movement",
+            "value": "Ball joint, wide arc"
+          },
+          {
+            "label": "Steam thermostat",
+            "value": "Dedicated, ≈140–150 °C"
+          },
+          {
+            "label": "Comfortable jug",
+            "value": "Up to about 350 ml"
+          }
+        ],
+        "capability": "Mounted on a proper ball joint, so it swings through a wide arc and gets completely out of the way when you need space under the group — a small thing you will appreciate every morning. A single hole fed by a brass boiler produces steam that is dry and genuinely powerful, easily enough for latte-art microfoam in a 350 ml jug. Steaming takes the boiler well past brew temperature, so a cooling flush before the next shot is part of the routine on any single-boiler machine, this one included.",
+        "note": "Mounted on a ball joint that swings through a wide arc and gets completely out of the way when you need the space. Dry, powerful steam for a single-boiler machine."
+      },
+      {
+        "partId": "water-reservoir",
+        "component": "2.0 L top-loading removable tank",
+        "spec": "2.0 L, top-loading, removable",
+        "figures": [
+          {
+            "label": "Capacity",
+            "value": "2.0 L"
+          },
+          {
+            "label": "Access",
+            "value": "Through the top panel — lift out or fill in place"
+          },
+          {
+            "label": "Sensor",
+            "value": "None — no low-water cutoff"
+          },
+          {
+            "label": "Position",
+            "value": "Fully enclosed inside the case"
+          }
+        ],
+        "capability": "Reached by lifting the top panel, and you can either take the tank out or simply pour into it where it sits — the fastest refill of any machine here, and nothing has to move on the counter. There is no low-water sensor, so keep an eye on it; running a vibratory pump dry is not instantly fatal but it is not good for it either. Because the tank sits fully inside the case there is nothing at the back to knock or leak behind the machine.",
+        "note": "Reached through the top panel. You can lift it out entirely or simply pour into it in place, which is the fastest refill of any machine here."
+      },
+      {
+        "partId": "drip-tray",
+        "component": "Stainless steel removable tray and grate",
+        "spec": "Stainless steel, removable, no float",
+        "figures": [
+          {
+            "label": "Material",
+            "value": "Stainless steel"
+          },
+          {
+            "label": "Indicator",
+            "value": "None"
+          },
+          {
+            "label": "Cup clearance",
+            "value": "Generous — tall cups fit as-is"
+          },
+          {
+            "label": "Removal",
+            "value": "Lifts straight out"
+          }
+        ],
+        "capability": "Stainless, deep, and with more clearance between grate and group than any slim machine offers, so tall cups fit without taking anything apart. No float, so emptying it is on you — and because there is no solenoid dumping water into it after every shot, it fills more slowly than the Gaggia's.",
+        "note": "Generous clearance between grate and group compared with slimmer machines, so tall cups actually fit underneath without removing anything."
+      },
+      {
+        "partId": "control-panel",
+        "component": "Three illuminated switches, no instrumentation",
+        "spec": "Three illuminated switches, no instrumentation",
+        "figures": [
+          {
+            "label": "Switches",
+            "value": "Power, brew, steam"
+          },
+          {
+            "label": "Instrumentation",
+            "value": "None"
+          },
+          {
+            "label": "PID",
+            "value": "Not fitted — kits are the standard first upgrade"
+          },
+          {
+            "label": "Alternative",
+            "value": "Silvia Pro X ships with PID from the factory"
+          }
+        ],
+        "capability": "Power, brew, steam. No gauge, no timer, no temperature readout — you time shots on a phone and judge temperature by the heating light, exactly as owners have since 1997. This is the machine's one genuine weakness, and it is also the most solvable: PID kits designed specifically for Silvia are a well-trodden afternoon's work, and if you would rather not, Rancilio sells the Silvia Pro X with one already fitted.",
+        "note": "Power, brew, steam, and nothing else. The lack of a temperature readout is the machine's one genuine weakness, and the reason a PID kit is the most common modification in home espresso."
+      }
+    ]
+  },
+  {
+    "id": "breville-dual-boiler",
+    "brand": "Breville",
+    "name": "Dual Boiler",
+    "modelCode": "BES920XL",
+    "price": 1599,
+    "category": "Dual boiler",
+    "categoryNote": "Two PID boilers, brew and steam at once",
+    "releaseYear": 2013,
+    "finish": "brushed-steel",
+    "skillFloor": "moderate",
+    "tagline": "The waiting, deleted — for three times the money.",
+    "summary": "Two independent stainless boilers, each with its own PID, so the machine brews and steams at the same time and neither job interrupts the other. A 58 mm brass group with its own heating element, a real pressure gauge, programmable pre-infusion, and a water tank that slides out of the front instead of the back. It is the first machine in this comparison that stops making you wait for anything at all.",
+    "bestFor": "Households making several milk drinks every morning, and anyone who has outgrown temperature surfing.",
+    "verdict": "Buy it when the queue is the problem. For one or two drinks a day a $450 single boiler and a good grinder put the same coffee in the cup for a third of the money — the difference here is not flavour, it is that four drinks take four drinks' worth of time instead of twenty minutes. If that is your morning, nothing else in this comparison comes close.",
+    "pros": [
+      "Brews and steams simultaneously — no mode switch, no cooling flush, no recovery wait",
+      "Both boilers PID-controlled, with brew temperature adjustable to the degree",
+      "Front-loading water tank, so the machine can live against a wall"
+    ],
+    "cons": [
+      "Three times the price of the Gaggia for a difference you only feel under load",
+      "38 cm square on the counter before you allow clearance",
+      "Still no grinder, so budget for one on top of an already large number"
+    ],
+    "specs": {
+      "heating": "Twin stainless boilers, dual PID",
+      "heatUpSeconds": 600,
+      "portafilterMm": 58,
+      "basketType": "Single-wall + pressurised",
+      "pumpBar": 15,
+      "tankLitres": 2.5,
+      "pid": true,
+      "grinder": false,
+      "steamWand": "Articulating, dedicated steam boiler",
+      "instrumentation": "gauge",
+      "wattage": 1800,
+      "weightKg": 12.7,
+      "widthCm": 38,
+      "depthCm": 38,
+      "heightCm": 41
+    },
+    "parts": [
+      {
+        "partId": "boiler",
+        "component": "Twin stainless boilers, independently PID controlled",
+        "spec": "Two boilers, dual PID",
+        "figures": [
+          {
+            "label": "Boilers",
+            "value": "Two, stainless steel"
+          },
+          {
+            "label": "Control",
+            "value": "Independent PID on each"
+          },
+          {
+            "label": "Brew temperature",
+            "value": "Adjustable to the degree"
+          },
+          {
+            "label": "Warm-up",
+            "value": "≈10 min, or wake on a timer"
+          }
+        ],
+        "capability": "One boiler holds brew water at a temperature you set to the degree; a second, hotter one does nothing but make steam. Because they are separate, steaming a jug takes nothing away from the shot and there is no mode switch, no cooling flush and no recovery pause — the two operations are simply independent. The group head is heated as well, so the whole brew path sits at temperature rather than being warmed by the first shot through it.",
+        "note": "This is the component you are actually buying, and everything else on the machine is in service of it. It is also why the machine costs what it does: two boilers, two PIDs, two safety circuits and the plumbing to keep them apart."
+      },
+      {
+        "partId": "group-head",
+        "component": "58 mm brass group with active heating and programmable pre-infusion",
+        "spec": "58 mm brass, heated, programmable pre-infusion",
+        "figures": [
+          {
+            "label": "Diameter",
+            "value": "58 mm"
+          },
+          {
+            "label": "Material",
+            "value": "Brass, with its own heating element"
+          },
+          {
+            "label": "Pre-infusion",
+            "value": "Programmable pressure and duration"
+          },
+          {
+            "label": "Screen",
+            "value": "Removable, tool-free"
+          }
+        ],
+        "capability": "A commercial-diameter brass group that is heated directly rather than relying on the boiler to warm it through, which removes the first-shot temperature dip every other machine here has. Pre-infusion pressure and duration are both programmable, so you can wet the puck gently for a measured number of seconds before full pressure — the kind of control that usually starts at twice this price.",
+        "note": "Programmable pre-infusion is the feature owners keep. It is the difference between fighting a light roast and dialling one in, and no amount of technique substitutes for it on a machine that lacks it."
+      },
+      {
+        "partId": "portafilter",
+        "component": "58 mm commercial portafilter with four baskets",
+        "spec": "58 mm commercial, four baskets",
+        "figures": [
+          {
+            "label": "Diameter",
+            "value": "58 mm"
+          },
+          {
+            "label": "Material",
+            "value": "Chrome-plated brass"
+          },
+          {
+            "label": "Baskets",
+            "value": "Single and double, single-wall and pressurised"
+          },
+          {
+            "label": "Fits",
+            "value": "The entire 58 mm market"
+          }
+        ],
+        "capability": "Full 58 mm, so every tamper, distribution tool, precision basket and bottomless portafilter fits — the same ecosystem the Gaggia and the Silvia open up, on a machine that can actually exploit it. Ships with both pressurised and single-wall baskets, though anyone spending this much should be on single-wall from the first week.",
+        "note": "Breville putting 58 mm on this machine and 54 mm on the Barista range is the clearest signal in their line-up about who each machine is for."
+      },
+      {
+        "partId": "steam-wand",
+        "component": "Articulating wand fed by a dedicated steam boiler",
+        "spec": "Articulating, dedicated boiler",
+        "figures": [
+          {
+            "label": "Tip",
+            "value": "Multi-hole commercial"
+          },
+          {
+            "label": "Movement",
+            "value": "Ball joint, wide arc"
+          },
+          {
+            "label": "Supply",
+            "value": "Its own boiler — no sharing with brew"
+          },
+          {
+            "label": "Comfortable jug",
+            "value": "Up to about 600 ml"
+          }
+        ],
+        "capability": "A proper articulating wand with a dedicated boiler behind it, which changes what steaming feels like: the steam is dry, it does not fade halfway through a jug, and you can texture 600 ml without the machine sagging. It is available the instant you want it because nothing has to switch modes, and using it takes nothing away from the shot brewing at the same time.",
+        "note": "If you make milk drinks for more than one person, this is where the money goes. Every single-boiler machine here can make one good flat white; this one can make four in a row."
+      },
+      {
+        "partId": "water-reservoir",
+        "component": "2.5 L front-loading removable tank",
+        "spec": "2.5 L, front-loading, removable",
+        "figures": [
+          {
+            "label": "Capacity",
+            "value": "2.5 L"
+          },
+          {
+            "label": "Access",
+            "value": "Slides out of the front"
+          },
+          {
+            "label": "Sensor",
+            "value": "Low-water alarm"
+          },
+          {
+            "label": "Filter",
+            "value": "Takes a replaceable water filter"
+          }
+        ],
+        "capability": "Front access is the quiet luxury here. Every other machine in this comparison with a rear tank has to be pulled forward off the wall to be refilled; this one gives up its tank from the front, so it can sit against a backsplash permanently. It holds 2.5 litres, takes a replaceable filter, and warns before it runs dry.",
+        "note": "On a machine this large and this heavy, front loading is not a nicety — it is the difference between a fixed installation and something you shove about twice a week."
+      },
+      {
+        "partId": "drip-tray",
+        "component": "Deep removable tray with float indicator",
+        "spec": "Removable, deep, with float",
+        "figures": [
+          {
+            "label": "Indicator",
+            "value": "Pop-up float"
+          },
+          {
+            "label": "Depth",
+            "value": "Deep — the largest here"
+          },
+          {
+            "label": "Grate",
+            "value": "Stainless, removable"
+          },
+          {
+            "label": "Cup clearance",
+            "value": "Takes a tall glass without removal"
+          }
+        ],
+        "capability": "Deep enough to absorb the flushing and purging a dual boiler encourages, with a float that rises before it overflows. Clearance above it is the most generous in this comparison — a tall latte glass fits under the group without taking anything out, which no other machine here manages.",
+        "note": "A big tray sounds like a footnote until you own a machine that encourages you to flush. On this one you empty it twice a week instead of twice a day."
+      },
+      {
+        "partId": "control-panel",
+        "component": "Analogue pressure gauge with LCD and programmable shots",
+        "spec": "Gauge, LCD, programmable pre-infusion",
+        "figures": [
+          {
+            "label": "Instrument",
+            "value": "Analogue extraction pressure gauge"
+          },
+          {
+            "label": "Display",
+            "value": "LCD with shot timer"
+          },
+          {
+            "label": "Programmable",
+            "value": "Shot volumes, pre-infusion, brew temperature"
+          },
+          {
+            "label": "Extras",
+            "value": "Hot water and steam dials"
+          }
+        ],
+        "capability": "A real pressure gauge and a shot timer together, which is the combination that lets you diagnose rather than guess: the gauge tells you what the puck is doing to the water while the timer tells you how long it has been doing it. Brew temperature, pre-infusion pressure and pre-infusion duration are all set from the panel, and both shot volumes are programmable.",
+        "note": "This is the most instrumented machine in the comparison, and the instrumentation is the reason a curious owner will outgrow it more slowly than anything else here."
+      }
+    ]
+  },
+  {
+    "id": "breville-bambino-plus",
+    "brand": "Breville",
+    "name": "Bambino Plus",
+    "modelCode": "BES500",
+    "price": 499,
+    "category": "Compact",
+    "categoryNote": "Full brew path, half the counter",
+    "releaseYear": 2019,
+    "finish": "brushed-steel",
+    "skillFloor": "gentle",
+    "tagline": "Everything the Barista Express does, minus the grinder and half the width.",
+    "summary": "The Bambino Plus is the Barista Express's brew path with the grinder removed and the case shrunk to 19.5 cm across. Same ThermoJet heating, same 54 mm basket, same low-pressure pre-infusion — plus an automatic steam wand that takes milk to a temperature and texture you choose and then stops by itself. It is the smallest machine here that is unambiguously a real espresso machine rather than a compromise.",
+    "bestFor": "Someone who already owns a grinder, or intends to buy a good one, and has very little counter.",
+    "verdict": "The best value in this comparison if you treat the grinder as a separate purchase, which you should. It gives up nothing important to the Barista Express except the burrs, costs $200 less, and takes 40% of the counter space. Buy it, then spend the difference and a little more on a grinder.",
+    "pros": [
+      "Three-second heat-up in a 19.5 cm-wide case",
+      "Automatic milk texturing that genuinely works and shuts off at temperature",
+      "Same 54 mm brew path and accessories as the Barista Express and Pro"
+    ],
+    "cons": [
+      "No grinder — its real cost is the machine plus one",
+      "54 mm again, so the accessory ceiling is unchanged",
+      "Light enough to slide on the counter when you lock the portafilter in"
+    ],
+    "specs": {
+      "heating": "ThermoJet flow heater",
+      "heatUpSeconds": 3,
+      "portafilterMm": 54,
+      "basketType": "Pressurised + single-wall",
+      "pumpBar": 15,
+      "tankLitres": 1.9,
+      "pid": true,
+      "grinder": false,
+      "steamWand": "Automatic, temperature and texture set",
+      "instrumentation": "buttons",
+      "wattage": 1560,
+      "weightKg": 5,
+      "widthCm": 19.5,
+      "depthCm": 32,
+      "heightCm": 31
+    },
+    "parts": [
+      {
+        "partId": "boiler",
+        "component": "ThermoJet three-element flow heater",
+        "spec": "ThermoJet, ready in 3 seconds",
+        "figures": [
+          {
+            "label": "Type",
+            "value": "ThermoJet flow heater"
+          },
+          {
+            "label": "Elements",
+            "value": "Three, in series"
+          },
+          {
+            "label": "Brew ready",
+            "value": "≈3 seconds from cold"
+          },
+          {
+            "label": "Brew → steam",
+            "value": "Seconds, not a wait"
+          }
+        ],
+        "capability": "The same heater as the Barista Pro in a case less than half the size, which is the whole reason this machine exists. It is at brew temperature almost immediately and crosses to steam nearly as fast, so a single milk drink is a continuous sequence. With no stored hot water behind it there is nothing in reserve: a run of four drinks will drift, and the machine is honest about being built for one or two.",
+        "note": "For most people this is the correct amount of heating system. You are not waiting, and you are not paying for a boiler you would only notice on a Sunday morning with guests."
+      },
+      {
+        "partId": "group-head",
+        "component": "54 mm group with low-pressure pre-infusion",
+        "spec": "54 mm, pre-infusion",
+        "figures": [
+          {
+            "label": "Diameter",
+            "value": "54 mm"
+          },
+          {
+            "label": "Material",
+            "value": "Aluminium"
+          },
+          {
+            "label": "Pre-infusion",
+            "value": "Low pressure, timed"
+          },
+          {
+            "label": "Shared with",
+            "value": "Barista Express and Pro"
+          }
+        ],
+        "capability": "Mechanically identical to the group on both Barista machines, so the shots are the same and every accessory interchanges. Pre-infusion wets the puck at low pressure before the pump ramps, which forgives an imperfect tamp — worth more here than on the bigger machines, because you are grinding on something the manufacturer never specified.",
+        "note": "The brew path being shared with the $699 and $849 machines is the strongest argument for this one. You are not buying a lesser group; you are declining a grinder."
+      },
+      {
+        "partId": "portafilter",
+        "component": "54 mm stainless portafilter with four baskets",
+        "spec": "54 mm, pressurised + single-wall",
+        "figures": [
+          {
+            "label": "Diameter",
+            "value": "54 mm"
+          },
+          {
+            "label": "Baskets",
+            "value": "1-cup and 2-cup, pressurised and single-wall"
+          },
+          {
+            "label": "Typical dose",
+            "value": "18–19 g in the single-wall double"
+          },
+          {
+            "label": "Accessories",
+            "value": "Breville 54 mm aftermarket"
+          }
+        ],
+        "capability": "Ships with the same four baskets as its larger siblings. Because there is no integrated grinder to blame, the single-wall baskets expose your grinder immediately — which is either the point of buying this machine or the reason to buy the Express instead. Bottomless 54 mm portafilters exist and are worth having here.",
+        "note": "Buying this machine means the grinder is now unambiguously your responsibility. That is a feature if you are willing to spend on one and a trap if you are not."
+      },
+      {
+        "partId": "steam-wand",
+        "component": "Automatic wand with milk temperature and texture control",
+        "spec": "Automatic, 3 temperatures, 3 textures",
+        "figures": [
+          {
+            "label": "Mode",
+            "value": "Automatic — set and walk away"
+          },
+          {
+            "label": "Temperature",
+            "value": "Three settings"
+          },
+          {
+            "label": "Texture",
+            "value": "Three settings"
+          },
+          {
+            "label": "Manual override",
+            "value": "Yes, full manual available"
+          }
+        ],
+        "capability": "A temperature probe in the drip tray reads the jug and the machine stops when it reaches the setting you chose, having folded in the amount of air you asked for. It is the only wand in this comparison you do not have to learn, and it produces pourable microfoam rather than froth. There is a manual mode if you would rather do it yourself, so the automation is a floor rather than a ceiling.",
+        "note": "This is the one place the Bambino Plus beats the Barista Express outright. The Express asks you to develop a technique; this asks you to press a button, and the result is better than most beginners manage by hand."
+      },
+      {
+        "partId": "water-reservoir",
+        "component": "1.9 L removable rear tank",
+        "spec": "1.9 L, rear-mounted, removable",
+        "figures": [
+          {
+            "label": "Capacity",
+            "value": "1.9 L"
+          },
+          {
+            "label": "Position",
+            "value": "Rear, lifts out upward"
+          },
+          {
+            "label": "Sensor",
+            "value": "Low-water indicator"
+          },
+          {
+            "label": "Practical",
+            "value": "Three or four days for one person"
+          }
+        ],
+        "capability": "Nearly as much water as the far larger Barista Express, which is a real achievement in a case this size — the tank is most of the machine's depth. It lifts out upward from the back, so the machine has to come forward to refill, though at five kilos that is a shove rather than a lift.",
+        "note": "The tank is why the Bambino is 32 cm deep despite being 19.5 cm wide. Measure the depth of your counter, not just the width."
+      },
+      {
+        "partId": "drip-tray",
+        "component": "Removable tray with full indicator and milk probe",
+        "spec": "Removable, with float and temperature sensor",
+        "figures": [
+          {
+            "label": "Indicator",
+            "value": "Pop-up float"
+          },
+          {
+            "label": "Extra",
+            "value": "Houses the milk temperature probe"
+          },
+          {
+            "label": "Depth",
+            "value": "Shallow"
+          },
+          {
+            "label": "Removal",
+            "value": "Slides out forward"
+          }
+        ],
+        "capability": "Does double duty: as well as catching purge water it carries the temperature sensor the automatic wand reads the jug through, so the jug sits on the tray while it steams. It is shallow and needs emptying often, and the float tells you when.",
+        "note": "Keep the tray and its sensor area clean — a milk-crusted probe is the usual reason the automatic steaming starts stopping at the wrong temperature."
+      },
+      {
+        "partId": "control-panel",
+        "component": "Three backlit buttons plus milk temperature and texture dials",
+        "spec": "1-cup, 2-cup, milk; temp and texture dials",
+        "figures": [
+          {
+            "label": "Buttons",
+            "value": "1 cup, 2 cup, milk"
+          },
+          {
+            "label": "Dials",
+            "value": "Milk temperature and texture"
+          },
+          {
+            "label": "Shot volumes",
+            "value": "Programmable"
+          },
+          {
+            "label": "Instrumentation",
+            "value": "None — no gauge or timer"
+          }
+        ],
+        "capability": "Two programmable shot buttons and a milk button, with two small dials setting how hot and how foamy the milk comes out. There is nothing to read: no gauge, no shot timer, no temperature display. For a machine aimed at people who already know what they are doing with a grinder, that is a real omission — you will be timing shots on a phone.",
+        "note": "If you want to see what the machine is doing while it does it, the Barista Express's gauge is worth the extra money and the extra 13 cm of counter."
+      }
+    ]
+  },
+  {
+    "id": "delonghi-dedica",
+    "brand": "De'Longhi",
+    "name": "Dedica",
+    "modelCode": "EC685",
+    "price": 249,
+    "category": "Compact",
+    "categoryNote": "15 cm wide, pressurised baskets",
+    "releaseYear": 2014,
+    "finish": "graphite",
+    "skillFloor": "gentle",
+    "tagline": "Fifteen centimetres wide, and that is the entire point.",
+    "summary": "The Dedica exists to fit where nothing else fits. It is narrower than a chopping board, heats in under a minute on a thermoblock, and ships with pressurised baskets that will produce a crema-topped shot out of supermarket pre-ground coffee. What it cannot do is grow with you.",
+    "bestFor": "Small kitchens, offices, and anyone who wants espresso-style drinks without taking on a hobby.",
+    "verdict": "Unbeatable on footprint and price, and refreshingly honest about what it is. If you suspect you might get seriously into espresso, treat it as a rental rather than a first rung — the 51 mm pressurised system does not lead anywhere, and nothing you learn on it transfers upward.",
+    "pros": [
+      "15 cm wide: it fits on counters that will not take anything else",
+      "Ready from cold in about 35 seconds",
+      "Pressurised baskets are extremely forgiving of a mediocre grind"
+    ],
+    "cons": [
+      "51 mm pressurised baskets put a hard ceiling on cup quality",
+      "The panarello froths rather than textures, which rules out latte art",
+      "Small tank and shallow tray mean frequent refills and daily emptying"
+    ],
+    "specs": {
+      "heating": "Stainless thermoblock",
+      "heatUpSeconds": 35,
+      "portafilterMm": 51,
+      "basketType": "Pressurised only",
+      "pumpBar": 15,
+      "tankLitres": 1.1,
+      "pid": false,
+      "grinder": false,
+      "steamWand": "Panarello frother",
+      "instrumentation": "buttons",
+      "wattage": 1300,
+      "weightKg": 4.2,
+      "widthCm": 15,
+      "depthCm": 33,
+      "heightCm": 30
+    },
+    "parts": [
+      {
+        "partId": "boiler",
+        "component": "Stainless steel thermoblock",
+        "spec": "Stainless thermoblock, heats on demand",
+        "figures": [
+          {
+            "label": "Type",
+            "value": "Thermoblock (flow-through)"
+          },
+          {
+            "label": "Ready",
+            "value": "≈35–40 seconds from cold"
+          },
+          {
+            "label": "Thermal reserve",
+            "value": "Essentially none"
+          },
+          {
+            "label": "Maintenance",
+            "value": "Descale alert on the panel"
+          }
+        ],
+        "capability": "Water is heated as it passes through a small stainless block, which is why the machine is usable within about half a minute of switching on and why it is so compact — there is no vessel of hot water to house. The trade is that it stores nothing: the block sets the temperature of whatever is flowing through it right now, so two drinks pulled back to back will not be identical, and it has no reserve to lean on. It also switches to steam quickly, but the steam it makes is wetter than a boiler's. A descale reminder on the panel is not decoration — the passages inside a thermoblock are narrow and scale closes them.",
+        "note": "Water is heated as it passes through, so the machine is ready in about 35 seconds and stores almost no reserve. Two drinks pulled back to back will not taste quite the same as each other."
+      },
+      {
+        "partId": "group-head",
+        "component": "51 mm compact aluminium group",
+        "spec": "51 mm compact aluminium",
+        "figures": [
+          {
+            "label": "Diameter",
+            "value": "51 mm"
+          },
+          {
+            "label": "Material",
+            "value": "Aluminium"
+          },
+          {
+            "label": "Pre-infusion",
+            "value": "None"
+          },
+          {
+            "label": "Thermal mass",
+            "value": "Minimal — cools quickly between shots"
+          }
+        ],
+        "capability": "A small, light aluminium group sized to keep the machine 15 cm wide, and everything about it is a consequence of that. With almost no mass it comes up to temperature quickly and loses it just as fast, so a blank flush of water before the first shot is the difference between a thin coffee and a decent one. There is no pre-infusion, so the puck sees full pressure immediately — which matters less than it would elsewhere, because the pressurised basket is regulating flow anyway.",
+        "note": "Light, and quick to lose heat. Run a blank flush of water through it before the first shot of the day or that shot will come out noticeably thin."
+      },
+      {
+        "partId": "portafilter",
+        "component": "51 mm pressurised portafilter with crema valve",
+        "spec": "51 mm, pressurised baskets only",
+        "figures": [
+          {
+            "label": "Diameter",
+            "value": "51 mm"
+          },
+          {
+            "label": "Baskets",
+            "value": "1-cup and 2-cup, both pressurised"
+          },
+          {
+            "label": "Also supplied",
+            "value": "ESE pod holder"
+          },
+          {
+            "label": "Non-pressurised",
+            "value": "Third-party only, and scarce"
+          }
+        ],
+        "capability": "Ships with two pressurised baskets and a holder for ESE paper pods. A pressurised basket has a second floor with a single small hole in it: the coffee bed does almost none of the work and the pressure drop happens at that hole instead, manufacturing a crema layer regardless of how the coffee was ground. That makes the machine genuinely forgiving — supermarket pre-ground will produce a good-looking shot. It also means grind, dose and tamp barely change the result, so the technique and equipment you would build around a 58 mm machine have nowhere to go here.",
+        "note": "The basket forces crema through a single restricted hole downstream of the coffee. It makes cheap pre-ground drinkable, and makes excellent beans taste roughly the same as cheap ones."
+      },
+      {
+        "partId": "steam-wand",
+        "component": "Panarello frother sleeve over a stainless tube",
+        "spec": "Panarello frother sleeve",
+        "figures": [
+          {
+            "label": "Type",
+            "value": "Panarello (self-aerating sleeve)"
+          },
+          {
+            "label": "Air intake",
+            "value": "Fixed hole in the sleeve, not adjustable"
+          },
+          {
+            "label": "Foam produced",
+            "value": "Stiff cappuccino foam"
+          },
+          {
+            "label": "Sleeve",
+            "value": "Removable — the bare tube underneath is low-powered"
+          }
+        ],
+        "capability": "The sleeve draws in its own air through a fixed hole and whips the milk into stiff, dry foam with no technique required at all — hold it in the jug and it works. That is the right answer for a cappuccino and the wrong one for a flat white: the bubbles are too large to pour patterns with, and the intake is not adjustable so you cannot dial the texture down. You can pull the sleeve off, but the bare tube underneath is fed by a thermoblock and does not have the power to build microfoam properly.",
+        "note": "The sleeve draws in its own air and produces stiff cappuccino foam with no technique required. You can pull the sleeve off, but the bare tube underneath does not have the power to texture milk properly."
+      },
+      {
+        "partId": "water-reservoir",
+        "component": "1.1 L removable rear tank",
+        "spec": "1.1 L, rear-mounted, removable",
+        "figures": [
+          {
+            "label": "Capacity",
+            "value": "1.1 L"
+          },
+          {
+            "label": "Position",
+            "value": "Rear, slides out backward"
+          },
+          {
+            "label": "Sensor",
+            "value": "Low-water indicator"
+          },
+          {
+            "label": "In practice",
+            "value": "Two or three days for one person"
+          }
+        ],
+        "capability": "The smallest tank in this group by a wide margin, which is the direct cost of a 15 cm-wide machine — the tank is the depth rather than the width. It slides out from the back, so like the Brevilles the machine has to come forward from a wall to refill it, though at four kilos that is a far smaller chore. There is a low-water indicator, and filtered water matters more here than on any other machine in this comparison because a thermoblock's passages are the narrowest.",
+        "note": "The smallest tank in this group by some margin. On a machine this narrow the tank is the depth, and you will be refilling it every few days."
+      },
+      {
+        "partId": "drip-tray",
+        "component": "Two-position removable tray",
+        "spec": "Two-position removable tray",
+        "figures": [
+          {
+            "label": "Positions",
+            "value": "Two heights — espresso cup or tall glass"
+          },
+          {
+            "label": "Grate",
+            "value": "Chrome, over a moulded tray"
+          },
+          {
+            "label": "Indicator",
+            "value": "None"
+          },
+          {
+            "label": "Depth",
+            "value": "Shallow — empty every day or two"
+          }
+        ],
+        "capability": "Clips in at two different heights, which is a genuinely smart answer to the problem of a 30 cm machine needing to serve both a 6 cm espresso cup and a 12 cm latte glass. Drop it to the lower position and a tall glass fits under the spouts without removing anything — something none of the larger machines here manage. It is shallow, has no float, and needs emptying every day or two.",
+        "note": "Clips in at two heights, for espresso cups or for tall glasses. It is a genuinely smart answer to the problem of a 30 cm machine needing to serve a 12 cm glass."
+      },
+      {
+        "partId": "control-panel",
+        "component": "Three backlit buttons with programmable volumes",
+        "spec": "Three backlit buttons: single, double, steam",
+        "figures": [
+          {
+            "label": "Buttons",
+            "value": "1 cup, 2 cup, steam"
+          },
+          {
+            "label": "Memory",
+            "value": "Both shot volumes programmable"
+          },
+          {
+            "label": "Auto-off",
+            "value": "Yes, after inactivity"
+          },
+          {
+            "label": "Instrumentation",
+            "value": "None"
+          }
+        ],
+        "capability": "Three backlit buttons and nothing to learn. Both shot volumes are programmable by holding the button through one shot at the length you want, after which the machine repeats it exactly without your attention — the most genuinely automatic behaviour of any machine here. There is no gauge and no timer, so there is nothing to diagnose with either; on a machine built around pressurised baskets there is also very little to diagnose.",
+        "note": "Volumetric buttons with programmable volumes, so shots repeat exactly without your attention. No gauge and no timer, but equally nothing you need to learn."
+      }
+    ]
+  }
+]
