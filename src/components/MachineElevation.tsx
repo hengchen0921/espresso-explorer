@@ -1,6 +1,8 @@
 import { useId } from 'react'
 import type { Machine } from '@/data/types'
 import { cx } from '@/lib/format'
+import { lengthUnit, lengthValue } from '@/lib/units'
+import { useUnits } from '@/hooks/useUnits'
 
 /**
  * A front elevation drawn from the machine's real dimensions and specs.
@@ -26,6 +28,7 @@ export function MachineElevation({
   highlight = false,
 }: MachineElevationProps) {
   const uid = useId()
+  const { units } = useUnits()
   const { widthCm: w, heightCm: h, grinder, portafilterMm, instrumentation } = machine.specs
 
   const hopperH = grinder ? h * 0.16 : 0
@@ -181,7 +184,7 @@ export function MachineElevation({
             fontFamily="var(--font-mono)"
             letterSpacing="0.06em"
           >
-            {w} cm
+            {lengthValue(w, units)} {lengthUnit(units)}
           </text>
           <text
             x={w + pad * 1.5}
@@ -191,7 +194,7 @@ export function MachineElevation({
             letterSpacing="0.06em"
             transform={`rotate(90 ${w + pad * 1.5} ${h / 2})`}
           >
-            {h} cm
+            {lengthValue(h, units)} {lengthUnit(units)}
           </text>
         </g>
       )}

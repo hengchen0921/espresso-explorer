@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom'
 import { useMemo } from 'react'
 import type { Machine } from '@/data/types'
 import { cx, formatDuration, formatPrice } from '@/lib/format'
+import { formatFootprint, formatPortafilter } from '@/lib/units'
+import { useUnits } from '@/hooks/useUnits'
 import { MachinePortrait } from '@/components/MachinePortrait'
 import { ArrowGlyph } from '@/components/ui/Button'
 
@@ -33,6 +35,7 @@ function useRanges(machines: Machine[]) {
 
 export function LineupDashboard({ machines }: { machines: Machine[] }) {
   const ranges = useRanges(machines)
+  const { units } = useUnits()
 
   return (
     <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -45,7 +48,7 @@ export function LineupDashboard({ machines }: { machines: Machine[] }) {
           },
           {
             label: 'Counter space',
-            value: `${machine.specs.widthCm} × ${machine.specs.depthCm} cm`,
+            value: formatFootprint(machine.specs.widthCm, machine.specs.depthCm, units),
             fill: ranges.footprint(machine) / ranges.maxFootprint,
           },
           {
@@ -105,7 +108,7 @@ export function LineupDashboard({ machines }: { machines: Machine[] }) {
 
               <div className="mt-auto flex items-end justify-between gap-3">
                 <p className="font-mono text-[9px] uppercase leading-[1.6] tracking-[0.12em] text-mist">
-                  {machine.specs.portafilterMm} mm
+                  {formatPortafilter(machine.specs.portafilterMm)}
                   <br />
                   {machine.specs.pid ? 'PID' : 'No PID'} ·{' '}
                   {machine.specs.grinder ? 'Grinder' : 'No grinder'}

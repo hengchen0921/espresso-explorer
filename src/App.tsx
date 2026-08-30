@@ -2,6 +2,7 @@ import { Suspense, lazy } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Layout } from '@/components/layout/Layout'
 import { CompareProvider } from '@/hooks/useCompare'
+import { UnitsProvider } from '@/hooks/useUnits'
 import { HomePage } from '@/pages/HomePage'
 import { NotFoundPage } from '@/pages/NotFoundPage'
 
@@ -17,6 +18,9 @@ const ComparePage = lazy(() =>
 const LineupPage = lazy(() =>
   import('@/pages/LineupPage').then((m) => ({ default: m.LineupPage })),
 )
+const FinderPage = lazy(() =>
+  import('@/pages/FinderPage').then((m) => ({ default: m.FinderPage })),
+)
 
 function RouteFallback() {
   return (
@@ -29,7 +33,8 @@ function RouteFallback() {
 export default function App() {
   return (
     <BrowserRouter basename={import.meta.env.BASE_URL}>
-      <CompareProvider>
+      <UnitsProvider>
+        <CompareProvider>
         <Routes>
           <Route element={<Layout />}>
             <Route index element={<HomePage />} />
@@ -38,6 +43,14 @@ export default function App() {
               element={
                 <Suspense fallback={<RouteFallback />}>
                   <MachinePage />
+                </Suspense>
+              }
+            />
+            <Route
+              path="finder"
+              element={
+                <Suspense fallback={<RouteFallback />}>
+                  <FinderPage />
                 </Suspense>
               }
             />
@@ -60,7 +73,8 @@ export default function App() {
             <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>
-      </CompareProvider>
+        </CompareProvider>
+      </UnitsProvider>
     </BrowserRouter>
   )
 }

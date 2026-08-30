@@ -17,9 +17,14 @@ npm run dev
   group head, portafilter, steam wand, water reservoir, drip tray, grinder and controls. Selecting
   a component flies the camera to it, dims everything else, and opens a panel explaining what it
   does and why it matters when you are choosing. Internal components turn the case to glass.
+- **`/finder`** — six questions, then a ranked answer with its reasoning shown, plus every machine
+  it ruled out and why. A scoring model, not an LLM.
 - **`/compare?ids=a,b,c`** — up to three machines in one scene, one camera, true relative scale,
   plus a specification matrix that marks a winner only in rows where "better" actually means
   something.
+
+Measurements switch between metric and imperial from the header; the choice persists and defaults
+to imperial in the US.
 
 ## Retailer links
 

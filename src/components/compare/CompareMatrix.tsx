@@ -1,6 +1,7 @@
 import { SPEC_GROUPS, SPEC_ROWS, winnersFor } from '@/data/specSchema'
 import type { Machine } from '@/data/types'
 import { cx } from '@/lib/format'
+import { useUnits } from '@/hooks/useUnits'
 
 /**
  * The specification matrix. Rows that have a defensible "better" direction mark
@@ -8,6 +9,7 @@ import { cx } from '@/lib/format'
  * deliberately unmarked rather than inventing a ranking.
  */
 export function CompareMatrix({ machines }: { machines: Machine[] }) {
+  const { units } = useUnits()
   const columns = `minmax(190px, 1.4fr) repeat(${machines.length}, minmax(140px, 1fr))`
 
   return (
@@ -74,7 +76,7 @@ export function CompareMatrix({ machines }: { machines: Machine[] }) {
                               aria-label="Strongest in this row"
                             />
                           )}
-                          {row.value(machine)}
+                          {row.value(machine, units)}
                         </p>
                       )
                     })}

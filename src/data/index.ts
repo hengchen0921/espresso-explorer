@@ -14,7 +14,7 @@ const partIndex = new Map(parts.map((p) => [p.id, p]))
  * something indexes a lookup table with it. These checks turn that into a loud
  * warning at startup in development instead.
  */
-if (import.meta.env.DEV) {
+if (import.meta.env?.DEV) {
   const FINISHES = new Set(['brushed-steel', 'stainless', 'graphite'])
   const CATEGORIES = new Set(['All-in-one', 'Single boiler', 'Dual boiler', 'Compact'])
   const SKILLS = new Set(['gentle', 'moderate', 'steep'])
@@ -55,7 +55,7 @@ export function resolveParts(machine: Machine): ResolvedPart[] {
   return machine.parts.flatMap((ref) => {
     const def = partIndex.get(ref.partId)
     if (!def) {
-      if (import.meta.env.DEV) {
+      if (import.meta.env?.DEV) {
         console.warn(`[data] ${machine.id} references unknown part "${ref.partId}"`)
       }
       return []

@@ -1,4 +1,12 @@
-import { formatDuration, formatFootprint, formatLitres, formatPrice } from '@/lib/format'
+import { formatDuration, formatPrice } from '@/lib/format'
+import {
+  formatFootprint,
+  formatLength,
+  formatPortafilter,
+  formatVolume,
+  formatWeight,
+  type UnitSystem,
+} from '@/lib/units'
 import type { Machine } from './types'
 
 export type CompareDirection = 'lower' | 'higher' | 'none'
@@ -7,8 +15,8 @@ export interface SpecRow {
   key: string
   label: string
   group: SpecGroup
-  /** Rendered cell text. */
-  value: (machine: Machine) => string
+  /** Rendered cell text, in the reader's chosen unit system. */
+  value: (machine: Machine, units: UnitSystem) => string
   /**
    * Optional numeric projection used to mark the strongest machine in a
    * comparison. Rows without one are informational — plenty of specs
@@ -104,7 +112,7 @@ export const SPEC_ROWS: SpecRow[] = [
     key: 'portafilter',
     label: 'Portafilter size',
     group: 'Brew',
-    value: (m) => `${m.specs.portafilterMm} mm`,
+    value: (m) => formatPortafilter(m.specs.portafilterMm),
     score: (m) => m.specs.portafilterMm,
     better: 'higher',
     hint: '58 mm is the commercial standard, so accessories are cheap and everywhere.',
@@ -143,7 +151,7 @@ export const SPEC_ROWS: SpecRow[] = [
     key: 'tank',
     label: 'Reservoir',
     group: 'Water',
-    value: (m) => formatLitres(m.specs.tankLitres),
+    value: (m, units) => formatVolume(m.specs.tankLitres, units),
     score: (m) => m.specs.tankLitres,
     better: 'higher',
   },
@@ -158,7 +166,7 @@ export const SPEC_ROWS: SpecRow[] = [
     key: 'footprint',
     label: 'Footprint',
     group: 'Physical',
-    value: (m) => formatFootprint(m.specs.widthCm, m.specs.depthCm),
+    value: (m, units) => formatFootprint(m.specs.widthCm, m.specs.depthCm, units),
     score: (m) => m.specs.widthCm * m.specs.depthCm,
     better: 'lower',
     hint: 'Width × depth on the counter, excluding clearance for the tank lid.',
@@ -167,14 +175,14 @@ export const SPEC_ROWS: SpecRow[] = [
     key: 'height',
     label: 'Height',
     group: 'Physical',
-    value: (m) => `${m.specs.heightCm} cm`,
+    value: (m, units) => formatLength(m.specs.heightCm, units),
     hint: 'Check it against the underside of your wall cabinets, tank lid included.',
   },
   {
     key: 'weight',
     label: 'Weight',
     group: 'Physical',
-    value: (m) => `${m.specs.weightKg} kg`,
+    value: (m, units) => formatWeight(m.specs.weightKg, units),
     hint: 'Weight is mostly boiler and frame — heavier usually means more thermal mass.',
   },
   {

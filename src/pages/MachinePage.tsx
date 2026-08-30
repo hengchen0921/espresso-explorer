@@ -7,6 +7,8 @@ import type { MachineModelDefinition } from '@/models/types'
 import { useCompare } from '@/hooks/useCompare'
 import { useIsCompact } from '@/hooks/useMediaQuery'
 import { cx, formatDuration, formatPrice } from '@/lib/format'
+import { formatPortafilter, formatVolume, formatWeight } from '@/lib/units'
+import { useUnits } from '@/hooks/useUnits'
 import { MachineViewer } from '@/components/viewer/MachineViewer'
 import { PartIndex } from '@/components/viewer/PartIndex'
 import { PartPanel } from '@/components/viewer/PartPanel'
@@ -37,6 +39,7 @@ function MachineDetail({
   const [activePart, setActivePart] = useState<PartId | null>(null)
   const [hoveredPart, setHoveredPart] = useState<PartId | null>(null)
   const compact = useIsCompact()
+  const { units } = useUnits()
   const { isSelected, toggle } = useCompare()
 
   const parts = useMemo(() => resolveParts(machine), [machine])
@@ -218,9 +221,9 @@ function MachineDetail({
             <div className="grid grid-cols-2 gap-px overflow-hidden border border-ink/12 bg-ink/12">
               {[
                 ['Ready in', formatDuration(machine.specs.heatUpSeconds)],
-                ['Portafilter', `${machine.specs.portafilterMm} mm`],
-                ['Reservoir', `${machine.specs.tankLitres} L`],
-                ['Weight', `${machine.specs.weightKg} kg`],
+                ['Portafilter', formatPortafilter(machine.specs.portafilterMm)],
+                ['Reservoir', formatVolume(machine.specs.tankLitres, units)],
+                ['Weight', formatWeight(machine.specs.weightKg, units)],
               ].map(([label, value]) => (
                 <div key={label} className="bg-linen px-5 py-6">
                   <p className="eyebrow">{label}</p>

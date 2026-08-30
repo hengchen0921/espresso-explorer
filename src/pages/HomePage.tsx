@@ -88,12 +88,12 @@ export function HomePage() {
               className="mt-10 flex flex-wrap items-center gap-3 animate-rise"
               style={{ animationDelay: '150ms' }}
             >
-              <ButtonLink to="/machines/breville-barista-express" className="group">
-                Open a machine
+              <ButtonLink to="/finder" className="group">
+                Find the one for you
                 <ArrowGlyph className="group-hover:translate-x-1" />
               </ButtonLink>
-              <ButtonLink to="/compare" variant="outline">
-                Compare side by side
+              <ButtonLink to="/machines/breville-barista-express" variant="outline">
+                Or just open a machine
               </ButtonLink>
             </div>
 

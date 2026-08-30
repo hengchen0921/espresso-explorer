@@ -14,14 +14,6 @@ export function formatDuration(seconds: number): string {
   return `${Math.round(seconds / 60)} min`
 }
 
-export function formatLitres(value: number): string {
-  return `${value.toFixed(1).replace(/\.0$/, '')} L`
-}
-
-export function formatFootprint(widthCm: number, depthCm: number): string {
-  return `${widthCm} × ${depthCm} cm`
-}
-
 const NUMBER_WORDS = [
   'zero', 'one', 'two', 'three', 'four', 'five', 'six',
   'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve',

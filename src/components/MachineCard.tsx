@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import type { Machine } from '@/data/types'
 import { useCompare } from '@/hooks/useCompare'
 import { cx, formatPrice } from '@/lib/format'
+import { formatPortafilter } from '@/lib/units'
 import { ArrowGlyph } from '@/components/ui/Button'
 import { MachinePortrait } from './MachinePortrait'
 
@@ -79,7 +80,7 @@ export function MachineCard({ machine, index, wide = false }: MachineCardProps) 
               {machine.category}
             </p>
             <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-mist">
-              {machine.specs.portafilterMm} mm · {machine.specs.grinder ? 'grinder' : 'no grinder'} ·{' '}
+              {formatPortafilter(machine.specs.portafilterMm)} · {machine.specs.grinder ? 'grinder' : 'no grinder'} ·{' '}
               {machine.specs.pid ? 'PID' : 'no PID'}
             </p>
           </div>

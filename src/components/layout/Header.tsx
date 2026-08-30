@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { useCompare } from '@/hooks/useCompare'
+import { useUnits } from '@/hooks/useUnits'
 import { cx } from '@/lib/format'
 import { Logo } from './Logo'
 
 const NAV = [
   { to: '/', label: 'Machines', end: true },
+  { to: '/finder', label: 'Find yours', end: false },
   { to: '/lineup', label: 'Lineup', end: false },
   { to: '/compare', label: 'Compare', end: false },
 ]
@@ -13,6 +15,7 @@ const NAV = [
 export function Header() {
   const [scrolled, setScrolled] = useState(false)
   const { ids } = useCompare()
+  const { units, setUnits } = useUnits()
   const { pathname } = useLocation()
 
   useEffect(() => {
@@ -39,6 +42,36 @@ export function Header() {
           </span>
         </Link>
 
+        <div className="flex items-center gap-3 md:gap-5">
+          <div
+            className="flex items-center rounded-full border border-ink/12 p-0.5"
+            role="group"
+            aria-label="Units"
+          >
+            {(
+              [
+                ['metric', 'cm'],
+                ['imperial', 'in'],
+              ] as const
+            ).map(([system, label]) => (
+              <button
+                key={system}
+                type="button"
+                onClick={() => setUnits(system)}
+                aria-pressed={units === system}
+                className={cx(
+                  'rounded-full px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.14em] transition-colors duration-300',
+                  units === system ? 'bg-ink text-linen' : 'text-stone hover:text-copper',
+                )}
+              >
+                {label}
+                <span className="sr-only">
+                  {system === 'metric' ? ' — centimetres and kilograms' : ' — inches and pounds'}
+                </span>
+              </button>
+            ))}
+          </div>
+
         <nav className="flex items-center gap-1 md:gap-2">
           {NAV.map((item) => (
             <NavLink
@@ -63,6 +96,7 @@ export function Header() {
             </NavLink>
           ))}
         </nav>
+        </div>
       </div>
     </header>
   )

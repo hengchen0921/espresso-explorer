@@ -138,6 +138,37 @@ pipeline was tried — one off-screen canvas capturing each machine with `toData
 that canvas mounts but its React children never render, so it silently produced nothing. If you
 revisit it, prove the children mount before building on it.
 
+## Units
+
+`src/lib/units.ts` converts and formats; `useUnits` holds the choice (localStorage, defaulting to
+imperial for `en-US`). Anything that renders a measurement takes the system as an argument rather
+than assuming — including `SpecRow.value(machine, units)` and the finder's generated reasoning,
+which would otherwise say "24.5 cm" while the header says inches.
+
+**Portafilter sizes stay in millimetres in both systems.** "58 mm" is the name of a standard, not a
+measurement to convert; US tamper and basket makers all say 58 mm. `formatPortafilter` exists to
+make that deliberate rather than an oversight.
+
+## The finder
+
+`src/data/finder.ts` scores every machine against six answers and returns both matches and
+rejections. It is a transparent rule engine, not an LLM, and that is a constraint of the
+architecture rather than a shortcut: this is a static build with no server, so calling a model would
+mean shipping an API key to the browser. A rule engine is also the only version that can show its
+working, which for a buying guide matters more than fluency.
+
+Two things to preserve if you extend it:
+
+- **Collect every blocker, not the first.** An earlier version overwrote them, so the "nothing fits"
+  case listed the widest machines rather than the closest ones.
+- **Blockers are weighted by how fixable they are** (`blockerWeight`): a counter is a fixed size, a
+  budget can stretch, a preference for a built-in grinder is the easiest to reconsider. That
+  ordering is what makes the near-miss list useful.
+
+Exercise it after changes — `npx tsx` a script that calls `findMachines` with a few realistic
+profiles and read the answers. Wrong weights produce plausible-looking nonsense that a type checker
+will never catch.
+
 ## Retailer links
 
 All of it lives in `src/data/retailers.ts`. Put real affiliate ids in `AFFILIATE_TAGS`; paste
