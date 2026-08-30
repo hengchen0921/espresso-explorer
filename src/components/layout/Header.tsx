@@ -7,6 +7,7 @@ import { Logo } from './Logo'
 
 const NAV = [
   { to: '/', label: 'Machines', end: true },
+  { to: '/catalog', label: 'Catalogue', end: false },
   { to: '/finder', label: 'Find yours', end: false },
   { to: '/lineup', label: 'Lineup', end: false },
   { to: '/compare', label: 'Compare', end: false },

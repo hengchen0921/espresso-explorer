@@ -17,6 +17,9 @@ npm run dev
   group head, portafilter, steam wand, water reservoir, drip tray, grinder and controls. Selecting
   a component flies the camera to it, dims everything else, and opens a panel explaining what it
   does and why it matters when you are choosing. Internal components turn the case to glass.
+- **`/catalog`** — 78 products across six categories with filtering by category, brand and price.
+  The eight flagship machines appear here badged and linked to their 3D teardown; everything else
+  is a standard product card.
 - **`/finder`** — six questions, then a ranked answer with its reasoning shown, plus every machine
   it ruled out and why. A scoring model, not an LLM.
 - **`/compare?ids=a,b,c`** — up to three machines in one scene, one camera, true relative scale,
@@ -41,7 +44,8 @@ React Router. No 3D assets, no image assets — every machine and every product 
 
 ```
 src/
-  data/       machines.json, parts.json, and the typed loaders + comparison schema
+  data/       flagship machines: machines.json, parts.json, loaders, comparison schema
+  catalog/    the broad catalogue: products.json, filtering, the Amazon data seam
   models/     3D geometry: primitives/, machines/, the registry, camera framing
   components/ viewer/, compare/, layout/, ui/
   pages/      HomePage, MachinePage, ComparePage, NotFoundPage

@@ -65,6 +65,38 @@ export interface RetailerLink {
   sponsored: boolean
 }
 
+/** Anything that can be pointed at Amazon: a flagship machine or a catalogue entry. */
+export interface AmazonTarget {
+  /** Verified ASIN, or null. Never guessed. */
+  asin?: string | null
+  /** Brand, model and part number — resolves correctly without an ASIN. */
+  query: string
+}
+
+/**
+ * One Amazon URL, built from an ASIN when we have a verified one and from a
+ * model search when we do not. Both carry the affiliate tag if configured.
+ */
+export function amazonLinkFor(target: AmazonTarget): RetailerLink {
+  const tag = AFFILIATE_TAGS.amazon ?? ''
+  const suffix = tag ? `?tag=${encodeURIComponent(tag)}` : ''
+
+  return {
+    id: 'amazon',
+    name: 'Amazon',
+    note: target.asin ? 'Direct product page' : 'Searches for the exact model',
+    url: target.asin
+      ? `https://www.amazon.com/dp/${encodeURIComponent(target.asin)}${suffix}`
+      : `https://www.amazon.com/s?k=${encodeURIComponent(target.query)}${tag ? `&tag=${encodeURIComponent(tag)}` : ''}`,
+    sponsored: Boolean(tag),
+  }
+}
+
+/** `rel` for an Amazon link, per search-engine guidance on compensated links. */
+export function linkRel(sponsored: boolean): string {
+  return sponsored ? 'sponsored nofollow noopener noreferrer' : 'noopener noreferrer'
+}
+
 export function retailerLinksFor(machine: Machine): RetailerLink[] {
   const query = `${machine.brand} ${machine.name} ${machine.modelCode}`
 

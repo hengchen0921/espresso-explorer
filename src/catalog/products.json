@@ -1,0 +1,1682 @@
+[
+  {
+    "id": "breville-bambino",
+    "name": "Bambino",
+    "brand": "Breville",
+    "category": "Espresso Machines",
+    "subcategory": "Compact",
+    "price": 299,
+    "summary": "The Bambino Plus without the automatic milk wand.",
+    "specs": [
+      {
+        "label": "Heating",
+        "value": "ThermoJet"
+      },
+      {
+        "label": "Portafilter",
+        "value": "54 mm"
+      },
+      {
+        "label": "Width",
+        "value": "19.5 cm"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "breville-infuser",
+    "name": "Infuser",
+    "brand": "Breville",
+    "category": "Espresso Machines",
+    "subcategory": "Single boiler",
+    "price": 499,
+    "summary": "Pressure gauge and PID in a machine with no grinder attached.",
+    "specs": [
+      {
+        "label": "Heating",
+        "value": "Thermocoil, PID"
+      },
+      {
+        "label": "Portafilter",
+        "value": "54 mm"
+      },
+      {
+        "label": "Gauge",
+        "value": "Yes"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "gaggia-classic-evo-pro",
+    "name": "Classic Evo Pro",
+    "brand": "Gaggia",
+    "category": "Espresso Machines",
+    "subcategory": "Single boiler",
+    "price": 499,
+    "summary": "The 2023 Classic, with a revised shower screen and a 58 mm brass group.",
+    "specs": [
+      {
+        "label": "Boiler",
+        "value": "Aluminium"
+      },
+      {
+        "label": "Portafilter",
+        "value": "58 mm"
+      },
+      {
+        "label": "Valve",
+        "value": "Three-way solenoid"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "rancilio-silvia-pro-x",
+    "name": "Silvia Pro X",
+    "brand": "Rancilio",
+    "category": "Espresso Machines",
+    "subcategory": "Dual boiler",
+    "price": 1090,
+    "summary": "The Silvia with the two things it always lacked: dual boilers and dual PID.",
+    "specs": [
+      {
+        "label": "Boilers",
+        "value": "Two, PID"
+      },
+      {
+        "label": "Portafilter",
+        "value": "58 mm"
+      },
+      {
+        "label": "Warm-up",
+        "value": "~5 min"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "profitec-go",
+    "name": "Go",
+    "brand": "Profitec",
+    "category": "Espresso Machines",
+    "subcategory": "Single boiler",
+    "price": 1050,
+    "summary": "German-built compact PID single boiler with a full 58 mm group.",
+    "specs": [
+      {
+        "label": "Boiler",
+        "value": "Stainless, PID"
+      },
+      {
+        "label": "Portafilter",
+        "value": "58 mm"
+      },
+      {
+        "label": "Width",
+        "value": "20.5 cm"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "lelit-mara-x",
+    "name": "Mara X",
+    "brand": "Lelit",
+    "category": "Espresso Machines",
+    "subcategory": "Heat exchanger",
+    "price": 1700,
+    "summary": "An E61 heat exchanger tuned so it does not need a cooling flush.",
+    "specs": [
+      {
+        "label": "Type",
+        "value": "Heat exchanger"
+      },
+      {
+        "label": "Group",
+        "value": "E61"
+      },
+      {
+        "label": "Portafilter",
+        "value": "58 mm"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "ecm-classika-pid",
+    "name": "Classika PID",
+    "brand": "ECM",
+    "category": "Espresso Machines",
+    "subcategory": "Single boiler",
+    "price": 2000,
+    "summary": "Hand-built Heidelberg single boiler with an E61 group and a PID.",
+    "specs": [
+      {
+        "label": "Boiler",
+        "value": "Brass, PID"
+      },
+      {
+        "label": "Group",
+        "value": "E61"
+      },
+      {
+        "label": "Portafilter",
+        "value": "58 mm"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "flair-58",
+    "name": "58",
+    "brand": "Flair",
+    "category": "Espresso Machines",
+    "subcategory": "Manual lever",
+    "price": 500,
+    "summary": "A manual lever press with a 58 mm basket and no pump at all.",
+    "specs": [
+      {
+        "label": "Type",
+        "value": "Manual lever"
+      },
+      {
+        "label": "Portafilter",
+        "value": "58 mm"
+      },
+      {
+        "label": "Power",
+        "value": "None"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "cafelat-robot-barista",
+    "name": "Robot Barista",
+    "brand": "Cafelat",
+    "category": "Espresso Machines",
+    "subcategory": "Manual lever",
+    "price": 415,
+    "summary": "No electricity, no pump — you supply the pressure and read it off a gauge.",
+    "specs": [
+      {
+        "label": "Type",
+        "value": "Manual lever"
+      },
+      {
+        "label": "Gauge",
+        "value": "Yes"
+      },
+      {
+        "label": "Power",
+        "value": "None"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "la-pavoni-europiccola",
+    "name": "Europiccola",
+    "brand": "La Pavoni",
+    "category": "Espresso Machines",
+    "subcategory": "Manual lever",
+    "price": 1000,
+    "summary": "The chrome spring-lever machine that has looked the same since 1961.",
+    "specs": [
+      {
+        "label": "Type",
+        "value": "Manual lever"
+      },
+      {
+        "label": "Boiler",
+        "value": "Brass, 0.8 L"
+      },
+      {
+        "label": "Portafilter",
+        "value": "51 mm"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "nespresso-creatista-plus",
+    "name": "Creatista Plus",
+    "brand": "Nespresso",
+    "category": "Espresso Machines",
+    "subcategory": "Pod",
+    "price": 600,
+    "summary": "Pods, with a real steam wand and automatic milk texturing.",
+    "specs": [
+      {
+        "label": "Type",
+        "value": "Pod"
+      },
+      {
+        "label": "Milk",
+        "value": "Automatic wand"
+      },
+      {
+        "label": "Heat-up",
+        "value": "3 sec"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "baratza-encore-esp",
+    "name": "Encore ESP",
+    "brand": "Baratza",
+    "category": "Grinders",
+    "subcategory": "Electric burr",
+    "price": 199,
+    "summary": "The entry burr grinder that finally has enough range for espresso.",
+    "specs": [
+      {
+        "label": "Burrs",
+        "value": "40 mm conical"
+      },
+      {
+        "label": "Settings",
+        "value": "40 espresso steps"
+      },
+      {
+        "label": "Use",
+        "value": "Espresso and filter"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "baratza-virtuoso",
+    "name": "Virtuoso+",
+    "brand": "Baratza",
+    "category": "Grinders",
+    "subcategory": "Electric burr",
+    "price": 299,
+    "summary": "A filter-focused grinder with a digital timer and a metal body.",
+    "specs": [
+      {
+        "label": "Burrs",
+        "value": "40 mm conical"
+      },
+      {
+        "label": "Settings",
+        "value": "40 steps"
+      },
+      {
+        "label": "Use",
+        "value": "Filter"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "baratza-sette-270",
+    "name": "Sette 270",
+    "brand": "Baratza",
+    "category": "Grinders",
+    "subcategory": "Electric burr",
+    "price": 429,
+    "summary": "Straight-through grind path, so almost nothing is retained between doses.",
+    "specs": [
+      {
+        "label": "Burrs",
+        "value": "40 mm conical"
+      },
+      {
+        "label": "Retention",
+        "value": "Near zero"
+      },
+      {
+        "label": "Use",
+        "value": "Espresso"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "fellow-ode-brew-grinder-gen-2",
+    "name": "Ode Brew Grinder Gen 2",
+    "brand": "Fellow",
+    "category": "Grinders",
+    "subcategory": "Electric burr",
+    "price": 345,
+    "summary": "Flat burrs and a small footprint, built specifically for filter coffee.",
+    "specs": [
+      {
+        "label": "Burrs",
+        "value": "64 mm flat"
+      },
+      {
+        "label": "Settings",
+        "value": "31 steps"
+      },
+      {
+        "label": "Use",
+        "value": "Filter"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "fellow-opus",
+    "name": "Opus",
+    "brand": "Fellow",
+    "category": "Grinders",
+    "subcategory": "Electric burr",
+    "price": 195,
+    "summary": "A conical grinder with enough range to cover espresso through cold brew.",
+    "specs": [
+      {
+        "label": "Burrs",
+        "value": "40 mm conical"
+      },
+      {
+        "label": "Settings",
+        "value": "41 steps"
+      },
+      {
+        "label": "Use",
+        "value": "All methods"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "1zpresso-j-ultra",
+    "name": "J-Ultra",
+    "brand": "1Zpresso",
+    "category": "Grinders",
+    "subcategory": "Hand grinder",
+    "price": 229,
+    "summary": "Hand grinder with external adjustment and a genuinely espresso-capable burr set.",
+    "specs": [
+      {
+        "label": "Burrs",
+        "value": "48 mm conical"
+      },
+      {
+        "label": "Adjustment",
+        "value": "External, 8.8 µm"
+      },
+      {
+        "label": "Use",
+        "value": "Espresso and filter"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "1zpresso-jx-pro",
+    "name": "JX-Pro",
+    "brand": "1Zpresso",
+    "category": "Grinders",
+    "subcategory": "Hand grinder",
+    "price": 169,
+    "summary": "The hand grinder most people start with when they get serious.",
+    "specs": [
+      {
+        "label": "Burrs",
+        "value": "48 mm conical"
+      },
+      {
+        "label": "Adjustment",
+        "value": "Internal, 12.5 µm"
+      },
+      {
+        "label": "Use",
+        "value": "Espresso and filter"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "1zpresso-k-ultra",
+    "name": "K-Ultra",
+    "brand": "1Zpresso",
+    "category": "Grinders",
+    "subcategory": "Hand grinder",
+    "price": 215,
+    "summary": "Filter-focused hand grinder with a magnetic catch cup.",
+    "specs": [
+      {
+        "label": "Burrs",
+        "value": "48 mm conical"
+      },
+      {
+        "label": "Adjustment",
+        "value": "External"
+      },
+      {
+        "label": "Use",
+        "value": "Filter"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "timemore-chestnut-c3-esp",
+    "name": "Chestnut C3 ESP",
+    "brand": "Timemore",
+    "category": "Grinders",
+    "subcategory": "Hand grinder",
+    "price": 89,
+    "summary": "The cheapest hand grinder that can actually hit espresso fineness.",
+    "specs": [
+      {
+        "label": "Burrs",
+        "value": "38 mm stainless"
+      },
+      {
+        "label": "Adjustment",
+        "value": "Internal"
+      },
+      {
+        "label": "Use",
+        "value": "Espresso and filter"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "comandante-c40-mk4",
+    "name": "C40 MK4",
+    "brand": "Comandante",
+    "category": "Grinders",
+    "subcategory": "Hand grinder",
+    "price": 325,
+    "summary": "The hand grinder other hand grinders are measured against.",
+    "specs": [
+      {
+        "label": "Burrs",
+        "value": "39 mm high-nitrogen steel"
+      },
+      {
+        "label": "Adjustment",
+        "value": "Internal"
+      },
+      {
+        "label": "Use",
+        "value": "Filter"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "eureka-mignon-specialita",
+    "name": "Mignon Specialita",
+    "brand": "Eureka",
+    "category": "Grinders",
+    "subcategory": "Electric burr",
+    "price": 675,
+    "summary": "Stepless flat burrs and a quiet motor, sized for a home counter.",
+    "specs": [
+      {
+        "label": "Burrs",
+        "value": "55 mm flat"
+      },
+      {
+        "label": "Adjustment",
+        "value": "Stepless"
+      },
+      {
+        "label": "Use",
+        "value": "Espresso"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "niche-zero",
+    "name": "Zero",
+    "brand": "Niche",
+    "category": "Grinders",
+    "subcategory": "Electric burr",
+    "price": 800,
+    "summary": "Single-dose conical grinder with famously low retention.",
+    "specs": [
+      {
+        "label": "Burrs",
+        "value": "63 mm conical"
+      },
+      {
+        "label": "Dosing",
+        "value": "Single dose"
+      },
+      {
+        "label": "Use",
+        "value": "Espresso and filter"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "df64-gen-2",
+    "name": "Gen 2",
+    "brand": "DF64",
+    "category": "Grinders",
+    "subcategory": "Electric burr",
+    "price": 429,
+    "summary": "Single-dose flat burr grinder that undercut everything above it.",
+    "specs": [
+      {
+        "label": "Burrs",
+        "value": "64 mm flat"
+      },
+      {
+        "label": "Dosing",
+        "value": "Single dose"
+      },
+      {
+        "label": "Use",
+        "value": "Espresso"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "breville-smart-grinder-pro",
+    "name": "Smart Grinder Pro",
+    "brand": "Breville",
+    "category": "Grinders",
+    "subcategory": "Electric burr",
+    "price": 200,
+    "summary": "Sixty settings and a dose timer, matched to Breville machines.",
+    "specs": [
+      {
+        "label": "Burrs",
+        "value": "Conical stainless"
+      },
+      {
+        "label": "Settings",
+        "value": "60"
+      },
+      {
+        "label": "Use",
+        "value": "Espresso and filter"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "wilfa-uniform",
+    "name": "Uniform",
+    "brand": "Wilfa",
+    "category": "Grinders",
+    "subcategory": "Electric burr",
+    "price": 250,
+    "summary": "Scandinavian filter grinder with a weight-based dosing mode.",
+    "specs": [
+      {
+        "label": "Burrs",
+        "value": "58 mm conical"
+      },
+      {
+        "label": "Dosing",
+        "value": "By weight"
+      },
+      {
+        "label": "Use",
+        "value": "Filter"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "lavazza-super-crema",
+    "name": "Super Crema",
+    "brand": "Lavazza",
+    "category": "Coffee Beans",
+    "subcategory": "Espresso blend",
+    "price": 22,
+    "summary": "The default Italian supermarket espresso blend, and a fair one.",
+    "specs": [
+      {
+        "label": "Roast",
+        "value": "Medium"
+      },
+      {
+        "label": "Size",
+        "value": "2.2 lb"
+      },
+      {
+        "label": "Blend",
+        "value": "Arabica and robusta"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "illy-classico-whole-bean",
+    "name": "Classico Whole Bean",
+    "brand": "Illy",
+    "category": "Coffee Beans",
+    "subcategory": "Espresso blend",
+    "price": 18,
+    "summary": "Consistent, mild, and the same in every tin you ever buy.",
+    "specs": [
+      {
+        "label": "Roast",
+        "value": "Medium"
+      },
+      {
+        "label": "Size",
+        "value": "8.8 oz"
+      },
+      {
+        "label": "Blend",
+        "value": "100% arabica"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "peet-s-coffee-big-bang",
+    "name": "Big Bang",
+    "brand": "Peet's Coffee",
+    "category": "Coffee Beans",
+    "subcategory": "Medium roast",
+    "price": 12,
+    "summary": "A medium roast that holds up as espresso and as filter.",
+    "specs": [
+      {
+        "label": "Roast",
+        "value": "Medium"
+      },
+      {
+        "label": "Size",
+        "value": "12 oz"
+      },
+      {
+        "label": "Origin",
+        "value": "Blend"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "stumptown-hair-bender",
+    "name": "Hair Bender",
+    "brand": "Stumptown",
+    "category": "Coffee Beans",
+    "subcategory": "Espresso blend",
+    "price": 19,
+    "summary": "The Portland blend that taught American espresso to taste like fruit.",
+    "specs": [
+      {
+        "label": "Roast",
+        "value": "Medium"
+      },
+      {
+        "label": "Size",
+        "value": "12 oz"
+      },
+      {
+        "label": "Origin",
+        "value": "Latin America, Africa, Indonesia"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "counter-culture-big-trouble",
+    "name": "Big Trouble",
+    "brand": "Counter Culture",
+    "category": "Coffee Beans",
+    "subcategory": "Espresso blend",
+    "price": 17,
+    "summary": "Nutty and forgiving — a good first bag for a new machine.",
+    "specs": [
+      {
+        "label": "Roast",
+        "value": "Medium"
+      },
+      {
+        "label": "Size",
+        "value": "12 oz"
+      },
+      {
+        "label": "Origin",
+        "value": "Latin America"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "intelligentsia-black-cat-classic-espresso",
+    "name": "Black Cat Classic Espresso",
+    "brand": "Intelligentsia",
+    "category": "Coffee Beans",
+    "subcategory": "Espresso blend",
+    "price": 19,
+    "summary": "A sweet, syrupy blend built to be pulled short.",
+    "specs": [
+      {
+        "label": "Roast",
+        "value": "Medium"
+      },
+      {
+        "label": "Size",
+        "value": "12 oz"
+      },
+      {
+        "label": "Origin",
+        "value": "Rotating blend"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "death-wish-coffee-dark-roast",
+    "name": "Dark Roast",
+    "brand": "Death Wish Coffee",
+    "category": "Coffee Beans",
+    "subcategory": "Dark roast",
+    "price": 22,
+    "summary": "Marketed on caffeine; genuinely a heavy, low-acid dark roast.",
+    "specs": [
+      {
+        "label": "Roast",
+        "value": "Dark"
+      },
+      {
+        "label": "Size",
+        "value": "16 oz"
+      },
+      {
+        "label": "Blend",
+        "value": "Arabica and robusta"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "kicking-horse-cliff-hanger-espresso",
+    "name": "Cliff Hanger Espresso",
+    "brand": "Kicking Horse",
+    "category": "Coffee Beans",
+    "subcategory": "Espresso blend",
+    "price": 15,
+    "summary": "Canadian organic blend, sweet enough to drink without milk.",
+    "specs": [
+      {
+        "label": "Roast",
+        "value": "Medium"
+      },
+      {
+        "label": "Size",
+        "value": "10 oz"
+      },
+      {
+        "label": "Certification",
+        "value": "Organic, fair trade"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "volcanica-ethiopian-yirgacheffe",
+    "name": "Ethiopian Yirgacheffe",
+    "brand": "Volcanica",
+    "category": "Coffee Beans",
+    "subcategory": "Single origin",
+    "price": 22,
+    "summary": "Floral and citric — the origin most people mean by \"fruity coffee\".",
+    "specs": [
+      {
+        "label": "Roast",
+        "value": "Light"
+      },
+      {
+        "label": "Size",
+        "value": "16 oz"
+      },
+      {
+        "label": "Origin",
+        "value": "Yirgacheffe, Ethiopia"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "blue-bottle-bella-donovan",
+    "name": "Bella Donovan",
+    "brand": "Blue Bottle",
+    "category": "Coffee Beans",
+    "subcategory": "Filter blend",
+    "price": 22,
+    "summary": "Chocolatey, jammy, and the blend Blue Bottle is best known for.",
+    "specs": [
+      {
+        "label": "Roast",
+        "value": "Medium"
+      },
+      {
+        "label": "Size",
+        "value": "12 oz"
+      },
+      {
+        "label": "Origin",
+        "value": "Blend"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "verve-streetlevel",
+    "name": "Streetlevel",
+    "brand": "Verve",
+    "category": "Coffee Beans",
+    "subcategory": "Filter blend",
+    "price": 19,
+    "summary": "An everyday blend built for drip and easy on a light-roast palate.",
+    "specs": [
+      {
+        "label": "Roast",
+        "value": "Medium"
+      },
+      {
+        "label": "Size",
+        "value": "12 oz"
+      },
+      {
+        "label": "Origin",
+        "value": "Blend"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "onyx-coffee-lab-southern-weather",
+    "name": "Southern Weather",
+    "brand": "Onyx Coffee Lab",
+    "category": "Coffee Beans",
+    "subcategory": "Filter blend",
+    "price": 20,
+    "summary": "Arkansas roaster, consistently near the top of blind filter rankings.",
+    "specs": [
+      {
+        "label": "Roast",
+        "value": "Medium"
+      },
+      {
+        "label": "Size",
+        "value": "10 oz"
+      },
+      {
+        "label": "Origin",
+        "value": "Colombia, Ethiopia"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "toddy-cold-brew-system",
+    "name": "Cold Brew System",
+    "brand": "Toddy",
+    "category": "Cold Brew",
+    "subcategory": "Immersion",
+    "price": 45,
+    "summary": "The original home immersion brewer, still the concentrate standard.",
+    "specs": [
+      {
+        "label": "Method",
+        "value": "Immersion"
+      },
+      {
+        "label": "Yield",
+        "value": "~1.4 L concentrate"
+      },
+      {
+        "label": "Filter",
+        "value": "Felt pad"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "oxo-good-grips-cold-brew-coffee-maker",
+    "name": "Good Grips Cold Brew Coffee Maker",
+    "brand": "OXO",
+    "category": "Cold Brew",
+    "subcategory": "Immersion",
+    "price": 50,
+    "summary": "Rainmaker lid wets the grounds evenly, then drains with a switch.",
+    "specs": [
+      {
+        "label": "Method",
+        "value": "Immersion"
+      },
+      {
+        "label": "Yield",
+        "value": "~1.2 L concentrate"
+      },
+      {
+        "label": "Filter",
+        "value": "Paper and mesh"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "hario-mizudashi-1000-ml",
+    "name": "Mizudashi 1000 ml",
+    "brand": "Hario",
+    "category": "Cold Brew",
+    "subcategory": "Immersion",
+    "price": 25,
+    "summary": "A jug, a mesh basket, and nothing else to go wrong.",
+    "specs": [
+      {
+        "label": "Method",
+        "value": "Immersion"
+      },
+      {
+        "label": "Capacity",
+        "value": "1 L"
+      },
+      {
+        "label": "Filter",
+        "value": "Mesh"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "filtron-cold-water-brewer",
+    "name": "Cold Water Brewer",
+    "brand": "Filtron",
+    "category": "Cold Brew",
+    "subcategory": "Immersion",
+    "price": 60,
+    "summary": "Toddy-style brewer with a glass decanter instead of plastic.",
+    "specs": [
+      {
+        "label": "Method",
+        "value": "Immersion"
+      },
+      {
+        "label": "Yield",
+        "value": "~1.7 L concentrate"
+      },
+      {
+        "label": "Filter",
+        "value": "Felt pad"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "county-line-kitchen-mason-jar-cold-brew-64-oz",
+    "name": "Mason Jar Cold Brew 64 oz",
+    "brand": "County Line Kitchen",
+    "category": "Cold Brew",
+    "subcategory": "Immersion",
+    "price": 30,
+    "summary": "A mason jar with a good filter — the cheapest way in.",
+    "specs": [
+      {
+        "label": "Method",
+        "value": "Immersion"
+      },
+      {
+        "label": "Capacity",
+        "value": "1.9 L"
+      },
+      {
+        "label": "Filter",
+        "value": "Stainless mesh"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "takeya-patented-deluxe-cold-brew-1-qt",
+    "name": "Patented Deluxe Cold Brew 1 qt",
+    "brand": "Takeya",
+    "category": "Cold Brew",
+    "subcategory": "Immersion",
+    "price": 25,
+    "summary": "Airtight, fridge-door sized, and effectively unbreakable.",
+    "specs": [
+      {
+        "label": "Method",
+        "value": "Immersion"
+      },
+      {
+        "label": "Capacity",
+        "value": "0.95 L"
+      },
+      {
+        "label": "Filter",
+        "value": "Fine mesh"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "bruer-slow-drip-cold-brew",
+    "name": "Slow Drip Cold Brew",
+    "brand": "Bruer",
+    "category": "Cold Brew",
+    "subcategory": "Slow drip",
+    "price": 85,
+    "summary": "Drips cold water through a bed over hours — cleaner than immersion.",
+    "specs": [
+      {
+        "label": "Method",
+        "value": "Slow drip"
+      },
+      {
+        "label": "Capacity",
+        "value": "~600 ml"
+      },
+      {
+        "label": "Time",
+        "value": "2–4 hours"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "yama-glass-8-cup-cold-drip-tower",
+    "name": "8-Cup Cold Drip Tower",
+    "brand": "Yama Glass",
+    "category": "Cold Brew",
+    "subcategory": "Slow drip",
+    "price": 180,
+    "summary": "The glass tower, as much furniture as brewer.",
+    "specs": [
+      {
+        "label": "Method",
+        "value": "Slow drip"
+      },
+      {
+        "label": "Capacity",
+        "value": "1 L"
+      },
+      {
+        "label": "Time",
+        "value": "3–5 hours"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "hario-v60-ceramic-02",
+    "name": "V60 Ceramic 02",
+    "brand": "Hario",
+    "category": "Pour-Over & Drip",
+    "subcategory": "Pour-over cone",
+    "price": 25,
+    "summary": "The cone that defines the category: a spiral rib and one big hole.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Ceramic"
+      },
+      {
+        "label": "Size",
+        "value": "02, 1–4 cups"
+      },
+      {
+        "label": "Filter",
+        "value": "V60 paper"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "hario-v60-plastic-02",
+    "name": "V60 Plastic 02",
+    "brand": "Hario",
+    "category": "Pour-Over & Drip",
+    "subcategory": "Pour-over cone",
+    "price": 8,
+    "summary": "The same geometry in plastic, which holds heat better than glass.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Plastic"
+      },
+      {
+        "label": "Size",
+        "value": "02, 1–4 cups"
+      },
+      {
+        "label": "Filter",
+        "value": "V60 paper"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "chemex-classic-6-cup",
+    "name": "Classic 6-Cup",
+    "brand": "Chemex",
+    "category": "Pour-Over & Drip",
+    "subcategory": "Pour-over carafe",
+    "price": 45,
+    "summary": "Thick filters and a glass carafe; the cleanest cup in the category.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Borosilicate glass"
+      },
+      {
+        "label": "Capacity",
+        "value": "6 cups"
+      },
+      {
+        "label": "Filter",
+        "value": "Chemex bonded"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "kalita-wave-185-stainless",
+    "name": "Wave 185 Stainless",
+    "brand": "Kalita",
+    "category": "Pour-Over & Drip",
+    "subcategory": "Pour-over flat-bottom",
+    "price": 35,
+    "summary": "A flat bed and three small holes, which forgives an uneven pour.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Size",
+        "value": "185, 2–4 cups"
+      },
+      {
+        "label": "Filter",
+        "value": "Wave paper"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "origami-dripper-m",
+    "name": "Dripper M",
+    "brand": "Origami",
+    "category": "Pour-Over & Drip",
+    "subcategory": "Pour-over cone",
+    "price": 40,
+    "summary": "Twenty ribs and a wide cone; takes both V60 and Kalita papers.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Porcelain"
+      },
+      {
+        "label": "Size",
+        "value": "M"
+      },
+      {
+        "label": "Filter",
+        "value": "V60 or Wave"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "fellow-stagg-x-pour-over-dripper",
+    "name": "Stagg [X] Pour-Over Dripper",
+    "brand": "Fellow",
+    "category": "Pour-Over & Drip",
+    "subcategory": "Pour-over flat-bottom",
+    "price": 50,
+    "summary": "Flat bottom, steep walls, and a vacuum-sealed double wall.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Capacity",
+        "value": "1–2 cups"
+      },
+      {
+        "label": "Filter",
+        "value": "Stagg paper"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "aeropress-original",
+    "name": "Original",
+    "brand": "AeroPress",
+    "category": "Pour-Over & Drip",
+    "subcategory": "Immersion press",
+    "price": 40,
+    "summary": "Immersion and pressure in a plastic tube; almost impossible to ruin.",
+    "specs": [
+      {
+        "label": "Method",
+        "value": "Immersion press"
+      },
+      {
+        "label": "Capacity",
+        "value": "1–3 cups"
+      },
+      {
+        "label": "Filter",
+        "value": "Paper disc"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "aeropress-go",
+    "name": "Go",
+    "brand": "AeroPress",
+    "category": "Pour-Over & Drip",
+    "subcategory": "Immersion press",
+    "price": 50,
+    "summary": "The same brewer, packed inside its own mug.",
+    "specs": [
+      {
+        "label": "Method",
+        "value": "Immersion press"
+      },
+      {
+        "label": "Capacity",
+        "value": "1 cup"
+      },
+      {
+        "label": "Extra",
+        "value": "Travel mug and lid"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "melitta-pour-over-cone-2",
+    "name": "Pour-Over Cone #2",
+    "brand": "Melitta",
+    "category": "Pour-Over & Drip",
+    "subcategory": "Pour-over cone",
+    "price": 6,
+    "summary": "The wedge cone your grandparents used, and it still works.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Plastic"
+      },
+      {
+        "label": "Size",
+        "value": "#2"
+      },
+      {
+        "label": "Filter",
+        "value": "Melitta paper"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "technivorm-moccamaster-kbgv-select",
+    "name": "Moccamaster KBGV Select",
+    "brand": "Technivorm",
+    "category": "Pour-Over & Drip",
+    "subcategory": "Drip machine",
+    "price": 359,
+    "summary": "Hand-built Dutch drip machine that actually hits brewing temperature.",
+    "specs": [
+      {
+        "label": "Capacity",
+        "value": "1.25 L"
+      },
+      {
+        "label": "Brew time",
+        "value": "4–6 min"
+      },
+      {
+        "label": "Certification",
+        "value": "SCA"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "breville-precision-brewer",
+    "name": "Precision Brewer",
+    "brand": "Breville",
+    "category": "Pour-Over & Drip",
+    "subcategory": "Drip machine",
+    "price": 330,
+    "summary": "A drip machine with adjustable temperature, bloom and flow rate.",
+    "specs": [
+      {
+        "label": "Capacity",
+        "value": "1.8 L"
+      },
+      {
+        "label": "Modes",
+        "value": "Six, plus custom"
+      },
+      {
+        "label": "Certification",
+        "value": "SCA"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "oxo-brew-9-cup-coffee-maker",
+    "name": "Brew 9-Cup Coffee Maker",
+    "brand": "OXO",
+    "category": "Pour-Over & Drip",
+    "subcategory": "Drip machine",
+    "price": 200,
+    "summary": "Rainmaker shower head and a microprocessor-controlled brew cycle.",
+    "specs": [
+      {
+        "label": "Capacity",
+        "value": "1.2 L"
+      },
+      {
+        "label": "Brew time",
+        "value": "~6 min"
+      },
+      {
+        "label": "Certification",
+        "value": "SCA"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "bonavita-connoisseur-8-cup",
+    "name": "Connoisseur 8-Cup",
+    "brand": "Bonavita",
+    "category": "Pour-Over & Drip",
+    "subcategory": "Drip machine",
+    "price": 150,
+    "summary": "The cheapest machine on the SCA certified list, and unfussy with it.",
+    "specs": [
+      {
+        "label": "Capacity",
+        "value": "1.2 L"
+      },
+      {
+        "label": "Brew time",
+        "value": "~6 min"
+      },
+      {
+        "label": "Certification",
+        "value": "SCA"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "fellow-stagg-ekg-electric-kettle",
+    "name": "Stagg EKG Electric Kettle",
+    "brand": "Fellow",
+    "category": "Pour-Over & Drip",
+    "subcategory": "Kettle",
+    "price": 165,
+    "summary": "Variable temperature, a real gooseneck, and a hold function.",
+    "specs": [
+      {
+        "label": "Capacity",
+        "value": "0.9 L"
+      },
+      {
+        "label": "Control",
+        "value": "Variable to 1 °C"
+      },
+      {
+        "label": "Spout",
+        "value": "Gooseneck"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "hario-buono-kettle-1-2-l",
+    "name": "Buono Kettle 1.2 L",
+    "brand": "Hario",
+    "category": "Pour-Over & Drip",
+    "subcategory": "Kettle",
+    "price": 60,
+    "summary": "Stovetop gooseneck; the pour control without the electronics.",
+    "specs": [
+      {
+        "label": "Capacity",
+        "value": "1.2 L"
+      },
+      {
+        "label": "Heat",
+        "value": "Stovetop"
+      },
+      {
+        "label": "Spout",
+        "value": "Gooseneck"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "cosori-gooseneck-electric-kettle",
+    "name": "Gooseneck Electric Kettle",
+    "brand": "Cosori",
+    "category": "Pour-Over & Drip",
+    "subcategory": "Kettle",
+    "price": 70,
+    "summary": "Variable temperature gooseneck at half the price of a Stagg.",
+    "specs": [
+      {
+        "label": "Capacity",
+        "value": "0.8 L"
+      },
+      {
+        "label": "Control",
+        "value": "Five presets"
+      },
+      {
+        "label": "Spout",
+        "value": "Gooseneck"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "bodum-chambord-34-oz",
+    "name": "Chambord 34 oz",
+    "brand": "Bodum",
+    "category": "French Press",
+    "subcategory": "Glass press",
+    "price": 40,
+    "summary": "The chrome-and-glass press everyone pictures when you say French press.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Borosilicate and chrome"
+      },
+      {
+        "label": "Capacity",
+        "value": "1 L"
+      },
+      {
+        "label": "Filter",
+        "value": "Stainless mesh"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "bodum-brazil-34-oz",
+    "name": "Brazil 34 oz",
+    "brand": "Bodum",
+    "category": "French Press",
+    "subcategory": "Glass press",
+    "price": 22,
+    "summary": "The same brewer with a plastic frame, for a third of the money.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Borosilicate and plastic"
+      },
+      {
+        "label": "Capacity",
+        "value": "1 L"
+      },
+      {
+        "label": "Filter",
+        "value": "Stainless mesh"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "espro-p3-32-oz",
+    "name": "P3 32 oz",
+    "brand": "Espro",
+    "category": "French Press",
+    "subcategory": "Filtered press",
+    "price": 40,
+    "summary": "A double micro-filter that keeps the silt out of the cup.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Borosilicate glass"
+      },
+      {
+        "label": "Capacity",
+        "value": "0.95 L"
+      },
+      {
+        "label": "Filter",
+        "value": "Double micro-filter"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "espro-p7-32-oz",
+    "name": "P7 32 oz",
+    "brand": "Espro",
+    "category": "French Press",
+    "subcategory": "Insulated press",
+    "price": 110,
+    "summary": "Vacuum-insulated steel, so it stays hot without stewing.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Capacity",
+        "value": "0.95 L"
+      },
+      {
+        "label": "Filter",
+        "value": "Double micro-filter"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "frieling-double-wall-36-oz",
+    "name": "Double-Wall 36 oz",
+    "brand": "Frieling",
+    "category": "French Press",
+    "subcategory": "Insulated press",
+    "price": 110,
+    "summary": "Polished double-wall steel that holds temperature for an hour.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Capacity",
+        "value": "1 L"
+      },
+      {
+        "label": "Filter",
+        "value": "Two-stage mesh"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "fellow-clara-french-press",
+    "name": "Clara French Press",
+    "brand": "Fellow",
+    "category": "French Press",
+    "subcategory": "Insulated press",
+    "price": 145,
+    "summary": "Insulated, with a filter that lifts clear of the coffee when done.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Capacity",
+        "value": "1 L"
+      },
+      {
+        "label": "Filter",
+        "value": "Lift-out"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "stanley-classic-camp-press-48-oz",
+    "name": "Classic Camp Press 48 oz",
+    "brand": "Stanley",
+    "category": "French Press",
+    "subcategory": "Insulated press",
+    "price": 50,
+    "summary": "Brews and then travels; the press doubles as the flask.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Capacity",
+        "value": "1.4 L"
+      },
+      {
+        "label": "Filter",
+        "value": "Stainless mesh"
+      }
+    ],
+    "asin": null
+  },
+  {
+    "id": "sterlingpro-double-wall-34-oz",
+    "name": "Double Wall 34 oz",
+    "brand": "SterlingPro",
+    "category": "French Press",
+    "subcategory": "Insulated press",
+    "price": 37,
+    "summary": "Two screens instead of one, which is most of the grit problem solved.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Capacity",
+        "value": "1 L"
+      },
+      {
+        "label": "Filter",
+        "value": "Double screen"
+      }
+    ],
+    "asin": null
+  }
+]

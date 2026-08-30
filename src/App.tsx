@@ -21,6 +21,9 @@ const LineupPage = lazy(() =>
 const FinderPage = lazy(() =>
   import('@/pages/FinderPage').then((m) => ({ default: m.FinderPage })),
 )
+const CatalogPage = lazy(() =>
+  import('@/pages/CatalogPage').then((m) => ({ default: m.CatalogPage })),
+)
 
 function RouteFallback() {
   return (
@@ -43,6 +46,14 @@ export default function App() {
               element={
                 <Suspense fallback={<RouteFallback />}>
                   <MachinePage />
+                </Suspense>
+              }
+            />
+            <Route
+              path="catalog"
+              element={
+                <Suspense fallback={<RouteFallback />}>
+                  <CatalogPage />
                 </Suspense>
               }
             />

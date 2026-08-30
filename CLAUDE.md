@@ -20,6 +20,34 @@ be written `import type`.
 `@/*` is aliased to `src/*` in both `tsconfig.app.json` and `vite.config.ts`; changing it means
 changing both.
 
+## Two catalogues, kept apart on purpose
+
+The app has two product datasets with different shapes and different jobs. They
+must not merge.
+
+| | Flagship | Catalogue |
+| --- | --- | --- |
+| Lives in | `src/data/` | `src/catalog/` |
+| Size | 8 machines | 70 products, growing |
+| Depth | Full teardown copy per component, 3D model, hotspot anchors | Name, brand, price, 3–4 specs, ASIN |
+| Renders as | `/machines/:id` with the 3D viewer | A card in `/catalog` |
+| Adding one | New JSON entry **and** a model file **and** a registry entry | One JSON entry, nothing else |
+
+`src/catalog/index.ts` is the only place the two meet: `flagshipAsCatalog()`
+projects the eight machines into catalogue-card shape so they appear in the grid
+with a "3D teardown" badge linking to their model page. Nothing flows the other
+way, and no catalogue field ever reaches the teardown pages.
+
+**The rule:** never widen `CatalogProduct` to carry teardown data, and never
+import from `src/catalog/` inside `src/data/` or `src/models/`. Breadth and depth
+have different failure modes; keeping them separate is what stops a 200-product
+catalogue from putting the 3D machines at risk.
+
+### Adding a catalogue product
+
+Append to `src/catalog/products.json`. That is the entire process — no component
+changes, no route changes. `asin` may be `null`; everything downstream handles it.
+
 ## The one architectural idea
 
 Three concerns are kept deliberately separate, and most mistakes in this codebase come from
@@ -168,6 +196,33 @@ Two things to preserve if you extend it:
 Exercise it after changes — `npx tsx` a script that calls `findMachines` with a few realistic
 profiles and read the answers. Wrong weights produce plausible-looking nonsense that a type checker
 will never catch.
+
+## Product images and the Amazon seam
+
+`ProductImage` resolves a picture in strict order: Amazon's own image → the
+generated 3D-derived portrait (flagship only) → a category line glyph. The
+fallbacks are the normal path today, not an error path, so the component is
+built to render identically whether or not live data ever arrives.
+
+`src/catalog/amazon.ts` is the seam. It exposes a `ProductDataProvider` and ships
+two implementations: `static` (returns nothing) and `endpoint` (fetches a
+backend). Setting `VITE_PRODUCT_API` switches the whole catalogue to live data
+and flips `IS_LIVE_PRODUCT_DATA`, which also updates the disclosure copy from
+"indicative street prices" to "live from Amazon". Nothing else changes.
+
+Requests are **batched across a microtask and capped at ten ASINs** (the GetItems
+limit) and cached for 24 hours in memory and session storage — 24 hours because
+that is Amazon's maximum permitted age for a displayed price. Do not raise it,
+and do not remove the batching: without it a 78-product page fires 78 requests.
+
+`server/product-api/` holds the function that would hold the credentials. Read
+its README before touching it — in particular, the PA-API signing has never been
+executed, because credentials are only issued to Associates who have already made
+qualifying sales.
+
+**Never invent an ASIN.** A wrong one does not 404; it silently sends a reader to
+a different product. `asin: null` is the correct value until one is verified, and
+`amazonLinkFor` falls back to a model search that resolves properly.
 
 ## Retailer links
 
