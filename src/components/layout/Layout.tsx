@@ -3,6 +3,7 @@ import { Outlet, useLocation } from 'react-router-dom'
 import { CompareTray } from '@/components/compare/CompareTray'
 import { Footer } from './Footer'
 import { Header } from './Header'
+import { PageRails } from './PageRails'
 
 function ScrollToTop() {
   const { pathname, search } = useLocation()
@@ -17,6 +18,7 @@ export function Layout() {
     <div className="flex min-h-dvh flex-col">
       <ScrollToTop />
       <Header />
+      <PageRails />
       <main className="flex-1">
         <Outlet />
       </main>
