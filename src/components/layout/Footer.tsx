@@ -54,10 +54,10 @@ export function Footer() {
         </div>
 
         <div className="hairline-dark mt-16 flex flex-col gap-3 pt-6 sm:flex-row sm:items-center sm:justify-between">
-          <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-mist/50">
+          <p className="label text-mist/50">
             Espresso Explorer — an interactive buyer's guide
           </p>
-          <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-mist/50">
+          <p className="label text-mist/50">
             {machines.length} machines · {parts.length} components
           </p>
         </div>

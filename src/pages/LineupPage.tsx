@@ -26,7 +26,7 @@ export function LineupPage() {
       <Container className="pt-8 md:pt-12">
         <div className="border-b border-ink/12 pb-8">
           <p className="eyebrow">The whole field</p>
-          <h1 className="mt-6 max-w-[18ch] text-[clamp(2.4rem,5.6vw,4.4rem)] leading-[0.96] tracking-[-0.03em]">
+          <h1 className="mt-6 max-w-[18ch] text-[clamp(2.4rem,5.6vw,4.4rem)] leading-[0.96] tracking-display-lg">
             All {machines.length}, on one counter.
           </h1>
           <p className="mt-6 max-w-[62ch] text-[1.02rem] leading-[1.72] text-ash">
@@ -44,7 +44,7 @@ export function LineupPage() {
           <Suspense fallback={null}>
             <LineupStage entries={entries} />
           </Suspense>
-          <p className="pointer-events-none absolute bottom-5 left-6 font-mono text-[10px] uppercase tracking-[0.16em] text-crema/40">
+          <p className="pointer-events-none absolute bottom-5 left-6 label text-crema/40">
             Two ranks · true relative scale · drag to rotate
           </p>
         </div>

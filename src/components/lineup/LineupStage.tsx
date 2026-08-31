@@ -164,7 +164,7 @@ export default function LineupStage({ entries }: { entries: Entry[] }) {
                     <p className="font-display text-[0.8rem] leading-tight text-crema">
                       {machine.name}
                     </p>
-                    <p className="mt-0.5 font-mono text-[9px] text-copper">
+                    <p className="mt-0.5 numeric text-[10px] text-copper">
                       {formatPrice(machine.price)}
                     </p>
                   </div>

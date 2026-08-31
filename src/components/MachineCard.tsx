@@ -36,7 +36,7 @@ export function MachineCard({ machine, index, wide = false }: MachineCardProps) 
           wide ? 'lg:w-[46%] lg:px-10 lg:py-12' : '',
         )}
       >
-        <span className="absolute left-5 top-5 font-mono text-[10px] tracking-[0.16em] text-mist">
+        <span className="absolute left-5 top-5 numeric text-[10px] text-mist">
           {String(index + 1).padStart(2, '0')}
         </span>
         <MachinePortrait
@@ -55,7 +55,7 @@ export function MachineCard({ machine, index, wide = false }: MachineCardProps) 
         <div>
           <div className="flex items-baseline justify-between gap-4">
             <p className="eyebrow">{machine.brand}</p>
-            <p className="font-mono text-[0.78rem] tracking-[0.06em] text-ink">
+            <p className="numeric text-[0.8rem] text-ink">
               {formatPrice(machine.price)}
             </p>
           </div>
@@ -76,10 +76,10 @@ export function MachineCard({ machine, index, wide = false }: MachineCardProps) 
 
         <div className="flex items-end justify-between gap-4">
           <div className="space-y-2">
-            <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-stone">
+            <p className="label text-stone">
               {machine.category}
             </p>
-            <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-mist">
+            <p className="label text-mist">
               {formatPortafilter(machine.specs.portafilterMm)} · {machine.specs.grinder ? 'grinder' : 'no grinder'} ·{' '}
               {machine.specs.pid ? 'PID' : 'no PID'}
             </p>

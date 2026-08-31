@@ -68,7 +68,7 @@ export function LineupDashboard({ machines }: { machines: Machine[] }) {
             )}
           >
             <div className="relative grid place-items-center product-well px-6 pt-8 pb-4">
-              <span className="absolute left-4 top-4 font-mono text-[10px] tracking-[0.16em] text-mist">
+              <span className="absolute left-4 top-4 numeric text-[10px] text-mist">
                 {String(index + 1).padStart(2, '0')}
               </span>
               <MachinePortrait machine={machine} className="h-[150px]" />
@@ -91,10 +91,10 @@ export function LineupDashboard({ machines }: { machines: Machine[] }) {
                 {bars.map((bar) => (
                   <div key={bar.label}>
                     <div className="flex items-baseline justify-between gap-3">
-                      <dt className="font-mono text-[9px] uppercase tracking-[0.14em] text-stone">
+                      <dt className="label text-stone">
                         {bar.label}
                       </dt>
-                      <dd className="font-mono text-[0.72rem] text-ink">{bar.value}</dd>
+                      <dd className="numeric text-[0.72rem] text-ink">{bar.value}</dd>
                     </div>
                     <div className="mt-1.5 h-[3px] w-full bg-ink/8">
                       <div
@@ -107,7 +107,7 @@ export function LineupDashboard({ machines }: { machines: Machine[] }) {
               </dl>
 
               <div className="mt-auto flex items-end justify-between gap-3">
-                <p className="font-mono text-[9px] uppercase leading-[1.6] tracking-[0.12em] text-mist">
+                <p className="numeric text-[10px] uppercase leading-[1.6] tracking-label text-mist">
                   {formatPortafilter(machine.specs.portafilterMm)}
                   <br />
                   {machine.specs.pid ? 'PID' : 'No PID'} ·{' '}

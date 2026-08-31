@@ -238,7 +238,7 @@ export function MachineViewer({
 
       <p
         className={cx(
-          'pointer-events-none absolute bottom-5 left-6 font-mono text-[10px] uppercase tracking-[0.16em] text-crema/45',
+          'pointer-events-none absolute bottom-5 left-6 label text-crema/45',
           'transition-opacity duration-700',
           hasOrbited || activePart ? 'opacity-0' : 'opacity-100',
         )}
@@ -256,7 +256,7 @@ export function MachineViewer({
         }}
         className={cx(
           'absolute bottom-5 right-6 rounded-full border border-crema/20 px-3.5 py-1.5',
-          'font-mono text-[10px] uppercase tracking-[0.16em] text-crema/70 backdrop-blur-sm',
+          'label text-crema/70 backdrop-blur-sm',
           'transition-all duration-500 hover:border-copper hover:text-copper',
           hasOrbited || activePart ? 'opacity-100' : 'pointer-events-none opacity-0',
         )}

@@ -51,6 +51,13 @@
   --well-to: #0f0b0a;
   --portrait-shadow: #000000;
 
+  /* Tracking. Uppercase mono needs air; display needs the opposite; numerals
+     need a hair to keep digits from touching. Three values, not thirteen. */
+  --tracking-label: 0.14em;
+  --tracking-data: 0.02em;
+  --tracking-display: -0.015em;
+  --tracking-display-lg: -0.03em;
+
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
 }
@@ -149,7 +156,7 @@
   h3 {
     font-family: var(--font-display);
     font-variation-settings: "SOFT" 0, "WONK" 1;
-    letter-spacing: -0.015em;
+    letter-spacing: var(--tracking-display);
     text-wrap: balance;
   }
 
@@ -165,15 +172,61 @@
 }
 
 @layer components {
-  /* Small mono label that sits above headings and beside numbers. Used often
-     enough to be worth a class. */
+  /* -------------------------------------------------------------------------
+     Type system.
+
+     Three families, three jobs, and no overlap between them:
+
+       display (Fraunces)  headings only
+       sans    (Inter)     all running prose and interface copy
+       mono    (JetBrains) data the machine produced — specs, prices,
+                           dimensions, counters — plus the editorial eyebrow
+
+     Every uppercase mono label goes through `.eyebrow`, `.label` or
+     `.rail-label`. They exist because the same label used to be written
+     inline in nine different ways (9/10/11px x 0.1/0.12/0.14/0.16em), which
+     is the single reason the site read as having no type system at all. If
+     you find yourself typing `font-mono ... uppercase tracking-[...]`, you
+     want one of these classes instead.
+  ------------------------------------------------------------------------- */
+
+  /* Editorial label above a heading. The larger of the two label sizes. */
   .eyebrow {
     font-family: var(--font-mono);
     font-size: 0.6875rem;
     font-weight: 500;
-    letter-spacing: 0.16em;
+    letter-spacing: var(--tracking-label);
     text-transform: uppercase;
     color: var(--color-stone);
+  }
+
+  /* Interface label: buttons, pills, filters, chips, overlay captions.
+     Sets no colour — the control it sits in owns that. */
+  .label {
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    font-weight: 500;
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+  }
+
+  /* The gutter rails only. Set far wider because it is read vertically, one
+     letter at a time, where normal tracking closes up into a solid bar. */
+  .rail-label {
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+  }
+
+  /* Numerals and measured values. Carries no size: a price in a hero and a
+     figure in a spec row are the same voice at different volumes. Tabular
+     figures so columns of specs line up on the decimal. */
+  .numeric {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: var(--tracking-data);
   }
 
   /* The lit floor a product sits on, on cards and in the comparison stage. */

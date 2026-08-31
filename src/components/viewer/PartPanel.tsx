@@ -63,13 +63,13 @@ export function PartPanel({
         {/* The part as actually fitted to this machine */}
         <section className="border-l-2 border-copper pl-5">
           <p className="eyebrow text-copper-deep">Fitted to the {machine.name}</p>
-          <p className="mt-3 font-display text-[1.14rem] leading-[1.34] tracking-[-0.01em] text-ink">
+          <p className="mt-3 font-display text-[1.14rem] leading-[1.34] tracking-display text-ink">
             {part.component}
           </p>
         </section>
 
         {internal && (
-          <p className="mt-5 inline-flex rounded-full border border-ink/12 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.12em] text-stone">
+          <p className="mt-5 inline-flex rounded-full border border-ink/12 px-3 py-1.5 label text-stone">
             Inside the case — the shell is showing you through
           </p>
         )}
@@ -83,7 +83,7 @@ export function PartPanel({
                 className="grid grid-cols-[auto_1fr] items-baseline gap-x-5 border-b border-ink/8 py-3"
               >
                 <dt className="text-[0.86rem] text-stone">{figure.label}</dt>
-                <dd className="text-right font-mono text-[0.78rem] leading-[1.5] tracking-[0.01em] text-ink">
+                <dd className="text-right numeric text-[0.8rem] leading-[1.5] text-ink">
                   {figure.value}
                 </dd>
               </div>
@@ -116,7 +116,7 @@ export function PartPanel({
         <button
           type="button"
           onClick={() => onStep(-1)}
-          className="group flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.14em] text-stone transition-colors hover:text-copper"
+          className="group flex items-center gap-2 label text-stone transition-colors hover:text-copper"
         >
           <ArrowGlyph className="rotate-180 group-hover:-translate-x-1" />
           Previous
@@ -124,7 +124,7 @@ export function PartPanel({
         <button
           type="button"
           onClick={() => onStep(1)}
-          className="group flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.14em] text-stone transition-colors hover:text-copper"
+          className="group flex items-center gap-2 label text-stone transition-colors hover:text-copper"
         >
           Next component
           <ArrowGlyph className="group-hover:translate-x-1" />

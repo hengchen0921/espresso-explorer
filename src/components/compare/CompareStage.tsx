@@ -131,13 +131,13 @@ export default function CompareStage({ entries }: CompareStageProps) {
                 style={{ pointerEvents: 'none' }}
               >
                 <div className="w-max text-center">
-                  <p className="font-mono text-[9px] uppercase tracking-[0.16em] text-mist/60">
+                  <p className="label text-mist/60">
                     {machine.brand}
                   </p>
                   <p className="mt-1 font-display text-[0.95rem] leading-tight text-crema">
                     {machine.name}
                   </p>
-                  <p className="mt-1 font-mono text-[10px] text-copper">{formatPrice(machine.price)}</p>
+                  <p className="mt-1 numeric text-[10px] text-copper">{formatPrice(machine.price)}</p>
                 </div>
               </Html>
             </group>

@@ -47,7 +47,7 @@ export function FinderPage() {
       <Container className="pt-8 md:pt-12">
         <div className="border-b border-ink/12 pb-8">
           <p className="eyebrow">Find yours</p>
-          <h1 className="mt-6 max-w-[20ch] text-[clamp(2.4rem,5.6vw,4.4rem)] leading-[0.96] tracking-[-0.03em]">
+          <h1 className="mt-6 max-w-[20ch] text-[clamp(2.4rem,5.6vw,4.4rem)] leading-[0.96] tracking-display-lg">
             Six questions, then an honest answer.
           </h1>
           <p className="mt-6 max-w-[62ch] text-[1.02rem] leading-[1.72] text-ash">
@@ -68,7 +68,7 @@ export function FinderPage() {
               <li key={question.id} className="hairline pt-6">
                 <div className="grid gap-6 lg:grid-cols-12">
                   <div className="lg:col-span-5">
-                    <span className="font-mono text-[10px] tracking-[0.16em] text-copper">
+                    <span className="numeric text-[10px] text-copper">
                       {String(index + 1).padStart(2, '0')}
                     </span>
                     <h2 className="mt-4 text-[clamp(1.3rem,2.2vw,1.75rem)] leading-[1.12]">
@@ -103,7 +103,7 @@ export function FinderPage() {
                           >
                             {option.label}
                           </span>
-                          <span className="mt-1 block font-mono text-[10px] uppercase tracking-[0.1em] text-mist">
+                          <span className="mt-1 block label text-mist">
                             {option.detail}
                           </span>
                         </button>
@@ -178,14 +178,14 @@ function FinderResults({
               <div>
                 <div className="flex items-baseline justify-between gap-4">
                   <p className="eyebrow">{best.machine.brand}</p>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-copper">
+                  <p className="label text-copper">
                     {Math.round(best.score * 100)}% match
                   </p>
                 </div>
                 <h3 className="mt-2.5 text-[clamp(1.8rem,3.4vw,2.6rem)] leading-[1.02]">
                   {best.machine.name}
                 </h3>
-                <p className="mt-3 font-mono text-[0.85rem] text-stone">
+                <p className="mt-3 numeric text-[0.8rem] text-stone">
                   {formatPrice(best.machine.price)}
                   {best.totalCost !== best.machine.price && (
                     <> · {formatPrice(best.totalCost)} all in with a grinder</>
@@ -227,18 +227,18 @@ function FinderResults({
                   <div>
                     <p className="eyebrow">{match.machine.brand}</p>
                     <h3 className="mt-1.5 text-[1.3rem] leading-[1.1]">{match.machine.name}</h3>
-                    <p className="mt-2 font-mono text-[0.78rem] text-stone">
+                    <p className="mt-2 numeric text-[0.8rem] text-stone">
                       {formatPrice(match.totalCost)} all in
                     </p>
                   </div>
-                  <p className="shrink-0 font-mono text-[10px] uppercase tracking-[0.14em] text-copper">
+                  <p className="shrink-0 label text-copper">
                     {Math.round(match.score * 100)}%
                   </p>
                 </div>
                 <MatchReasons match={match} compact />
                 <Link
                   to={`/machines/${match.machine.id}`}
-                  className="link-underline mt-auto self-start font-mono text-[10px] uppercase tracking-[0.14em] text-stone hover:text-copper"
+                  className="link-underline mt-auto self-start label text-stone hover:text-copper"
                 >
                   Open in 3D
                 </Link>
@@ -277,7 +277,7 @@ function FinderResults({
         <p className="hairline max-w-[68ch] pt-6 text-[0.82rem] leading-[1.7] text-mist">
           This is a scoring model, not a language model — the site is static, and an LLM would mean
           shipping an API key to your browser. Every point above comes from a rule you can read in
-          <code className="mx-1 font-mono text-[0.78rem] text-stone">src/data/finder.ts</code>, which
+          <code className="mx-1 numeric text-[0.8rem] text-stone">src/data/finder.ts</code>, which
           is also why it can tell you what it weighed rather than just what it decided.
         </p>
       </Container>

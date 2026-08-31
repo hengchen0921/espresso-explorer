@@ -123,7 +123,7 @@ function UnitsToggle({ compact }: { compact?: boolean }) {
           onClick={() => setUnits(system)}
           aria-pressed={units === system}
           className={cx(
-            'rounded-full font-mono uppercase tracking-[0.14em] transition-colors duration-300',
+            'rounded-full label transition-colors duration-300',
             compact ? 'px-3.5 py-1.5 text-[11px]' : 'px-2.5 py-1 text-[10px]',
             units === system ? 'bg-ink text-inverse' : 'text-stone hover:text-copper',
           )}
@@ -181,7 +181,7 @@ export function Header() {
       <div className="mx-auto flex h-16 w-full max-w-[1680px] items-center justify-between gap-6 px-5 md:h-[74px] md:px-8 lg:px-12">
         <Link to="/" className="group flex items-center gap-3" aria-label="Espresso Explorer, home">
           <Logo className="h-5 w-5 text-copper transition-transform duration-500 group-hover:rotate-[-14deg]" />
-          <span className="font-display text-[1.02rem] font-medium tracking-[-0.02em] text-ink">
+          <span className="font-display text-[1.02rem] font-medium tracking-display text-ink">
             Espresso Explorer
           </span>
         </Link>
@@ -201,7 +201,7 @@ export function Header() {
               >
                 {item.label}
                 {item.to === '/compare' && ids.length > 0 && (
-                  <span className="ml-1.5 inline-block rounded-full bg-copper px-1.5 py-px font-mono text-[9px] text-linen">
+                  <span className="ml-1.5 inline-block rounded-full bg-copper px-1.5 py-px numeric text-[10px] text-linen">
                     {ids.length}
                   </span>
                 )}
@@ -218,7 +218,7 @@ export function Header() {
           {ids.length > 0 && (
             <Link
               to="/compare"
-              className="rounded-full bg-copper px-2.5 py-1 font-mono text-[10px] text-linen"
+              className="rounded-full bg-copper px-2.5 py-1 numeric text-[10px] text-linen"
             >
               {ids.length}
               <span className="sr-only"> machines in your comparison</span>
@@ -256,7 +256,7 @@ export function Header() {
                   )}
                 >
                   <span>
-                    <span className="font-display text-[1.45rem] tracking-[-0.02em]">
+                    <span className="font-display text-[1.45rem] tracking-display">
                       {item.label}
                     </span>
                     <span className="mt-1 block text-[0.85rem] leading-snug text-ash">
@@ -264,7 +264,7 @@ export function Header() {
                     </span>
                   </span>
                   {item.to === '/compare' && ids.length > 0 && (
-                    <span className="shrink-0 rounded-full bg-copper px-2 py-0.5 font-mono text-[10px] text-linen">
+                    <span className="shrink-0 rounded-full bg-copper px-2 py-0.5 numeric text-[10px] text-linen">
                       {ids.length}
                     </span>
                   )}

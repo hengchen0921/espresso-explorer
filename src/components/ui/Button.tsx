@@ -6,7 +6,7 @@ type Variant = 'solid' | 'outline' | 'ghost' | 'inverse'
 type Size = 'sm' | 'md'
 
 const BASE =
-  'inline-flex items-center justify-center gap-2 rounded-full font-mono uppercase tracking-[0.14em] ' +
+  'inline-flex items-center justify-center gap-2 rounded-full label ' +
   'transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] disabled:opacity-40 disabled:pointer-events-none'
 
 const VARIANTS: Record<Variant, string> = {

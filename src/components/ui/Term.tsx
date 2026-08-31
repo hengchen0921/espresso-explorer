@@ -51,7 +51,7 @@ export function Term({ entry, children }: { entry: GlossaryEntry; children: Reac
             'rounded-lg border border-ink/12 bg-surface p-3.5 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.55)]',
           )}
         >
-          <span className="block font-mono text-[10px] uppercase tracking-[0.16em] text-copper">
+          <span className="block label text-copper">
             {entry.term}
           </span>
           <span className="mt-2 block text-[0.83rem] leading-[1.6] text-ash">

@@ -73,7 +73,7 @@ export function HomePage() {
           <div className="flex flex-col justify-center px-5 pt-14 pb-16 md:px-8 lg:py-24 lg:pr-14 lg:pl-[clamp(3rem,6vw,7rem)] xl:pl-[clamp(4.5rem,7vw,9.5rem)]">
             <p className="eyebrow animate-fade">Interactive teardown · 2026 buyer&rsquo;s guide</p>
 
-            <h1 className="mt-7 text-[clamp(2.9rem,5.6vw,5.9rem)] leading-[0.92] tracking-[-0.035em] animate-rise">
+            <h1 className="mt-7 text-[clamp(2.9rem,5.6vw,5.9rem)] leading-[0.92] tracking-display-lg animate-rise">
               Every espresso machine
               <span className="block text-copper">looks the same</span>
               until you take it apart.
@@ -112,7 +112,7 @@ export function HomePage() {
               ].map(([label, value]) => (
                 <div key={label}>
                   <dt className="eyebrow">{label}</dt>
-                  <dd className="mt-2 font-display text-[1.35rem] tracking-[-0.01em] text-linen">
+                  <dd className="mt-2 font-display text-[1.35rem] tracking-display text-linen">
                     {value}
                   </dd>
                 </div>
@@ -128,14 +128,14 @@ export function HomePage() {
 
             <div className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between p-6 lg:p-8">
               <div>
-                <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-mist/60">
+                <p className="label text-mist/60">
                   Shown
                 </p>
                 <p className="mt-1.5 font-display text-[1.1rem] text-crema">
                   Breville Barista Express
                 </p>
               </div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-mist/50">
+              <p className="label text-mist/50">
                 Drag to rotate
               </p>
             </div>
@@ -173,7 +173,7 @@ export function HomePage() {
                   onClick={() => setCategory(option)}
                   aria-pressed={category === option}
                   className={cx(
-                    'rounded-full border px-3.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.14em] transition-all duration-300',
+                    'rounded-full border px-3.5 py-1.5 label transition-all duration-300',
                     category === option
                       ? 'border-ink bg-stage text-linen'
                       : 'border-ink/15 text-stone hover:border-copper hover:text-copper',
@@ -193,7 +193,7 @@ export function HomePage() {
                   onClick={() => setSort(option.id)}
                   aria-pressed={sort === option.id}
                   className={cx(
-                    'rounded-full px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.14em] transition-colors duration-300',
+                    'rounded-full px-3 py-1.5 label transition-colors duration-300',
                     sort === option.id ? 'text-ink underline decoration-copper underline-offset-4' : 'text-stone hover:text-copper',
                   )}
                 >
@@ -235,7 +235,7 @@ export function HomePage() {
           <ol className="mt-16 grid gap-12 md:grid-cols-3 md:gap-8">
             {DECIDERS.map((item, i) => (
               <li key={item.title} className="hairline-dark pt-6">
-                <span className="font-mono text-[10px] tracking-[0.16em] text-copper">
+                <span className="numeric text-[10px] text-copper">
                   {String(i + 1).padStart(2, '0')}
                 </span>
                 <h3 className="mt-5 text-[1.32rem] leading-[1.18] text-linen">{item.title}</h3>

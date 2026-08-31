@@ -44,7 +44,7 @@ export function PartIndex({ parts, hoveredPart, onSelect, onHover, className }: 
             >
               <span
                 className={cx(
-                  'mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full font-mono text-[10px] transition-colors duration-300',
+                  'mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full numeric text-[10px] transition-colors duration-300',
                   hoveredPart === part.id
                     ? 'bg-copper text-linen'
                     : 'bg-ink/10 text-stone group-hover:bg-copper group-hover:text-linen',
@@ -54,12 +54,12 @@ export function PartIndex({ parts, hoveredPart, onSelect, onHover, className }: 
               </span>
               <span className="min-w-0 flex-1">
                 <span className="flex items-baseline justify-between gap-3">
-                  <span className="font-display text-[1.02rem] tracking-[-0.01em] text-ink">
+                  <span className="font-display text-[1.02rem] tracking-display text-ink">
                     {part.name}
                   </span>
                   <span className="eyebrow shrink-0 text-mist">{part.system}</span>
                 </span>
-                <span className="mt-1.5 block truncate font-mono text-[10px] uppercase tracking-[0.1em] text-stone">
+                <span className="mt-1.5 block truncate label text-stone">
                   {part.spec}
                 </span>
               </span>

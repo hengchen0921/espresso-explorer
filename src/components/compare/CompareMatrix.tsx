@@ -66,7 +66,7 @@ export function CompareMatrix({ machines }: { machines: Machine[] }) {
                         <p
                           key={machine.id}
                           className={cx(
-                            'flex items-baseline gap-2 font-mono text-[0.8rem] leading-[1.5]',
+                            'flex items-baseline gap-2 numeric text-[0.8rem] leading-[1.5]',
                             isWinner ? 'text-copper-deep' : 'text-ink',
                           )}
                         >

@@ -67,7 +67,7 @@ export function ComparePage() {
       <Container className="pt-8 md:pt-12">
         <div className="border-b border-ink/12 pb-8">
           <p className="eyebrow">Side by side</p>
-          <h1 className="mt-6 max-w-[16ch] text-[clamp(2.4rem,5.6vw,4.4rem)] leading-[0.96] tracking-[-0.03em]">
+          <h1 className="mt-6 max-w-[16ch] text-[clamp(2.4rem,5.6vw,4.4rem)] leading-[0.96] tracking-display-lg">
             Two or three, at true scale.
           </h1>
           <p className="mt-6 max-w-[58ch] text-[1.02rem] leading-[1.72] text-ash">
@@ -92,7 +92,7 @@ export function ComparePage() {
                 onClick={() => toggle(machine.id)}
                 aria-pressed={active}
                 className={cx(
-                  'rounded-full border px-3.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.14em] transition-all duration-300',
+                  'rounded-full border px-3.5 py-1.5 label transition-all duration-300',
                   active
                     ? 'border-copper bg-copper text-linen'
                     : 'border-ink/15 text-stone hover:border-copper hover:text-copper',
@@ -106,7 +106,7 @@ export function ComparePage() {
             <button
               type="button"
               onClick={() => setSearchParams({})}
-              className="ml-1 px-2 font-mono text-[10px] uppercase tracking-[0.14em] text-mist transition-colors hover:text-copper"
+              className="ml-1 px-2 label text-mist transition-colors hover:text-copper"
             >
               Clear
             </button>
@@ -135,7 +135,7 @@ export function ComparePage() {
             <Suspense fallback={null}>
               <CompareStage entries={entries} />
             </Suspense>
-            <p className="pointer-events-none absolute bottom-5 left-6 font-mono text-[10px] uppercase tracking-[0.16em] text-crema/40">
+            <p className="pointer-events-none absolute bottom-5 left-6 label text-crema/40">
               One camera · true relative scale · drag to rotate
             </p>
           </div>
@@ -192,7 +192,7 @@ export function ComparePage() {
                   <div>
                     <p className="eyebrow">{machine.brand}</p>
                     <h3 className="mt-2 text-[1.35rem] leading-[1.1]">{machine.name}</h3>
-                    <p className="mt-2 font-mono text-[0.82rem] text-copper">
+                    <p className="mt-2 numeric text-[0.8rem] text-copper">
                       {formatPrice(machine.price)}
                     </p>
                   </div>

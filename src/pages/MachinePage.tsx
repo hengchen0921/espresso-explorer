@@ -114,7 +114,7 @@ function MachineDetail({
             <p className="eyebrow mt-7">
               {machine.brand} · {machine.modelCode} · in production since {machine.releaseYear}
             </p>
-            <h1 className="mt-3 text-[clamp(2.4rem,5.6vw,4.4rem)] leading-[0.96] tracking-[-0.03em]">
+            <h1 className="mt-3 text-[clamp(2.4rem,5.6vw,4.4rem)] leading-[0.96] tracking-display-lg">
               {machine.name}
             </h1>
             <p className="mt-4 max-w-[46ch] font-display text-[clamp(1.05rem,1.7vw,1.35rem)] italic leading-[1.4] text-ash">
@@ -123,7 +123,7 @@ function MachineDetail({
           </div>
 
           <div className="flex shrink-0 flex-col items-start gap-4 md:items-end">
-            <p className="font-mono text-[1.55rem] tracking-[-0.01em] text-ink">
+            <p className="numeric text-[1.55rem] text-ink">
               {formatPrice(machine.price)}
             </p>
             <div className="flex flex-wrap items-center gap-2">
@@ -139,7 +139,7 @@ function MachineDetail({
               onClick={() => toggle(machine.id)}
               aria-pressed={compared}
               className={cx(
-                'rounded-full border px-4 py-2 font-mono text-[10px] uppercase tracking-[0.14em] transition-all duration-300',
+                'rounded-full border px-4 py-2 label transition-all duration-300',
                 compared
                   ? 'border-copper bg-copper text-linen'
                   : 'border-ink/20 text-ink hover:border-copper hover:text-copper',
@@ -228,7 +228,7 @@ function MachineDetail({
               ].map(([label, value]) => (
                 <div key={label} className="bg-surface px-5 py-6">
                   <p className="eyebrow">{label}</p>
-                  <p className="mt-2.5 font-display text-[1.5rem] tracking-[-0.01em]">{value}</p>
+                  <p className="mt-2.5 font-display text-[1.5rem] tracking-display">{value}</p>
                 </div>
               ))}
             </div>
@@ -297,7 +297,7 @@ function MachineDetail({
                 </p>
               </div>
               <div className="flex items-end justify-between gap-3">
-                <span className="font-mono text-[0.8rem] text-stone">{formatPrice(other.price)}</span>
+                <span className="numeric text-[0.8rem] text-stone">{formatPrice(other.price)}</span>
                 <ArrowGlyph className="text-stone group-hover:translate-x-1 group-hover:text-copper" />
               </div>
             </Link>

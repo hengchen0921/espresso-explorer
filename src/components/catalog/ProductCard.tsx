@@ -32,7 +32,7 @@ export function ProductCard({ product }: { product: CatalogProduct }) {
       <ProductImage product={product} className="h-[190px]" />
 
       {product.flagshipId && (
-        <span className="absolute left-4 top-4 rounded-full bg-stage px-2.5 py-1 font-mono text-[9px] uppercase tracking-[0.14em] text-linen">
+        <span className="absolute left-4 top-4 rounded-full bg-stage px-2.5 py-1 label text-linen">
           3D teardown
         </span>
       )}
@@ -41,7 +41,7 @@ export function ProductCard({ product }: { product: CatalogProduct }) {
         <div>
           <div className="flex items-baseline justify-between gap-3">
             <p className="eyebrow truncate">{product.brand}</p>
-            <p className="shrink-0 font-mono text-[0.8rem] text-ink">
+            <p className="shrink-0 numeric text-[0.8rem] text-ink">
               {formatPrice(livePrice ?? product.price)}
             </p>
           </div>
@@ -63,10 +63,10 @@ export function ProductCard({ product }: { product: CatalogProduct }) {
         <dl className="space-y-1">
           {product.specs.slice(0, 3).map((spec) => (
             <div key={spec.label} className="flex justify-between gap-3">
-              <dt className="font-mono text-[9px] uppercase tracking-[0.12em] text-mist">
+              <dt className="label text-mist">
                 {spec.label}
               </dt>
-              <dd className="truncate font-mono text-[0.7rem] text-stone">{spec.value}</dd>
+              <dd className="truncate numeric text-[0.72rem] text-stone">{spec.value}</dd>
             </div>
           ))}
         </dl>
@@ -76,7 +76,7 @@ export function ProductCard({ product }: { product: CatalogProduct }) {
             href={link.url}
             target="_blank"
             rel={linkRel(link.sponsored)}
-            className="relative z-10 inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-copper transition-colors hover:text-copper-deep"
+            className="relative z-10 inline-flex items-center gap-1.5 label text-copper transition-colors hover:text-copper-deep"
           >
             View on Amazon
             <svg viewBox="0 0 16 16" aria-hidden className="h-3 w-3">

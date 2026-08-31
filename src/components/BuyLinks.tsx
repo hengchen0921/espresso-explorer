@@ -27,7 +27,7 @@ export function BuyButton({ machine, className }: { machine: Machine; className?
         rel={primary.sponsored ? 'sponsored nofollow noopener noreferrer' : 'noopener noreferrer'}
         className={cx(
           'group inline-flex items-center gap-2 rounded-full bg-copper px-5 py-2.5',
-          'font-mono text-[11px] uppercase tracking-[0.14em] text-linen',
+          'label text-linen',
           'transition-colors duration-300 hover:bg-copper-deep',
         )}
       >
@@ -47,7 +47,7 @@ export function BuyButton({ machine, className }: { machine: Machine; className?
         </span>
       </a>
 
-      <p className="font-mono text-[9px] uppercase tracking-[0.12em] text-mist">
+      <p className="label text-mist">
         {HAS_AFFILIATE_LINKS
           ? 'Affiliate link · may earn a commission'
           : 'Retailer search · earns nothing'}
@@ -64,7 +64,7 @@ export function BuyLinks({ machine, className }: { machine: Machine; className?:
     <section className={cx('border border-ink/12 bg-surface px-6 py-6', className)}>
       <div className="flex items-baseline justify-between gap-4">
         <h3 className="eyebrow">Where to buy</h3>
-        <p className="font-mono text-[0.78rem] text-stone">
+        <p className="numeric text-[0.8rem] text-stone">
           about {formatPrice(machine.price)}
         </p>
       </div>
@@ -84,7 +84,7 @@ export function BuyLinks({ machine, className }: { machine: Machine; className?:
             >
               <span>
                 <span className="block text-[0.95rem] text-ink">{link.name}</span>
-                <span className="mt-0.5 block font-mono text-[10px] uppercase tracking-[0.12em] text-mist">
+                <span className="mt-0.5 block label text-mist">
                   {link.note}
                 </span>
               </span>

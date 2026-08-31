@@ -49,7 +49,7 @@ export function CatalogPage() {
       <Container className="pt-8 md:pt-12">
         <div className="border-b border-ink/12 pb-8">
           <p className="eyebrow">The catalogue</p>
-          <h1 className="mt-6 max-w-[20ch] text-[clamp(2.4rem,5.6vw,4.4rem)] leading-[0.96] tracking-[-0.03em]">
+          <h1 className="mt-6 max-w-[20ch] text-[clamp(2.4rem,5.6vw,4.4rem)] leading-[0.96] tracking-display-lg">
             Everything else you need.
           </h1>
           <p className="mt-6 max-w-[64ch] text-[1.02rem] leading-[1.72] text-ash">
@@ -71,7 +71,7 @@ export function CatalogPage() {
                 onClick={() => update({ category: category as CatalogCategory | 'All' })}
                 aria-pressed={filters.category === category}
                 className={cx(
-                  'rounded-full border px-3.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.14em] transition-all duration-300',
+                  'rounded-full border px-3.5 py-1.5 label transition-all duration-300',
                   filters.category === category
                     ? 'border-ink bg-stage text-linen'
                     : 'border-ink/15 text-stone hover:border-copper hover:text-copper',
@@ -88,7 +88,7 @@ export function CatalogPage() {
               <select
                 value={filters.brand}
                 onChange={(event) => update({ brand: event.target.value })}
-                className="rounded-full border border-ink/15 bg-transparent px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.12em] text-ink transition-colors hover:border-copper focus-visible:border-copper"
+                className="rounded-full border border-ink/15 bg-transparent px-3 py-1.5 label text-ink transition-colors hover:border-copper focus-visible:border-copper"
               >
                 <option value="All">All brands</option>
                 {brands.map((brand) => (
@@ -110,7 +110,7 @@ export function CatalogPage() {
                   }
                   aria-pressed={filters.maxPrice === step}
                   className={cx(
-                    'rounded-full border px-3 py-1.5 font-mono text-[10px] tracking-[0.1em] transition-all duration-300',
+                    'rounded-full border px-3 py-1.5 numeric text-[10px] transition-all duration-300',
                     filters.maxPrice === step
                       ? 'border-copper bg-copper text-linen'
                       : 'border-ink/15 text-stone hover:border-copper hover:text-copper',
@@ -130,7 +130,7 @@ export function CatalogPage() {
                   onClick={() => update({ sort: option.id })}
                   aria-pressed={filters.sort === option.id}
                   className={cx(
-                    'rounded-full px-2.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.12em] transition-colors duration-300',
+                    'rounded-full px-2.5 py-1.5 label transition-colors duration-300',
                     filters.sort === option.id
                       ? 'text-ink underline decoration-copper underline-offset-4'
                       : 'text-stone hover:text-copper',

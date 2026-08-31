@@ -23,7 +23,7 @@ export function SpecTable({ machine, className }: { machine: Machine; className?
                   className="grid grid-cols-[1fr_auto] items-baseline gap-x-6 border-b border-ink/8 py-4"
                 >
                   <dt className="text-[0.92rem] text-ash">{row.label}</dt>
-                  <dd className="text-right font-mono text-[0.8rem] tracking-[0.02em] text-ink">
+                  <dd className="text-right numeric text-[0.8rem] text-ink">
                     {row.value(machine, units)}
                   </dd>
                   {row.hint && (

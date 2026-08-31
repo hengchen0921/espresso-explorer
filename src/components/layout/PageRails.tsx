@@ -45,13 +45,13 @@ export function PageRails() {
   return (
     <div aria-hidden className="pointer-events-none fixed inset-y-0 z-30 hidden w-full xl:block">
       <div className="absolute left-4 top-1/2 -translate-y-1/2 [writing-mode:vertical-rl]">
-        <span className="font-mono text-[10px] uppercase tracking-[0.34em] text-stone/70">
+        <span className="rail-label text-stone/70">
           {railLabel(pathname)}
         </span>
       </div>
 
       <div className="absolute right-5 top-1/2 flex h-40 -translate-y-1/2 flex-col items-center gap-3">
-        <span className="font-mono text-[9px] tracking-[0.2em] text-stone/60 [writing-mode:vertical-rl]">
+        <span className="rail-label text-stone/60 [writing-mode:vertical-rl]">
           {String(Math.round(progress * 100)).padStart(2, '0')}
         </span>
         <span className="relative w-px flex-1 bg-ink/12">
