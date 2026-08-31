@@ -217,32 +217,49 @@ Exercise it after changes — `npx tsx` a script that calls `findMachines` with 
 profiles and read the answers. Wrong weights produce plausible-looking nonsense that a type checker
 will never catch.
 
-## Product images and the Amazon seam
+## Product images and the provider seam
 
-`ProductImage` resolves a picture in strict order: Amazon's own image → the
+`ProductImage` resolves a picture in strict order: a live provider's image → the
 generated 3D-derived portrait (flagship only) → a category line glyph. The
 fallbacks are the normal path today, not an error path, so the component is
-built to render identically whether or not live data ever arrives.
+built to render identically whether or not live data ever arrives. **Do not add
+a fourth state for "loading" that shifts layout** — cards resolve to a
+placeholder on first paint.
 
-`src/catalog/amazon.ts` is the seam. It exposes a `ProductDataProvider` and ships
-two implementations: `static` (returns nothing) and `endpoint` (fetches a
+`src/catalog/amazon.ts` is the seam. It exposes a `ProductDataProvider` and
+ships two implementations: `static` (returns nothing) and `endpoint` (fetches a
 backend). Setting `VITE_PRODUCT_API` switches the whole catalogue to live data
 and flips `IS_LIVE_PRODUCT_DATA`, which also updates the disclosure copy from
 "indicative street prices" to "live from Amazon". Nothing else changes.
 
-Requests are **batched across a microtask and capped at ten ASINs** (the GetItems
-limit) and cached for 24 hours in memory and session storage — 24 hours because
-that is Amazon's maximum permitted age for a displayed price. Do not raise it,
-and do not remove the batching: without it a 78-product page fires 78 requests.
+Requests are **batched across a microtask and capped at ten ids** and cached for
+24 hours in memory and session storage. Do not raise the TTL past a day, and do
+not remove the batching: without it a 78-product page fires 78 requests.
 
-`server/product-api/` holds the function that would hold the credentials. Read
-its README before touching it — in particular, the PA-API signing has never been
-executed, because credentials are only issued to Associates who have already made
-qualifying sales.
+### Two server implementations, one contract
 
-**Never invent an ASIN.** A wrong one does not 404; it silently sends a reader to
-a different product. `asin: null` is the correct value until one is verified, and
-`amazonLinkFor` falls back to a model search that resolves properly.
+Both answer `GET ?ids=…` with `{ id: { imageUrl, price, currency, fetchedAt } }`,
+so `VITE_PRODUCT_API` can point at either with no client change.
+
+- `server/product-api/` — Amazon. **Written against PA-API 5.0, which was
+  retired on 15 May 2026**, so it does not currently work; the successor is the
+  Creators API (REST + OAuth 2.0, new credentials). Cleanest licensing, but
+  gated behind an Associates account with ten qualified sales in the last
+  thirty days — circular for a site with no traffic.
+- `server/retailer-feed/` — an affiliate network's product feed (Impact,
+  ShareASale, AvantLink). No sales threshold, better subject-matter fit for
+  espresso, and the parser is exercised by `node server/retailer-feed/feed.test.mjs`.
+
+The rule both share: **an absent or failed lookup returns no entry, never an
+error.** A dead upstream must degrade to the generated drawings. The generated
+pictures are the site's baseline, not its fallback of last resort.
+
+**Never invent an ASIN.** A wrong one does not 404 — it silently sends a reader
+to a different product. `asin: null` is the correct value until one is verified,
+and `amazonLinkFor` falls back to a model search that resolves properly. The
+same reasoning governs feed name-matching, which is why it is exact-normalised
+rather than fuzzy: the wrong picture on a card is worse than no picture,
+because nothing looks broken.
 
 ## Retailer links
 
