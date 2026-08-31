@@ -378,6 +378,48 @@ name down the left, scroll position down the right. It is fixed and
 `pointer-events-none`, mounted once in `Layout`. Do not add per-section rails
 on top of it; they collide.
 
+## Installing it as an app
+
+The site is a PWA: added from a phone's share menu it gets its own icon, opens
+without browser chrome and keeps working offline. `vite-plugin-pwa` in
+`vite.config.ts` is the whole configuration, and `registerType: 'autoUpdate'`
+means a push to main updates every installed copy — there is no store review in
+the middle, which is the main reason to ship it this way rather than wrapping it.
+
+**Icons are generated, not committed.** `scripts/generate-icons.js` rasterises
+the same mark as `public/favicon.svg` into `public/icons/*.png`, run by
+`prebuild`, and the PNGs are gitignored. The site has no image assets on
+purpose and app icons are not the exception worth making. Two variants exist
+for a reason:
+
+- **Standard** fills the square and carries no rounded corners of its own —
+  iOS applies its own mask, and a pre-rounded icon gets double-rounded.
+- **Maskable** insets the mark to ~68%, because Android crops to whatever shape
+  the launcher uses and can take the outer 20% off every side. Without a
+  maskable entry the OS crops the standard icon and clips the cup.
+
+`scope` and `start_url` come from Vite's `base`. Do not hardcode them; moving
+the site to a custom domain would silently break installation.
+
+Three things in the Workbox config are load-bearing:
+
+- `maximumFileSizeToCacheInBytes` is raised past the 2 MiB default so the
+  ~1.2 MB `three-stack` chunk precaches. That chunk is what makes a machine
+  page's 3D viewer work offline; without it the app installs and then cannot
+  draw a machine on a plane.
+- `navigateFallback` — client-side routes have no file behind them, so an
+  installed app opened on `/finder` offline would otherwise show the browser's
+  error page.
+- The Google Fonts runtime caches. The three families load from a CDN and are
+  not in the precache, so without them an offline launch silently falls back to
+  system fonts and the entire type system disappears.
+
+iOS ignores most of the manifest and reads the `apple-*` meta tags in
+`index.html` instead. The status bar is set to `black` rather than
+`black-translucent`: translucent looks better but slides content under the
+notch, and nothing here handles `env(safe-area-inset-*)` yet. Handle the insets
+first if you want to change it.
+
 ## Known lint warnings
 
 `oxlint` reports `react(only-export-components)` on every file in `src/models/machines/` and on

@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Home-screen icons are rasterised from the mark at build time by
+# scripts/generate-icons.js — regenerate rather than commit bitmaps.
+public/icons/*.png
