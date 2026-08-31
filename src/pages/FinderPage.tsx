@@ -7,8 +7,9 @@ import {
   type FinderQuestionId,
   type MachineMatch,
 } from '@/data/finder'
+import { machines } from '@/data'
 import { AdvisorError, IS_ADVISOR_ENABLED, interpret } from '@/lib/advisor'
-import { formatPrice } from '@/lib/format'
+import { formatPrice, spellOut } from '@/lib/format'
 import { useUnits } from '@/hooks/useUnits'
 import { BuyButton } from '@/components/BuyLinks'
 import { MachinePortrait } from '@/components/MachinePortrait'
@@ -115,7 +116,7 @@ export function FinderPage() {
         </h1>
         <p className="mt-7 max-w-[54ch] text-[1.02rem] leading-[1.7] text-ash">
           {asking
-            ? 'Everything you answer narrows it. When there is enough to go on, the guide ranks all eight machines against what you actually said — and shows its working, including every machine it ruled out and why.'
+            ? `Everything you answer narrows it. When there is enough to go on, the guide ranks all ${spellOut(machines.length)} machines against what you actually said — and shows its working, including every machine it ruled out and why.`
             : 'Write it however you would say it out loud. Whatever you cover gets filled in for you; whatever you leave out becomes a question. Nothing here is a sales funnel — the ranking is a scoring model you can read.'}
         </p>
       </Container>

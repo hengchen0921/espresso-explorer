@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { useCompare } from '@/hooks/useCompare'
 import { useTheme } from '@/hooks/useTheme'
+import { machines } from '@/data'
+import { spellOut } from '@/lib/format'
 import { useUnits } from '@/hooks/useUnits'
 import { cx } from '@/lib/format'
 import { Logo } from './Logo'
@@ -16,7 +18,7 @@ import { Logo } from './Logo'
  * room to say what a link actually leads to.
  */
 const NAV = [
-  { to: '/', label: 'Machines', hint: 'The eight we take apart', end: true },
+  { to: '/', label: 'Machines', hint: `The ${spellOut(machines.length)} we take apart`, end: true },
   {
     to: '/finder',
     label: 'Help me choose',
@@ -243,7 +245,7 @@ export function Header() {
           className="animate-fade fixed inset-x-0 top-16 bottom-0 z-40 overflow-y-auto border-t border-ink/10 bg-paper px-5 pt-4 pb-10 md:hidden"
         >
           <nav className="flex flex-col">
-            {[...NAV, { to: '/lineup', label: 'Lineup', hint: 'All eight at true scale, on one counter', end: false }].map(
+            {[...NAV, { to: '/lineup', label: 'Lineup', hint: `All ${spellOut(machines.length)} at true scale, on one counter`, end: false }].map(
               (item) => (
                 <NavLink
                   key={item.to}

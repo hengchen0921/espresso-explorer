@@ -11,7 +11,8 @@ import {
 } from '@/catalog'
 import { IS_LIVE_PRODUCT_DATA } from '@/catalog/amazon'
 import { AMAZON_REQUIRED_DISCLOSURE, HAS_AFFILIATE_LINKS } from '@/data/retailers'
-import { cx, formatPrice } from '@/lib/format'
+import { machines } from '@/data'
+import { cx, formatPrice, spellOut } from '@/lib/format'
 import { ProductCard } from '@/components/catalog/ProductCard'
 import { Button } from '@/components/ui/Button'
 import { Container } from '@/components/ui/Section'
@@ -54,7 +55,7 @@ export function CatalogPage() {
           </h1>
           <p className="mt-6 max-w-[64ch] text-[1.02rem] leading-[1.72] text-ash">
             {catalog.length} products across six categories — machines, grinders, beans and every
-            brewer that is not an espresso machine. The eight flagship machines carry a full 3D
+            brewer that is not an espresso machine. The {spellOut(machines.length)} flagship machines carry a full 3D
             teardown; everything else is here as a straight recommendation.
           </p>
         </div>

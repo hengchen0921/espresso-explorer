@@ -1808,5 +1808,226 @@
         "note": "Volumetric buttons with programmable volumes, so shots repeat exactly without your attention. No gauge and no timer, but equally nothing you need to learn."
       }
     ]
+  },
+  {
+    "id": "breville-bambino",
+    "brand": "Breville",
+    "name": "Bambino",
+    "modelCode": "BES450",
+    "price": 299,
+    "category": "Compact",
+    "categoryNote": "The cheapest real brew path here",
+    "releaseYear": 2019,
+    "finish": "brushed-steel",
+    "skillFloor": "gentle",
+    "tagline": "The Bambino Plus with the automatic milk system removed and two hundred dollars off.",
+    "summary": "The Bambino is the same machine as the Bambino Plus in almost every way that touches the coffee: the same ThermoJet heater, the same three-second start, the same 54 mm group, the same low-pressure pre-infusion, the same shell. What it gives up is the automatic steam wand — you texture the milk yourself, watching the jug rather than pressing a button. That is the entire $200 difference, and for a lot of people it is a difference they would rather keep in their pocket and spend on the grinder.",
+    "bestFor": "Anyone who wants the shortest honest route to real espresso, and is willing to learn to steam milk.",
+    "verdict": "The best machine here under $400, and the one that most exposes how much of an espresso machine's price is milk automation rather than coffee. Buy it if you will practise steaming for a fortnight. Buy the Plus if you know you will not, because a machine you find annoying at 7 a.m. is a machine you stop using.",
+    "pros": [
+      "Identical brew path to machines costing $400 more",
+      "Three seconds from cold, in a 19.5 cm case",
+      "Leaves the most room in a budget for the grinder that actually decides quality"
+    ],
+    "cons": [
+      "Manual steam wand with a real learning curve",
+      "1.4 L tank, and it is behind the machine",
+      "54 mm, so the accessory ceiling is lower than a 58 mm machine's",
+      "Light enough to slide when you lock the portafilter in"
+    ],
+    "specs": {
+      "heating": "ThermoJet flow heater",
+      "heatUpSeconds": 3,
+      "portafilterMm": 54,
+      "basketType": "Pressurised + single-wall",
+      "pumpBar": 15,
+      "tankLitres": 1.4,
+      "pid": true,
+      "grinder": false,
+      "steamWand": "Manual, single-hole tip",
+      "instrumentation": "buttons",
+      "wattage": 1560,
+      "weightKg": 4.4,
+      "widthCm": 19.5,
+      "depthCm": 32,
+      "heightCm": 31
+    },
+    "parts": [
+      {
+        "partId": "boiler",
+        "component": "ThermoJet three-element flow heater",
+        "spec": "ThermoJet, ready in 3 seconds",
+        "figures": [
+          {
+            "label": "Type",
+            "value": "ThermoJet flow heater"
+          },
+          {
+            "label": "Elements",
+            "value": "Three, in series"
+          },
+          {
+            "label": "Brew ready",
+            "value": "≈3 seconds from cold"
+          },
+          {
+            "label": "Brew → steam",
+            "value": "Seconds, not a wait"
+          }
+        ],
+        "capability": "The same heater as the Bambino Plus and the Barista Pro, which is the single most surprising thing about this machine's price. It reaches brew temperature almost immediately and crosses to steam nearly as fast, so one milk drink is a continuous sequence rather than a series of waits. As with every flow heater there is nothing held in reserve: a fourth consecutive drink will drift.",
+        "note": "Three seconds changes behaviour more than any specification here. A machine you can switch on when you decide you want coffee is a machine you use on weekday mornings."
+      },
+      {
+        "partId": "group-head",
+        "component": "54 mm group with low-pressure pre-infusion",
+        "spec": "54 mm, pre-infusion",
+        "figures": [
+          {
+            "label": "Diameter",
+            "value": "54 mm"
+          },
+          {
+            "label": "Material",
+            "value": "Aluminium"
+          },
+          {
+            "label": "Pre-infusion",
+            "value": "Low pressure, timed"
+          },
+          {
+            "label": "Shared with",
+            "value": "Bambino Plus, Barista Express and Pro"
+          }
+        ],
+        "capability": "Mechanically the same group as every other Breville here, including the $849 Barista Pro. Pre-infusion wets the puck at low pressure before the pump ramps up, which forgives an uneven tamp — and forgives more on this machine than on any other, because the grinder feeding it is one the manufacturer never specified.",
+        "note": "This is the argument for the machine in one line: the part that makes the coffee is the same part the expensive Brevilles use. What you are declining is a grinder and a milk robot."
+      },
+      {
+        "partId": "portafilter",
+        "component": "54 mm stainless portafilter with four baskets",
+        "spec": "54 mm, pressurised + single-wall",
+        "figures": [
+          {
+            "label": "Diameter",
+            "value": "54 mm"
+          },
+          {
+            "label": "Baskets",
+            "value": "1-cup and 2-cup, pressurised and single-wall"
+          },
+          {
+            "label": "Typical dose",
+            "value": "18–19 g in the single-wall double"
+          },
+          {
+            "label": "Accessories",
+            "value": "Breville 54 mm aftermarket"
+          }
+        ],
+        "capability": "Ships with the pressurised baskets fitted, which will make drinkable coffee from pre-ground supermarket beans on the first morning and will never make excellent coffee. The single-wall baskets in the box are the ones that matter, and they only work with a grinder you can adjust finely. Bottomless 54 mm portafilters are cheap and are the fastest way to see what your puck prep is actually doing.",
+        "note": "Start on the pressurised basket while you find your feet, then move to single-wall the week your grinder arrives. Staying on pressurised for ever means you bought the wrong machine."
+      },
+      {
+        "partId": "steam-wand",
+        "component": "Manual swivel wand, single-hole tip",
+        "spec": "Manual, single hole",
+        "figures": [
+          {
+            "label": "Control",
+            "value": "Manual, one selector"
+          },
+          {
+            "label": "Tip",
+            "value": "Single hole"
+          },
+          {
+            "label": "Movement",
+            "value": "Swivel, both axes"
+          },
+          {
+            "label": "Auto shut-off",
+            "value": "None"
+          }
+        ],
+        "capability": "This is the whole difference between this machine and the Plus. There is no temperature to choose and no texture setting: you position the tip, open the valve, and judge the milk by sound and by the side of the jug. A single-hole tip is slower than the multi-hole tips on bigger machines, which is genuinely helpful while learning — it gives you time to react.",
+        "note": "Expect a fortnight of mediocre foam. Everyone goes through it, and almost everyone comes out the other side preferring the control. If you already know you will resent that fortnight, the Plus exists for exactly you."
+      },
+      {
+        "partId": "water-reservoir",
+        "component": "1.4 L rear tank",
+        "spec": "1.4 L, rear-mounted",
+        "figures": [
+          {
+            "label": "Capacity",
+            "value": "1.4 litres"
+          },
+          {
+            "label": "Position",
+            "value": "Rear"
+          },
+          {
+            "label": "Access",
+            "value": "Lift out from above"
+          },
+          {
+            "label": "Low-water",
+            "value": "Indicated on the panel"
+          }
+        ],
+        "capability": "Half a litre smaller than the Plus's, in the same footprint. It lifts out from the top, so the machine needs clearance above it as well as behind — a shelf directly over the counter is the constraint people forget when they measure. On the counter it is roughly four to six milk drinks between refills.",
+        "note": "Measure the height of your upper cabinets, not just the width of the gap. A machine you have to pull forward to fill every second day is one you will resent."
+      },
+      {
+        "partId": "drip-tray",
+        "component": "Removable tray with full indicator",
+        "spec": "Removable, full indicator",
+        "figures": [
+          {
+            "label": "Removal",
+            "value": "Slides forward"
+          },
+          {
+            "label": "Indicator",
+            "value": "Red float through the grate"
+          },
+          {
+            "label": "Cup clearance",
+            "value": "Espresso and small latte glasses"
+          },
+          {
+            "label": "Dishwasher",
+            "value": "Top rack"
+          }
+        ],
+        "capability": "A plain tray with the usual float that rises through the grate when it is full. Cup clearance suits espresso cups and short glasses; a tall travel mug will not fit under the spouts, which is a common surprise on machines this compact.",
+        "note": "The machine purges into this tray automatically after steaming, so it fills faster than you expect from the number of drinks you have made."
+      },
+      {
+        "partId": "control-panel",
+        "component": "Two shot buttons and a steam selector",
+        "spec": "Two buttons, one selector",
+        "figures": [
+          {
+            "label": "Buttons",
+            "value": "1-cup, 2-cup"
+          },
+          {
+            "label": "Selector",
+            "value": "Steam / hot water"
+          },
+          {
+            "label": "Volumes",
+            "value": "Reprogrammable"
+          },
+          {
+            "label": "Display",
+            "value": "None"
+          }
+        ],
+        "capability": "Two preset volumes you can reprogram by holding the button through a shot you like, and a mechanical selector for steam and hot water. There is no display and no temperature adjustment — the machine has one opinion about brew temperature and does not invite discussion.",
+        "note": "The absence of a screen is not a saving here so much as a design decision that has aged well. There is nothing to navigate at seven in the morning."
+      }
+    ]
   }
 ]

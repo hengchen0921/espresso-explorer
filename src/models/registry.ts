@@ -1,3 +1,4 @@
+import { brevilleBambino } from './machines/BrevilleBambino'
 import { brevilleBambinoPlus } from './machines/BrevilleBambinoPlus'
 import { brevilleBaristaExpress } from './machines/BrevilleBaristaExpress'
 import { brevilleBaristaPro } from './machines/BrevilleBaristaPro'
@@ -33,6 +34,7 @@ const definitions: MachineModelDefinition[] = [
   rancilioSilvia,
   brevilleDualBoiler,
   brevilleBambinoPlus,
+  brevilleBambino,
   delonghiDedica,
 ]
 
