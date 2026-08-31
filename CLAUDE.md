@@ -431,6 +431,20 @@ Three things in the Workbox config are load-bearing:
   not in the precache, so without them an offline launch silently falls back to
   system fonts and the entire type system disappears.
 
+**The service worker will lie to you in local preview.** `npm run preview`
+serves on a fixed origin, so a worker registered by an earlier preview keeps
+serving that build's precache — you rebuild, reload, and see the old page with
+no indication anything is stale. `autoUpdate` fixes it on a subsequent load,
+which is exactly late enough to waste your time first. When a change refuses to
+appear, clear it before you debug the code:
+
+```js
+for (const r of await navigator.serviceWorker.getRegistrations()) await r.unregister()
+for (const k of await caches.keys()) await caches.delete(k)
+```
+
+`npm run dev` is unaffected — the plugin does not register a worker in dev.
+
 iOS ignores most of the manifest and reads the `apple-*` meta tags in
 `index.html` instead. The status bar is set to `black` rather than
 `black-translucent`: translucent looks better but slides content under the

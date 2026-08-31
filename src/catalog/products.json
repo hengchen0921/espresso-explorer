@@ -1,29 +1,5 @@
 [
   {
-    "id": "breville-bambino",
-    "name": "Bambino",
-    "brand": "Breville",
-    "category": "Espresso Machines",
-    "subcategory": "Compact",
-    "price": 299,
-    "summary": "The Bambino Plus without the automatic milk wand.",
-    "specs": [
-      {
-        "label": "Heating",
-        "value": "ThermoJet"
-      },
-      {
-        "label": "Portafilter",
-        "value": "54 mm"
-      },
-      {
-        "label": "Width",
-        "value": "19.5 cm"
-      }
-    ],
-    "asin": null
-  },
-  {
     "id": "breville-infuser",
     "name": "Infuser",
     "brand": "Breville",
