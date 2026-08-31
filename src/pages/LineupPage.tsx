@@ -38,7 +38,7 @@ export function LineupPage() {
       </Container>
 
       {/* --------------------------------------------------------- Family shot */}
-      <Container className="mt-8">
+      <Container wide className="mt-8">
         <div className="relative h-[54vh] min-h-[380px] overflow-hidden border border-ink/12 lg:h-[min(64vh,640px)]">
           <div className="absolute inset-0 stage-vignette" aria-hidden />
           <Suspense fallback={null}>

@@ -10,7 +10,7 @@ const BASE =
   'transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] disabled:opacity-40 disabled:pointer-events-none'
 
 const VARIANTS: Record<Variant, string> = {
-  solid: 'bg-ink text-linen hover:bg-copper',
+  solid: 'bg-ink text-inverse hover:bg-copper hover:text-linen',
   outline: 'border border-ink/20 text-ink hover:border-copper hover:text-copper',
   ghost: 'text-stone hover:text-copper',
   inverse: 'border border-crema/25 text-crema hover:border-copper hover:text-copper',

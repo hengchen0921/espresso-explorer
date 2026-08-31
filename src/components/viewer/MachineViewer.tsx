@@ -211,24 +211,25 @@ export function MachineViewer({
           </PartInteractionContext.Provider>
 
           <CastShadows target={model} token={definition.machineId} />
-        </Suspense>
 
-        <CameraRig
-          framing={framing}
-          framingKey={framingKey}
-          minDistance={span * 0.75}
-          maxDistance={span * 6}
-          instant={reducedMotion}
-          zoom={engaged}
-          onUserInteract={() => setHasOrbited(true)}
-        />
+          {/* Kept inside the boundary deliberately — see HeroCanvas. */}
+          <CameraRig
+            framing={framing}
+            framingKey={framingKey}
+            minDistance={span * 0.75}
+            maxDistance={span * 6}
+            instant={reducedMotion}
+            zoom={engaged}
+            onUserInteract={() => setHasOrbited(true)}
+          />
+        </Suspense>
       </Canvas>
 
       {/* Loading veil — the canvas fades up once the first frame is on screen */}
       <div
         aria-hidden
         className={cx(
-          'pointer-events-none absolute inset-0 grid place-items-center bg-ink transition-opacity duration-700',
+          'pointer-events-none absolute inset-0 grid place-items-center bg-stage transition-opacity duration-700',
           ready ? 'opacity-0' : 'opacity-100',
         )}
       >

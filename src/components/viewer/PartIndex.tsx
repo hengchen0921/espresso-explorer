@@ -15,7 +15,7 @@ interface PartIndexProps {
  */
 export function PartIndex({ parts, hoveredPart, onSelect, onHover, className }: PartIndexProps) {
   return (
-    <div className={cx('flex h-full flex-col bg-linen', className)}>
+    <div className={cx('flex h-full flex-col bg-surface', className)}>
       <div className="border-b border-ink/10 px-6 py-5 md:px-8">
         <p className="eyebrow">Components</p>
         <h2 className="mt-2.5 text-[clamp(1.4rem,2.2vw,1.85rem)] leading-[1.08]">
@@ -39,7 +39,7 @@ export function PartIndex({ parts, hoveredPart, onSelect, onHover, className }: 
               onBlur={() => onHover(null)}
               className={cx(
                 'group flex w-full items-start gap-4 border-b border-ink/8 px-6 py-4 text-left transition-colors duration-300 md:px-8',
-                hoveredPart === part.id ? 'bg-copper-tint/40' : 'hover:bg-crema/50',
+                hoveredPart === part.id ? 'bg-copper-tint/40' : 'hover:bg-ink/6',
               )}
             >
               <span
@@ -47,7 +47,7 @@ export function PartIndex({ parts, hoveredPart, onSelect, onHover, className }: 
                   'mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full font-mono text-[10px] transition-colors duration-300',
                   hoveredPart === part.id
                     ? 'bg-copper text-linen'
-                    : 'bg-crema text-stone group-hover:bg-ink group-hover:text-linen',
+                    : 'bg-ink/10 text-stone group-hover:bg-copper group-hover:text-linen',
                 )}
               >
                 {i + 1}

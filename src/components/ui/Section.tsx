@@ -1,8 +1,37 @@
 import type { ReactNode } from 'react'
 import { cx } from '@/lib/format'
 
-export function Container({ children, className }: { children: ReactNode; className?: string }) {
-  return <div className={cx('mx-auto w-full max-w-[1440px] px-6 md:px-10 lg:px-16', className)}>{children}</div>
+/**
+ * The measured column. Wider and less padded than a typical article container
+ * because the old 1440/px-16 combination left visible dead margins on any
+ * screen above ~1600px — the content read as a strip floating in space.
+ */
+export function Container({
+  children,
+  className,
+  wide,
+}: {
+  children: ReactNode
+  className?: string
+  /** Drop the max-width entirely; padding still holds content off the edge. */
+  wide?: boolean
+}) {
+  return (
+    <div
+      className={cx(
+        'mx-auto w-full px-5 md:px-8 lg:px-12',
+        wide ? 'max-w-none' : 'max-w-[1680px]',
+        className,
+      )}
+    >
+      {children}
+    </div>
+  )
+}
+
+/** Truly edge to edge — no padding, no cap. For stages and full-width bands. */
+export function Bleed({ children, className }: { children: ReactNode; className?: string }) {
+  return <div className={cx('w-full', className)}>{children}</div>
 }
 
 interface SectionHeadingProps {

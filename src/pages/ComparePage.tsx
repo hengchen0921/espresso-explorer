@@ -78,7 +78,7 @@ export function ComparePage() {
       </Container>
 
       {/* --------------------------------------------------------------- Picker */}
-      <Container className="mt-8">
+      <Container wide className="mt-8">
         <div className="flex flex-wrap items-center gap-2">
           <span className="eyebrow mr-2">
             Choose up to {MAX_COMPARE} — {selected.length} selected
@@ -153,7 +153,7 @@ export function ComparePage() {
               {selected.map((machine) => (
                 <div
                   key={machine.id}
-                  className="bg-[radial-gradient(120%_100%_at_50%_0%,#fffdf9_0%,#f2ece1_100%)] px-5 py-8"
+                  className="product-well px-5 py-8"
                 >
                   <MachineElevation machine={machine} className="mx-auto max-h-[220px]" />
                 </div>

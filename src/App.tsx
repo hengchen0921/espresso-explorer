@@ -2,6 +2,7 @@ import { Suspense, lazy } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Layout } from '@/components/layout/Layout'
 import { CompareProvider } from '@/hooks/useCompare'
+import { ThemeProvider } from '@/hooks/useTheme'
 import { UnitsProvider } from '@/hooks/useUnits'
 import { HomePage } from '@/pages/HomePage'
 import { NotFoundPage } from '@/pages/NotFoundPage'
@@ -36,6 +37,7 @@ function RouteFallback() {
 export default function App() {
   return (
     <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <ThemeProvider>
       <UnitsProvider>
         <CompareProvider>
         <Routes>
@@ -86,6 +88,7 @@ export default function App() {
         </Routes>
         </CompareProvider>
       </UnitsProvider>
+      </ThemeProvider>
     </BrowserRouter>
   )
 }

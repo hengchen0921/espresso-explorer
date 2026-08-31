@@ -64,19 +64,23 @@ export function HomePage() {
   return (
     <>
       {/* ---------------------------------------------------------------- Hero */}
-      <section className="relative overflow-hidden">
-        <Container className="relative grid gap-10 pt-10 pb-16 lg:grid-cols-12 lg:gap-6 lg:pt-16 lg:pb-24">
-          <div className="lg:col-span-6 lg:pt-10">
-            <p className="eyebrow animate-fade">Interactive teardown · 2026 buyer's guide</p>
+      {/* Full-bleed on purpose: the copy is hard against the left gutter and the
+          stage runs off the right screen edge, so nothing floats in a centred
+          column with dead margins either side. */}
+      <section className="relative overflow-hidden border-b border-ink/10">
 
-            <h1 className="mt-7 text-[clamp(2.6rem,6.6vw,5.6rem)] leading-[0.94] tracking-[-0.03em] animate-rise">
+        <div className="grid items-stretch lg:min-h-[92vh] lg:grid-cols-[1fr_minmax(0,53%)]">
+          <div className="flex flex-col justify-center px-5 pt-14 pb-16 md:px-8 lg:py-24 lg:pr-14 lg:pl-[clamp(3rem,6vw,7rem)] xl:pl-[clamp(4.5rem,7vw,9.5rem)]">
+            <p className="eyebrow animate-fade">Interactive teardown · 2026 buyer&rsquo;s guide</p>
+
+            <h1 className="mt-7 text-[clamp(2.9rem,5.6vw,5.9rem)] leading-[0.92] tracking-[-0.035em] animate-rise">
               Every espresso machine
               <span className="block text-copper">looks the same</span>
               until you take it apart.
             </h1>
 
             <p
-              className="mt-8 max-w-[52ch] text-[1.05rem] leading-[1.72] text-ash animate-rise"
+              className="mt-8 max-w-[46ch] text-[1.05rem] leading-[1.72] text-ash animate-rise"
               style={{ animationDelay: '90ms' }}
             >
               {capitalise(spellOut(machines.length))} machines people actually cross-shop, rebuilt
@@ -98,7 +102,7 @@ export function HomePage() {
             </div>
 
             <dl
-              className="hairline mt-14 grid max-w-lg grid-cols-3 gap-6 pt-6 animate-fade"
+              className="hairline mt-14 grid max-w-xl grid-cols-3 gap-6 pt-6 animate-fade"
               style={{ animationDelay: '260ms' }}
             >
               {[
@@ -108,40 +112,40 @@ export function HomePage() {
               ].map(([label, value]) => (
                 <div key={label}>
                   <dt className="eyebrow">{label}</dt>
-                  <dd className="mt-2 font-display text-[1.35rem] tracking-[-0.01em]">{value}</dd>
+                  <dd className="mt-2 font-display text-[1.35rem] tracking-[-0.01em] text-linen">
+                    {value}
+                  </dd>
                 </div>
               ))}
             </dl>
           </div>
 
-          <div className="relative lg:col-span-6">
-            <div className="relative aspect-[4/5] w-full overflow-hidden bg-ink sm:aspect-[16/11] lg:aspect-auto lg:h-[min(74vh,660px)]">
-              <div className="absolute inset-0 stage-vignette" aria-hidden />
-              <Suspense fallback={null}>
-                <HeroCanvas machineId="breville-barista-express" />
-              </Suspense>
+          <div className="relative h-[58vh] min-h-[340px] w-full border-t border-ink/10 lg:h-auto lg:border-t-0 lg:border-l">
+            <div className="absolute inset-0 stage-vignette" aria-hidden />
+            <Suspense fallback={null}>
+              <HeroCanvas machineId="breville-barista-express" />
+            </Suspense>
 
-              <div className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between p-6">
-                <div>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-mist/60">
-                    Shown
-                  </p>
-                  <p className="mt-1.5 font-display text-[1.1rem] text-crema">
-                    Breville Barista Express
-                  </p>
-                </div>
-                <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-mist/50">
-                  Drag to rotate
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between p-6 lg:p-8">
+              <div>
+                <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-mist/60">
+                  Shown
+                </p>
+                <p className="mt-1.5 font-display text-[1.1rem] text-crema">
+                  Breville Barista Express
                 </p>
               </div>
+              <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-mist/50">
+                Drag to rotate
+              </p>
             </div>
           </div>
-        </Container>
+        </div>
       </section>
 
       {/* ------------------------------------------------------------- Machines */}
-      <section id="machines" className="scroll-mt-24">
-        <Container>
+      <section id="machines" className="relative scroll-mt-24 pt-24">
+        <Container wide>
           <SectionHeading
             eyebrow="The shortlist"
             index={String(machines.length).padStart(2, '0')}
@@ -171,7 +175,7 @@ export function HomePage() {
                   className={cx(
                     'rounded-full border px-3.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.14em] transition-all duration-300',
                     category === option
-                      ? 'border-ink bg-ink text-linen'
+                      ? 'border-ink bg-stage text-linen'
                       : 'border-ink/15 text-stone hover:border-copper hover:text-copper',
                   )}
                 >

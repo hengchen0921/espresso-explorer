@@ -76,7 +76,7 @@ export function Hotspot({ anchor, index, label, active, dimmed, onSelect, onHove
               'ring-1 backdrop-blur-[2px] transition-all duration-300',
               active
                 ? 'bg-copper text-linen ring-copper shadow-[0_0_0_5px_rgba(193,90,43,0.22)]'
-                : 'bg-crema/92 text-ink ring-ink/15 group-hover:bg-linen group-hover:ring-copper/70 group-hover:shadow-[0_0_0_4px_rgba(193,90,43,0.16)]',
+                : 'bg-crema/92 text-stage ring-stage/20 group-hover:bg-linen group-hover:ring-copper/70 group-hover:shadow-[0_0_0_4px_rgba(193,90,43,0.16)]',
             ].join(' ')}
           >
             {index}
@@ -88,7 +88,7 @@ export function Hotspot({ anchor, index, label, active, dimmed, onSelect, onHove
               'px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.14em] transition-all duration-300',
               active
                 ? 'bg-copper text-linen opacity-100'
-                : 'bg-ink/85 text-crema opacity-0 translate-x-[-4px] group-hover:translate-x-0 group-hover:opacity-100',
+                : 'bg-stage/90 text-crema opacity-0 translate-x-[-4px] group-hover:translate-x-0 group-hover:opacity-100',
             ].join(' ')}
           >
             {label}

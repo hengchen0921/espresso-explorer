@@ -24,7 +24,7 @@ export function ProductCard({ product }: { product: CatalogProduct }) {
   return (
     <article
       className={cx(
-        'group relative flex flex-col border border-ink/10 bg-linen',
+        'group relative flex flex-col border border-ink/10 bg-surface',
         'transition-[transform,border-color,box-shadow] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]',
         'hover:-translate-y-1 hover:border-ink/25 hover:shadow-[0_22px_50px_-32px_rgba(23,18,15,0.5)]',
       )}
@@ -32,7 +32,7 @@ export function ProductCard({ product }: { product: CatalogProduct }) {
       <ProductImage product={product} className="h-[190px]" />
 
       {product.flagshipId && (
-        <span className="absolute left-4 top-4 rounded-full bg-ink px-2.5 py-1 font-mono text-[9px] uppercase tracking-[0.14em] text-linen">
+        <span className="absolute left-4 top-4 rounded-full bg-stage px-2.5 py-1 font-mono text-[9px] uppercase tracking-[0.14em] text-linen">
           3D teardown
         </span>
       )}

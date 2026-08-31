@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
+import { Glossed } from '@/components/ui/Term'
 import { Link, useParams } from 'react-router-dom'
 import { getMachine, machines, resolveParts } from '@/data'
 import type { Machine, PartId } from '@/data/types'
@@ -151,7 +152,7 @@ function MachineDetail({
       </Container>
 
       {/* ---------------------------------------------------------- The viewer */}
-      <Container className="mt-8">
+      <Container wide className="mt-8">
         <div className="grid overflow-hidden border border-ink/12 lg:grid-cols-12">
           <MachineViewer
             definition={definition}
@@ -188,7 +189,7 @@ function MachineDetail({
             type="button"
             aria-label="Close component panel"
             onClick={() => setActivePart(null)}
-            className="animate-fade fixed inset-0 z-40 bg-ink/45 backdrop-blur-[2px] lg:hidden"
+            className="animate-fade fixed inset-0 z-40 bg-stage/70 backdrop-blur-[2px] lg:hidden"
           />
           <div className="animate-sheet fixed inset-x-0 bottom-0 z-50 max-h-[76dvh] overflow-hidden rounded-t-2xl border-t border-ink/15 shadow-[0_-24px_60px_-24px_rgba(23,18,15,0.6)] lg:hidden">
             <div className="mx-auto mt-3 h-1 w-10 rounded-full bg-ink/15" aria-hidden />
@@ -204,11 +205,11 @@ function MachineDetail({
             <h2 className="text-[clamp(1.7rem,3vw,2.5rem)] leading-[1.08]">
               What you are actually buying
             </h2>
-            <p className="mt-7 text-[1.05rem] leading-[1.75] text-ash">{machine.summary}</p>
+            <p className="mt-7 text-[1.05rem] leading-[1.75] text-ash"><Glossed text={machine.summary} /></p>
 
             <div className="mt-10 border-l-2 border-copper pl-6">
               <p className="eyebrow text-copper-deep">The verdict</p>
-              <p className="mt-3.5 text-[1.02rem] leading-[1.72] text-bark">{machine.verdict}</p>
+              <p className="mt-3.5 text-[1.02rem] leading-[1.72] text-bark"><Glossed text={machine.verdict} /></p>
             </div>
 
             <p className="mt-10 text-[0.92rem] leading-[1.7] text-stone">
@@ -225,14 +226,14 @@ function MachineDetail({
                 ['Reservoir', formatVolume(machine.specs.tankLitres, units)],
                 ['Weight', formatWeight(machine.specs.weightKg, units)],
               ].map(([label, value]) => (
-                <div key={label} className="bg-linen px-5 py-6">
+                <div key={label} className="bg-surface px-5 py-6">
                   <p className="eyebrow">{label}</p>
                   <p className="mt-2.5 font-display text-[1.5rem] tracking-[-0.01em]">{value}</p>
                 </div>
               ))}
             </div>
 
-            <div className="mt-5 border border-ink/12 bg-[radial-gradient(120%_100%_at_50%_0%,#fffdf9_0%,#f2ece1_100%)] px-8 py-8">
+            <div className="mt-5 border border-ink/12 product-well px-8 py-8">
               <MachineElevation machine={machine} className="mx-auto max-h-[260px]" />
             </div>
 
@@ -287,7 +288,7 @@ function MachineDetail({
             <Link
               key={other.id}
               to={`/compare?ids=${machine.id},${other.id}`}
-              className="group flex flex-col justify-between gap-8 bg-paper px-6 py-7 transition-colors duration-300 hover:bg-linen"
+              className="group flex flex-col justify-between gap-8 bg-paper px-6 py-7 transition-colors duration-300 hover:bg-surface"
             >
               <div>
                 <p className="eyebrow">{other.brand}</p>

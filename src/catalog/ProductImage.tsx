@@ -29,7 +29,7 @@ export function ProductImage({
   return (
     <div
       className={cx(
-        'relative w-full overflow-hidden bg-[radial-gradient(120%_100%_at_50%_0%,#fffdf9_0%,#f2ece1_100%)]',
+        'relative w-full overflow-hidden product-well',
         className,
       )}
     >

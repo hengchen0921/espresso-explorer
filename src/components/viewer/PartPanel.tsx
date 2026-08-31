@@ -1,4 +1,5 @@
 import type { Machine, ResolvedPart } from '@/data/types'
+import { Glossed } from '@/components/ui/Term'
 import { cx } from '@/lib/format'
 import { ArrowGlyph } from '@/components/ui/Button'
 
@@ -32,7 +33,7 @@ export function PartPanel({
   className,
 }: PartPanelProps) {
   return (
-    <div className={cx('flex h-full flex-col bg-linen', className)}>
+    <div className={cx('flex h-full flex-col bg-surface', className)}>
       <div className="flex items-start justify-between gap-4 border-b border-ink/10 px-6 py-5 md:px-8">
         <div>
           <p className="eyebrow">
@@ -92,22 +93,22 @@ export function PartPanel({
 
         <section className="mt-8">
           <h3 className="eyebrow">What this one can do</h3>
-          <p className="mt-3.5 text-[0.97rem] leading-[1.72] text-ash">{part.capability}</p>
+          <p className="mt-3.5 text-[0.97rem] leading-[1.72] text-ash"><Glossed text={part.capability} /></p>
         </section>
 
         <section className="mt-8">
           <h3 className="eyebrow">How the component works</h3>
-          <p className="mt-3.5 text-[0.97rem] leading-[1.72] text-ash">{part.fn}</p>
+          <p className="mt-3.5 text-[0.97rem] leading-[1.72] text-ash"><Glossed text={part.fn} /></p>
         </section>
 
         <section className="mt-8">
           <h3 className="eyebrow">Why it matters when you're choosing</h3>
-          <p className="mt-3.5 text-[0.97rem] leading-[1.72] text-ash">{part.whyItMatters}</p>
+          <p className="mt-3.5 text-[0.97rem] leading-[1.72] text-ash"><Glossed text={part.whyItMatters} /></p>
         </section>
 
         <section className="mt-8 border-l-2 border-copper bg-copper-tint/35 py-5 pl-5 pr-4">
           <h3 className="eyebrow text-copper-deep">The trade-off on the {machine.name}</h3>
-          <p className="mt-3 text-[0.97rem] leading-[1.72] text-bark">{part.note}</p>
+          <p className="mt-3 text-[0.97rem] leading-[1.72] text-bark"><Glossed text={part.note} /></p>
         </section>
       </div>
 

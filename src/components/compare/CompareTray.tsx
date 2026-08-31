@@ -23,7 +23,7 @@ export function CompareTray() {
     >
       <div
         className={cx(
-          'pointer-events-auto flex max-w-full items-center gap-2 rounded-full border border-crema/12 bg-ink/95 p-1.5 pl-4',
+          'pointer-events-auto flex max-w-full items-center gap-2 rounded-full border border-crema/12 bg-surface/95 p-1.5 pl-4',
           'shadow-[0_24px_60px_-24px_rgba(23,18,15,0.8)] backdrop-blur-xl',
         )}
         role="region"

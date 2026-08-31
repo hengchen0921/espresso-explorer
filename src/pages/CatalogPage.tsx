@@ -73,7 +73,7 @@ export function CatalogPage() {
                 className={cx(
                   'rounded-full border px-3.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.14em] transition-all duration-300',
                   filters.category === category
-                    ? 'border-ink bg-ink text-linen'
+                    ? 'border-ink bg-stage text-linen'
                     : 'border-ink/15 text-stone hover:border-copper hover:text-copper',
                 )}
               >
@@ -157,7 +157,7 @@ export function CatalogPage() {
       </Container>
 
       {/* ---------------------------------------------------------------- Results */}
-      <Container className="mt-8">
+      <Container wide className="mt-8">
         {results.length === 0 ? (
           <div className="grid place-items-center border border-dashed border-ink/20 px-6 py-24 text-center">
             <div>

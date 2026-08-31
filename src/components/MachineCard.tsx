@@ -24,7 +24,7 @@ export function MachineCard({ machine, index, wide = false }: MachineCardProps) 
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       className={cx(
-        'group relative flex flex-col border border-ink/10 bg-linen',
+        'group relative flex flex-col border border-ink/10 bg-surface',
         'transition-[transform,border-color,box-shadow] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]',
         'hover:-translate-y-1 hover:border-ink/25 hover:shadow-[0_26px_60px_-34px_rgba(23,18,15,0.55)]',
         wide && 'lg:flex-row',
@@ -32,7 +32,7 @@ export function MachineCard({ machine, index, wide = false }: MachineCardProps) 
     >
       <div
         className={cx(
-          'relative grid place-items-center overflow-hidden bg-[radial-gradient(120%_100%_at_50%_0%,#fffdf9_0%,#f2ece1_100%)] px-8 pt-10 pb-6',
+          'relative grid place-items-center overflow-hidden product-well px-8 pt-10 pb-6',
           wide ? 'lg:w-[46%] lg:px-10 lg:py-12' : '',
         )}
       >

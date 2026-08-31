@@ -92,7 +92,7 @@ export function FinderPage() {
                             'border px-4 py-3.5 text-left transition-all duration-300',
                             active
                               ? 'border-copper bg-copper-tint/45'
-                              : 'border-ink/12 hover:border-ink/30 hover:bg-crema/40',
+                              : 'border-ink/12 hover:border-ink/30 hover:bg-ink/6',
                           )}
                         >
                           <span
@@ -170,7 +170,7 @@ function FinderResults({
       {best ? (
         <Container className="mt-10">
           <article className="grid overflow-hidden border border-ink/12 lg:grid-cols-12">
-            <div className="grid place-items-center bg-[radial-gradient(120%_100%_at_50%_0%,#fffdf9_0%,#f2ece1_100%)] px-8 py-10 lg:col-span-5">
+            <div className="grid place-items-center product-well px-8 py-10 lg:col-span-5">
               <MachinePortrait machine={best.machine} className="h-[260px]" />
             </div>
 
@@ -222,7 +222,7 @@ function FinderResults({
           <p className="eyebrow border-t border-ink/12 pt-6">Also worth considering</p>
           <div className="mt-8 grid gap-5 md:grid-cols-2">
             {runnersUp.map((match) => (
-              <article key={match.machine.id} className="flex flex-col gap-6 border border-ink/12 bg-linen p-6">
+              <article key={match.machine.id} className="flex flex-col gap-6 border border-ink/12 bg-surface p-6">
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <p className="eyebrow">{match.machine.brand}</p>

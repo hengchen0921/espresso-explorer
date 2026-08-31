@@ -91,8 +91,8 @@ export function MachinePortrait({
           cy={h + w * 0.02}
           rx={w * 0.52}
           ry={w * 0.05}
-          fill="#2a221d"
-          opacity="0.28"
+          fill="var(--portrait-shadow)"
+          opacity="0.32"
           filter={`url(#${uid}-shadow)`}
         />
 

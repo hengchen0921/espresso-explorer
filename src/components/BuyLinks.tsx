@@ -61,7 +61,7 @@ export function BuyLinks({ machine, className }: { machine: Machine; className?:
   if (links.length === 0) return null
 
   return (
-    <section className={cx('border border-ink/12 bg-linen px-6 py-6', className)}>
+    <section className={cx('border border-ink/12 bg-surface px-6 py-6', className)}>
       <div className="flex items-baseline justify-between gap-4">
         <h3 className="eyebrow">Where to buy</h3>
         <p className="font-mono text-[0.78rem] text-stone">

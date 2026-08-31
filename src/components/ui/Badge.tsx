@@ -4,9 +4,9 @@ import { cx } from '@/lib/format'
 type Tone = 'neutral' | 'accent' | 'dark' | 'outline'
 
 const TONES: Record<Tone, string> = {
-  neutral: 'bg-crema text-ash',
-  accent: 'bg-copper-tint text-copper-deep',
-  dark: 'bg-ink text-crema',
+  neutral: 'bg-ink/10 text-stone',
+  accent: 'bg-copper-tint text-copper',
+  dark: 'bg-stage text-crema',
   outline: 'border border-current text-stone',
 }
 

@@ -282,13 +282,81 @@ it reintroduces a sync loop.
 
 ## Design system
 
-Tokens are defined once in `@theme` in `src/index.css`: `ink`/`espresso`/`bark`/`ash`/`stone`/
-`mist` (warm neutrals), `crema`/`paper`/`linen` (grounds), and `copper` as the single accent. Type
-is Fraunces (display), Inter (body), JetBrains Mono (labels, specs, numbers) from Google Fonts.
+Tokens are defined once in `@theme` in `src/index.css`. **The site is dark-ground.**
+Type is Fraunces (display), Inter (body), JetBrains Mono (labels, specs, numbers).
 The `.eyebrow` class is the mono label used above nearly every heading.
 
-**Tailwind v4:** the important modifier is a *suffix* (`absolute!`), not a prefix. A stray
-`!absolute` is silently a no-op class.
+**`ink` is the light foreground and `paper` is the dark ground.** That reads
+backwards if you assume light mode, and it is deliberate: it is what let ~470
+existing colour utilities stay correct through the flip to dark. `text-ink` on
+`bg-paper` is still maximum contrast; `border-ink/12` is still a hairline, now
+light-on-dark instead of dark-on-light. Think "ink is what you write with".
+
+**Solid dark backgrounds are never `ink`.** They are `stage` (deepest — 3D
+canvases and product wells) or `surface` (raised cards). The split matters
+because `ink` carries two roles that pull opposite ways once the ground is dark:
+
+| Written as | Means | Renders |
+| --- | --- | --- |
+| `text-ink`, `border-ink/12`, `bg-ink/8` | foreground / hairline / wash | light |
+| `bg-stage`, `bg-surface` | a solid dark panel | dark |
+
+So `bg-ink/12` (a divider) and `bg-stage` (a panel) are both correct and mean
+opposite things. Writing `bg-ink` for a panel gives you a cream block.
+
+The one place a light-on-dark chip is intentional is the hotspot pill, which
+sits *on* the 3D stage and therefore takes `text-stage`, not `text-ink`.
+
+Product image wells use a radial studio gradient, not a flat fill, so a machine
+on a card is lit the same way as the machine on the 3D stage.
+
+**Tailwind v4:** the important modifier is a *suffix* (`absolute!`), not a
+prefix. A stray `!absolute` is silently a no-op class — this shipped unnoticed
+in `HeroCanvas` for some time.
+
+## Themes
+
+`useTheme` (localStorage, **defaulting to dark**) writes `data-theme` onto
+`<html>`; `index.html` sets the same attribute in an inline script before first
+paint so a light-theme reload does not flash dark. The toggle lives in the
+header beside the units control.
+
+`@theme` holds the dark values. `:root[data-theme="light"]` overrides only the
+tokens that describe the **page**. Three groups deliberately do not flip,
+because they describe the 3D stage, which is dark in both themes:
+
+- `stage` — the canvas ground and product wells' darkest stop
+- `linen` / `crema` / `mist` — text that sits *on* the stage
+- `espresso` — the dark editorial band
+
+The consequence worth remembering: **`text-mist` is light in both themes**, so
+it is only ever correct on dark. A chip on the page ground wants `text-stone`,
+which flips. Getting this wrong gives you pale grey text on cream that passes
+review in dark mode.
+
+`--color-inverse` is "whatever sits legibly on top of `ink`". Because `ink`
+flips, a solid `bg-ink` pill needs `text-inverse`, never a fixed `text-linen`
+or `text-stage` — either one is invisible in one of the two themes.
+
+Product wells use the `.product-well` class (`--well-from/via/to`) rather than
+an inline gradient, and `MachinePortrait`'s contact shadow reads
+`var(--portrait-shadow)`, so both re-light with the theme. Do not reintroduce a
+hard-coded gradient in a component.
+
+## Layout and the page margins
+
+`Container` is the measured column (`max-w-[1680px]`, `px-5/8/12`); `Container
+wide` drops the cap for grid-heavy sections; `Bleed` is true edge-to-edge.
+
+The homepage hero is deliberately **not** in a Container — it is a two-column
+grid where the copy sits hard against the left gutter and the 3D stage runs off
+the right screen edge. A centred hero was the single biggest reason the site
+read as "everything in the middle with empty sides".
+
+`components/layout/PageRails.tsx` fills both gutters on `xl` and up — section
+name down the left, scroll position down the right. It is fixed and
+`pointer-events-none`, mounted once in `Layout`. Do not add per-section rails
+on top of it; they collide.
 
 ## Known lint warnings
 

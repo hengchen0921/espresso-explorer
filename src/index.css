@@ -1,38 +1,96 @@
 @import "tailwindcss";
 
 /* ---------------------------------------------------------------------------
-   Design tokens. The palette is intentionally narrow: a warm paper ground, a
-   near-black roasted brown for type and the 3D stage, and exactly one accent.
-   Everything else is a neutral pulled toward the same warm hue so nothing in
-   the UI reads as "default blue-grey".
+   Design tokens — dark ground, warm.
+
+   The naming is literal: `ink` is what you write WITH (light foreground),
+   `paper` is what you write ON (dark ground). That reads backwards against a
+   light-mode instinct, but it is what makes the ~470 existing colour
+   utilities correct without touching them: `text-ink` on `bg-paper` is still
+   maximum contrast, `border-ink/12` is still a hairline.
+
+   Solid dark backgrounds are NOT `ink` — they are `stage` (the deepest, for
+   3D canvases) and `surface` (raised cards). Alpha uses of ink stay ink:
+   `bg-ink/12` is a light rule on a dark field, which is what a divider is now.
 --------------------------------------------------------------------------- */
 @theme {
   --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", monospace;
 
-  --color-ink: #17120f;
+  /* Grounds, deepest first */
+  --color-stage: #0b0908;
+  --color-paper: #14100e;
+  --color-surface: #1c1613;
   --color-espresso: #241c18;
-  --color-bark: #3b2e27;
+  --color-raised: #2c231d;
+
+  /* Foreground, brightest first */
+  --color-linen: #fffcf7;
+  --color-ink: #f2eae0;
+  --color-crema: #e3d8c8;
+  --color-mist: #b9ada0;
+  --color-ash: #a1917f;
+  --color-stone: #8a7b6c;
+  --color-bark: #c9bcae;
+
+  /* Accent. Hotter than the light-mode copper — #c15a2b goes muddy on black. */
+  --color-copper: #e2793f;
+  --color-copper-deep: #c15a2b;
+  --color-copper-tint: #3a2116;
+  --color-steel: #9aa2a7;
+
+  /* Whatever sits legibly ON TOP of `ink`. Flips with the theme, so a solid
+     `bg-ink` pill has a readable label in both. */
+  --color-inverse: #14100e;
+
+  /* Product image wells and the portrait's contact shadow. Vars rather than
+     literals so a card is lit to match whichever ground it sits on. */
+  --well-from: #2b221c;
+  --well-via: #191310;
+  --well-to: #0f0b0a;
+  --portrait-shadow: #000000;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+/* ---------------------------------------------------------------------------
+   Light theme.
+
+   Only the tokens that describe the PAGE flip. Three groups deliberately do
+   not, because they describe the 3D stage, which is dark in both themes:
+   `stage` itself, the text that sits on it (`linen`/`crema`/`mist`), and
+   `espresso`, the dark editorial band. Flipping those would put cream text on
+   a cream canvas.
+--------------------------------------------------------------------------- */
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --color-paper: #f7f3ec;
+  --color-surface: #fffdf9;
+  --color-raised: #efe8dd;
+
+  --color-ink: #17120f;
+  --color-inverse: #fffdf9;
   --color-ash: #574b43;
   --color-stone: #7a6d63;
-  --color-mist: #b9ada0;
-  --color-crema: #e8dfd1;
-  --color-paper: #f7f3ec;
-  --color-linen: #fffdf9;
+  --color-bark: #3b2e27;
 
   --color-copper: #c15a2b;
   --color-copper-deep: #9c4520;
   --color-copper-tint: #f3e1d5;
   --color-steel: #a9b0b4;
 
-  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+  --well-from: #fffdf9;
+  --well-via: #f8f3ea;
+  --well-to: #f2ece1;
+  --portrait-shadow: #2a221d;
 }
 
 @layer base {
   :root {
-    color-scheme: light;
+    color-scheme: dark;
   }
 
   html {
@@ -71,7 +129,7 @@
     inset: 0;
     z-index: 9999;
     pointer-events: none;
-    opacity: 0.04;
+    opacity: 0.028;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
   }
 
@@ -116,6 +174,16 @@
     letter-spacing: 0.16em;
     text-transform: uppercase;
     color: var(--color-stone);
+  }
+
+  /* The lit floor a product sits on, on cards and in the comparison stage. */
+  .product-well {
+    background-image: radial-gradient(
+      115% 95% at 50% 0%,
+      var(--well-from) 0%,
+      var(--well-via) 55%,
+      var(--well-to) 100%
+    );
   }
 
   .hairline {
