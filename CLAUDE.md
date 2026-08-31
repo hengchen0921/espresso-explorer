@@ -179,19 +179,39 @@ make that deliberate rather than an oversight.
 
 ## The finder
 
-`src/data/finder.ts` scores every machine against six answers and returns both matches and
-rejections. It is a transparent rule engine, not an LLM, and that is a constraint of the
-architecture rather than a shortcut: this is a static build with no server, so calling a model would
-mean shipping an API key to the browser. A rule engine is also the only version that can show its
-working, which for a buying guide matters more than fluency.
+Two pieces that must stay separate: **the model understands, the scorer decides.**
 
-Two things to preserve if you extend it:
+`src/data/finder.ts` scores every machine against six answers and returns both
+matches and rejections. It is a transparent rule engine and it stays one. The
+reason is not caution about LLMs — it is that a buying guide's one real asset is
+showing its working: which machine won, why, and exactly what ruled every other
+one out. A model producing the verdict trades that for fluency.
+
+`server/advisor/` is the other half, and it only ever fills in the form. It maps
+free text ("two flat whites, tiny kitchen, about $600") onto `FinderAnswers`
+fields and returns a paraphrase; `FinderPage` then asks, one at a time, only the
+questions that are genuinely still unanswered. `src/lib/advisor.ts` is the seam,
+switched on by `VITE_ADVISOR_API` exactly like `VITE_PRODUCT_API`. With no
+endpoint set the text box never renders and the page opens on the questions —
+the same finder, one fewer shortcut. **Keep that fallback working**: the site
+deploys to GitHub Pages, where there is no server at all.
+
+The client re-validates every field the endpoint returns against the option
+lists in `FINDER_QUESTIONS` before it reaches the scorer. An unrecognised value
+would otherwise fall through the scorer's lookups and produce a confident wrong
+answer rather than an error — the same silent failure as a mistyped enum in
+`machines.json`, arriving over the network instead of from a file.
+
+Three things to preserve if you extend it:
 
 - **Collect every blocker, not the first.** An earlier version overwrote them, so the "nothing fits"
   case listed the widest machines rather than the closest ones.
 - **Blockers are weighted by how fixable they are** (`blockerWeight`): a counter is a fixed size, a
   budget can stretch, a preference for a built-in grinder is the easiest to reconsider. That
   ordering is what makes the near-miss list useful.
+- **Absent is a valid answer from the advisor.** The prompt tells the model that
+  guessing is worse than leaving a field null, because a null becomes a real
+  question a moment later. Do not "improve" it by demanding all six.
 
 Exercise it after changes — `npx tsx` a script that calls `findMachines` with a few realistic
 profiles and read the answers. Wrong weights produce plausible-looking nonsense that a type checker

@@ -1,0 +1,9 @@
+{
+  "name": "espresso-explorer-advisor",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.71.0",
+    "zod": "^3.25.76"
+  }
+}

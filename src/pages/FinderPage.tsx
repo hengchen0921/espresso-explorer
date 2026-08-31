@@ -4,142 +4,278 @@ import {
   FINDER_QUESTIONS,
   findMachines,
   type FinderAnswers,
+  type FinderQuestionId,
   type MachineMatch,
 } from '@/data/finder'
-import { cx, formatPrice } from '@/lib/format'
+import { AdvisorError, IS_ADVISOR_ENABLED, interpret } from '@/lib/advisor'
+import { formatPrice } from '@/lib/format'
 import { useUnits } from '@/hooks/useUnits'
 import { BuyButton } from '@/components/BuyLinks'
 import { MachinePortrait } from '@/components/MachinePortrait'
 import { ArrowGlyph, Button, ButtonLink } from '@/components/ui/Button'
 import { Container } from '@/components/ui/Section'
 
-type Partial6 = Partial<FinderAnswers>
+/** Shown under the box so the first-time visitor knows what "tell me" means. */
+const EXAMPLES = [
+  'Two flat whites every morning, tiny kitchen, about $600 all in. I want good coffee, not a hobby.',
+  "Just me, black espresso. I already have a decent grinder and I'd happily tinker.",
+  'Family of four, everyone wants a latte at once, and I can leave it switched on.',
+]
 
+/**
+ * The finder asks one question at a time, and asks as few as it can.
+ *
+ * The previous version put all six on one page as a flat form, which asked a
+ * nervous first-time buyer to already know their counter depth in centimetres
+ * before it told them anything. Now the opening move is a text box: the model
+ * behind `interpret` turns "two lattes, tiny kitchen, £600" into whichever
+ * fields that actually settles, and only what is genuinely still unknown gets
+ * asked. Someone who writes a full sentence often answers four of six.
+ *
+ * The ranking is untouched — `findMachines` still decides, still deterministic,
+ * still showing its working. The model only ever fills in the form.
+ */
 export function FinderPage() {
-  const [answers, setAnswers] = useState<Partial6>({})
   const { units } = useUnits()
+  const [answers, setAnswers] = useState<Partial<FinderAnswers>>({})
+  const [understood, setUnderstood] = useState('')
+  const [text, setText] = useState('')
+  const [busy, setBusy] = useState(false)
+  const [error, setError] = useState('')
+  // With no endpoint configured there is nothing to send the text to, so the
+  // page opens on the questions instead. Same finder, one fewer shortcut.
+  const [asking, setAsking] = useState(!IS_ADVISOR_ENABLED)
   const resultsRef = useRef<HTMLDivElement>(null)
 
-  const answered = FINDER_QUESTIONS.filter((q) => answers[q.id]).length
-  const complete = answered === FINDER_QUESTIONS.length
+  const remaining = FINDER_QUESTIONS.filter((q) => !answers[q.id])
+  const current = remaining[0]
+  const complete = remaining.length === 0
+  const answeredCount = FINDER_QUESTIONS.length - remaining.length
 
   const result = useMemo(
     () => (complete ? findMachines(answers as FinderAnswers, units) : null),
     [answers, complete, units],
   )
 
-  const choose = (id: keyof FinderAnswers, value: string) => {
+  const scrollToResults = () =>
+    window.setTimeout(
+      () => resultsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }),
+      120,
+    )
+
+  const choose = (id: FinderQuestionId, value: string) => {
     setAnswers((current) => {
-      const next = { ...current, [id]: value } as Partial6
-      // Scroll to the answer the moment the last question lands.
-      if (Object.keys(next).length === FINDER_QUESTIONS.length) {
-        window.setTimeout(
-          () => resultsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }),
-          120,
-        )
-      }
+      const next = { ...current, [id]: value } as Partial<FinderAnswers>
+      if (Object.keys(next).length === FINDER_QUESTIONS.length) scrollToResults()
       return next
     })
   }
 
+  const reopen = (id: FinderQuestionId) =>
+    setAnswers(({ [id]: _dropped, ...rest }) => rest as Partial<FinderAnswers>)
+
+  const reset = () => {
+    setAnswers({})
+    setUnderstood('')
+    setText('')
+    setError('')
+    setAsking(!IS_ADVISOR_ENABLED)
+  }
+
+  const submitText = async () => {
+    const trimmed = text.trim()
+    if (!trimmed || busy) return
+    setBusy(true)
+    setError('')
+    try {
+      const reading = await interpret(trimmed)
+      setAnswers(reading.answers)
+      setUnderstood(reading.understood)
+      setAsking(true)
+      if (Object.keys(reading.answers).length === FINDER_QUESTIONS.length) scrollToResults()
+    } catch (failure) {
+      // A failed read is not a dead end — it just means asking everything.
+      setError(
+        failure instanceof AdvisorError
+          ? failure.message
+          : 'Something went wrong. Answer the questions instead.',
+      )
+      setAsking(true)
+    } finally {
+      setBusy(false)
+    }
+  }
+
   return (
     <>
-      <Container className="pt-8 md:pt-12">
-        <div className="border-b border-ink/12 pb-8">
-          <p className="eyebrow">Find yours</p>
-          <h1 className="mt-6 max-w-[20ch] text-[clamp(2.4rem,5.6vw,4.4rem)] leading-[0.96] tracking-display-lg">
-            Six questions, then an honest answer.
-          </h1>
-          <p className="mt-6 max-w-[62ch] text-[1.02rem] leading-[1.72] text-ash">
-            Answer these and the guide will rank all {FINDER_QUESTIONS.length > 0 ? 'eight' : ''}{' '}
-            machines against what you actually said — and show its working. Every recommendation
-            lists why it fits and what you would be accepting; every machine it rules out says
-            exactly what ruled it out.
-          </p>
-        </div>
+      <Container className="pt-16 md:pt-24">
+        <p className="eyebrow">Find yours</p>
+        <h1 className="mt-6 max-w-[16ch] text-[clamp(2.4rem,6vw,4.4rem)] leading-[0.98] tracking-display-lg">
+          {asking ? 'A few things about your mornings.' : 'Tell me about your mornings.'}
+        </h1>
+        <p className="mt-7 max-w-[54ch] text-[1.02rem] leading-[1.7] text-ash">
+          {asking
+            ? 'Everything you answer narrows it. When there is enough to go on, the guide ranks all eight machines against what you actually said — and shows its working, including every machine it ruled out and why.'
+            : 'Write it however you would say it out loud. Whatever you cover gets filled in for you; whatever you leave out becomes a question. Nothing here is a sales funnel — the ranking is a scoring model you can read.'}
+        </p>
       </Container>
 
-      {/* ------------------------------------------------------------ Questions */}
-      <Container className="mt-12">
-        <ol className="space-y-14">
-          {FINDER_QUESTIONS.map((question, index) => {
-            const chosen = answers[question.id]
-            return (
-              <li key={question.id} className="hairline pt-6">
-                <div className="grid gap-6 lg:grid-cols-12">
-                  <div className="lg:col-span-5">
-                    <span className="numeric text-[10px] text-copper">
-                      {String(index + 1).padStart(2, '0')}
-                    </span>
-                    <h2 className="mt-4 text-[clamp(1.3rem,2.2vw,1.75rem)] leading-[1.12]">
-                      {question.question}
-                    </h2>
-                    <p className="mt-3 max-w-[42ch] text-[0.9rem] leading-[1.65] text-stone">
-                      {question.hint}
-                    </p>
-                  </div>
+      {/* ------------------------------------------------------------- Intake */}
+      {!asking && (
+        <Container className="mt-12">
+          <div className="max-w-[46rem]">
+            <label htmlFor="advisor-text" className="sr-only">
+              Describe your coffee habits and kitchen
+            </label>
+            <textarea
+              id="advisor-text"
+              value={text}
+              onChange={(event) => setText(event.target.value)}
+              onKeyDown={(event) => {
+                if (event.key === 'Enter' && (event.metaKey || event.ctrlKey)) void submitText()
+              }}
+              rows={4}
+              maxLength={1200}
+              placeholder="Two flat whites every morning, tiny kitchen, about $600 all in…"
+              className="w-full resize-none border border-ink/15 bg-surface p-5 text-[1.02rem] leading-[1.65] text-ink transition-colors duration-300 placeholder:text-stone focus-visible:border-copper focus-visible:outline-none"
+            />
 
-                  <div className="grid gap-2.5 sm:grid-cols-2 lg:col-span-7">
-                    {question.options.map((option) => {
-                      const active = chosen === option.value
-                      return (
-                        <button
-                          key={option.value}
-                          type="button"
-                          onClick={() => choose(question.id, option.value)}
-                          aria-pressed={active}
-                          className={cx(
-                            'border px-4 py-3.5 text-left transition-all duration-300',
-                            active
-                              ? 'border-copper bg-copper-tint/45'
-                              : 'border-ink/12 hover:border-ink/30 hover:bg-ink/6',
-                          )}
-                        >
-                          <span
-                            className={cx(
-                              'block text-[0.97rem]',
-                              active ? 'text-copper-deep' : 'text-ink',
-                            )}
-                          >
-                            {option.label}
-                          </span>
-                          <span className="mt-1 block label text-mist">
-                            {option.detail}
-                          </span>
-                        </button>
-                      )
-                    })}
-                  </div>
-                </div>
-              </li>
-            )
-          })}
-        </ol>
-      </Container>
+            <div className="mt-5 flex flex-wrap items-center gap-4">
+              <Button onClick={() => void submitText()} disabled={busy || !text.trim()}>
+                {busy ? 'Reading…' : 'Find my machine'}
+                {!busy && <ArrowGlyph />}
+              </Button>
+              <button
+                type="button"
+                onClick={() => setAsking(true)}
+                className="link-underline label text-stone transition-colors hover:text-copper"
+              >
+                Or just answer the questions
+              </button>
+            </div>
 
-      {/* -------------------------------------------------------------- Results */}
-      <div ref={resultsRef} className="scroll-mt-24">
-        {!complete && (
-          <Container className="mt-20">
-            <div className="hairline flex flex-wrap items-center justify-between gap-4 pt-6">
-              <p className="eyebrow">
-                {answered} of {FINDER_QUESTIONS.length} answered
+            {error && <p className="mt-5 text-[0.9rem] text-copper">{error}</p>}
+
+            <div className="mt-12 border-t border-ink/12 pt-6">
+              <p className="eyebrow">For example</p>
+              <ul className="mt-4 flex flex-col gap-2.5">
+                {EXAMPLES.map((example) => (
+                  <li key={example}>
+                    <button
+                      type="button"
+                      onClick={() => setText(example)}
+                      className="text-left text-[0.92rem] leading-[1.6] text-stone transition-colors duration-200 hover:text-copper"
+                    >
+                      “{example}”
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </Container>
+      )}
+
+      {/* ---------------------------------------------------------- Questions */}
+      {asking && !complete && current && (
+        <Container className="mt-14">
+          {understood && (
+            <div className="mb-10 max-w-[46rem] border-l-2 border-copper pl-5">
+              <p className="eyebrow">What I took from that</p>
+              <p className="mt-3 text-[1.02rem] leading-[1.65] text-ink">{understood}</p>
+              <p className="mt-2.5 text-[0.85rem] text-stone">
+                {answeredCount} of {FINDER_QUESTIONS.length} filled in.{' '}
+                <button
+                  type="button"
+                  onClick={reset}
+                  className="link-underline text-stone transition-colors hover:text-copper"
+                >
+                  Not right? Start again
+                </button>
               </p>
-              <div className="h-[3px] w-full max-w-sm bg-ink/8">
-                <div
-                  className="h-full bg-copper transition-[width] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
-                  style={{ width: `${(answered / FINDER_QUESTIONS.length) * 100}%` }}
-                />
+            </div>
+          )}
+
+          <AnsweredChips answers={answers} onReopen={reopen} />
+
+          <div className="mt-8 border-t border-ink/12 pt-8">
+            <div className="grid gap-8 lg:grid-cols-12">
+              <div className="lg:col-span-5">
+                <p className="numeric text-[10px] text-copper">
+                  {String(answeredCount + 1).padStart(2, '0')} / {FINDER_QUESTIONS.length}
+                </p>
+                <h2 className="mt-4 text-[clamp(1.5rem,2.6vw,2rem)] leading-[1.12]">
+                  {current.question}
+                </h2>
+                <p className="mt-4 max-w-[40ch] text-[0.95rem] leading-[1.65] text-stone">
+                  {current.hint}
+                </p>
+              </div>
+
+              <div className="grid content-start gap-3 sm:grid-cols-2 lg:col-span-7">
+                {current.options.map((option) => (
+                  <button
+                    key={option.value}
+                    type="button"
+                    onClick={() => choose(current.id, option.value)}
+                    className="border border-ink/12 bg-surface px-5 py-4 text-left transition-all duration-300 hover:border-copper hover:bg-raised"
+                  >
+                    <span className="block text-[0.97rem] text-ink">{option.label}</span>
+                    <span className="mt-1 block text-[0.85rem] leading-[1.5] text-stone">
+                      {option.detail}
+                    </span>
+                  </button>
+                ))}
               </div>
             </div>
-          </Container>
-        )}
+          </div>
+        </Container>
+      )}
 
-        {result && <FinderResults result={result} onReset={() => setAnswers({})} />}
+      {/* ------------------------------------------------------------ Results */}
+      <div ref={resultsRef} className="scroll-mt-24">
+        {result && <FinderResults result={result} onReset={reset} />}
       </div>
     </>
   )
 }
+
+/**
+ * Everything already settled, always visible and always reversible. The model
+ * fills some of these in without being asked, so they have to be correctable —
+ * an answer someone cannot see is an answer they cannot disagree with.
+ */
+function AnsweredChips({
+  answers,
+  onReopen,
+}: {
+  answers: Partial<FinderAnswers>
+  onReopen: (id: FinderQuestionId) => void
+}) {
+  const settled = FINDER_QUESTIONS.filter((q) => answers[q.id])
+  if (settled.length === 0) return null
+
+  return (
+    <div className="flex flex-wrap gap-2">
+      {settled.map((question) => {
+        const chosen = question.options.find((o) => o.value === answers[question.id])
+        return (
+          <button
+            key={question.id}
+            type="button"
+            onClick={() => onReopen(question.id)}
+            title={question.question}
+            className="group flex items-center gap-2 rounded-full border border-ink/15 px-3.5 py-1.5 transition-colors duration-300 hover:border-copper"
+          >
+            <span className="label text-stone">{chosen?.label}</span>
+            <span className="text-stone transition-colors group-hover:text-copper">×</span>
+          </button>
+        )
+      })}
+    </div>
+  )
+}
+
 
 function FinderResults({
   result,
