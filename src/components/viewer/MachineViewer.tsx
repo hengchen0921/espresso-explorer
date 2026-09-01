@@ -233,7 +233,7 @@ export function MachineViewer({
           ready ? 'opacity-0' : 'opacity-100',
         )}
       >
-        <span className="eyebrow text-mist/70">Building model</span>
+        <span className="eyebrow text-mist/80">Building model</span>
       </div>
 
       <p

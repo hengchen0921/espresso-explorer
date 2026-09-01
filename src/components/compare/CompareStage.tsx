@@ -131,7 +131,7 @@ export default function CompareStage({ entries }: CompareStageProps) {
                 style={{ pointerEvents: 'none' }}
               >
                 <div className="w-max text-center">
-                  <p className="label text-mist/60">
+                  <p className="label text-mist/80">
                     {machine.brand}
                   </p>
                   <p className="mt-1 font-display text-[0.95rem] leading-tight text-crema">

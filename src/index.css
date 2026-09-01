@@ -31,12 +31,20 @@
   --color-crema: #e3d8c8;
   --color-mist: #b9ada0;
   --color-ash: #a1917f;
+  /* Muted text on the PAGE. Distinct from `mist`, which is muted text on the
+     3D STAGE — the stage is dark in both themes, so mist must not flip, while
+     this must. They started as one token; ~20 page-ground uses of `mist` then
+     rendered at 1.99:1 in light mode, which is why they are now two. Rule:
+     on `stage`/`espresso` use `mist`, anywhere else use `muted`. */
+  --color-muted: #b9ada0;
   --color-stone: #8a7b6c;
   --color-bark: #c9bcae;
 
   /* Accent. Hotter than the light-mode copper — #c15a2b goes muddy on black. */
   --color-copper: #e2793f;
-  --color-copper-deep: #c15a2b;
+  /* Was #c15a2b, which is 4.29:1 on `paper` — under AA for the spec-group
+     headings and winner values in the comparison matrix that use it as TEXT. */
+  --color-copper-deep: #d6703a;
   --color-copper-tint: #3a2116;
   --color-steel: #9aa2a7;
 
@@ -82,9 +90,14 @@
   --color-inverse: #fffdf9;
   --color-ash: #574b43;
   --color-stone: #7a6d63;
+  /* 4.94:1 on `paper`, 5.38:1 on `surface`. `mist` deliberately does not
+     appear here — it stays light because it only ever sits on the stage. */
+  --color-muted: #74675d;
   --color-bark: #3b2e27;
 
-  --color-copper: #c15a2b;
+  /* Was #c15a2b, 3.98:1 on light `paper` — under AA as the error/link text
+     colour. Darkened just far enough to clear it without shifting the hue. */
+  --color-copper: #b3501f;
   --color-copper-deep: #9c4520;
   --color-copper-tint: #f3e1d5;
   --color-steel: #a9b0b4;

@@ -27,7 +27,7 @@ export function SpecTable({ machine, className }: { machine: Machine; className?
                     {row.value(machine, units)}
                   </dd>
                   {row.hint && (
-                    <p className="col-span-2 mt-2 max-w-[52ch] text-[0.8rem] leading-[1.6] text-mist">
+                    <p className="col-span-2 mt-2 max-w-[52ch] text-[0.8rem] leading-[1.6] text-muted">
                       {row.hint}
                     </p>
                   )}

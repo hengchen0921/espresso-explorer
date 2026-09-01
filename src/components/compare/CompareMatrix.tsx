@@ -54,7 +54,7 @@ export function CompareMatrix({ machines }: { machines: Machine[] }) {
                     <div>
                       <p className="text-[0.92rem] text-ash">{row.label}</p>
                       {row.hint && (
-                        <p className="mt-1.5 max-w-[40ch] text-[0.78rem] leading-[1.55] text-mist">
+                        <p className="mt-1.5 max-w-[40ch] text-[0.78rem] leading-[1.55] text-muted">
                           {row.hint}
                         </p>
                       )}
@@ -71,10 +71,18 @@ export function CompareMatrix({ machines }: { machines: Machine[] }) {
                           )}
                         >
                           {isWinner && (
-                            <span
-                              className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-copper"
-                              aria-label="Strongest in this row"
-                            />
+                            <>
+                              {/* The dot is the non-colour half of the winner
+                                  encoding, so it must not be the thing that
+                                  carries the meaning to a screen reader: an
+                                  `aria-label` on a plain `span` has no role to
+                                  hang off and is skipped by most of them. */}
+                              <span
+                                className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-copper"
+                                aria-hidden
+                              />
+                              <span className="sr-only">Strongest in this row:</span>
+                            </>
                           )}
                           {row.value(machine, units)}
                         </p>

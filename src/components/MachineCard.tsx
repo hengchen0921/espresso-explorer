@@ -36,7 +36,7 @@ export function MachineCard({ machine, index, wide = false }: MachineCardProps) 
           wide ? 'lg:w-[46%] lg:px-10 lg:py-12' : '',
         )}
       >
-        <span className="absolute left-5 top-5 numeric text-[10px] text-mist">
+        <span className="absolute left-5 top-5 numeric text-[10px] text-muted">
           {String(index + 1).padStart(2, '0')}
         </span>
         <MachinePortrait
@@ -79,7 +79,7 @@ export function MachineCard({ machine, index, wide = false }: MachineCardProps) 
             <p className="label text-stone">
               {machine.category}
             </p>
-            <p className="label text-mist">
+            <p className="label text-muted">
               {formatPortafilter(machine.specs.portafilterMm)} · {machine.specs.grinder ? 'grinder' : 'no grinder'} ·{' '}
               {machine.specs.pid ? 'PID' : 'no PID'}
             </p>

@@ -49,7 +49,7 @@ export function LineupPage() {
           </p>
         </div>
 
-        <p className="mt-4 max-w-[70ch] text-[0.85rem] leading-[1.7] text-mist">
+        <p className="mt-4 max-w-[70ch] text-[0.85rem] leading-[1.7] text-muted">
           There is no product photography anywhere in this guide. The machines above are geometry
           rendered live in your browser; the pictures below are drawn from the same dimensions and
           the same palette. That is why they can be trusted against each other in a way a set of

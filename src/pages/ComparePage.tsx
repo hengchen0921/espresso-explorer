@@ -106,7 +106,7 @@ export function ComparePage() {
             <button
               type="button"
               onClick={() => setSearchParams({})}
-              className="ml-1 px-2 label text-mist transition-colors hover:text-copper"
+              className="ml-1 px-2 label text-muted transition-colors hover:text-copper"
             >
               Clear
             </button>

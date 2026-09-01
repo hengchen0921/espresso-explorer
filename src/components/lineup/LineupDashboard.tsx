@@ -68,7 +68,7 @@ export function LineupDashboard({ machines }: { machines: Machine[] }) {
             )}
           >
             <div className="relative grid place-items-center product-well px-6 pt-8 pb-4">
-              <span className="absolute left-4 top-4 numeric text-[10px] text-mist">
+              <span className="absolute left-4 top-4 numeric text-[10px] text-muted">
                 {String(index + 1).padStart(2, '0')}
               </span>
               <MachinePortrait machine={machine} className="h-[150px]" />
@@ -107,7 +107,7 @@ export function LineupDashboard({ machines }: { machines: Machine[] }) {
               </dl>
 
               <div className="mt-auto flex items-end justify-between gap-3">
-                <p className="numeric text-[10px] uppercase leading-[1.6] tracking-label text-mist">
+                <p className="numeric text-[10px] uppercase leading-[1.6] tracking-label text-muted">
                   {formatPortafilter(machine.specs.portafilterMm)}
                   <br />
                   {machine.specs.pid ? 'PID' : 'No PID'} ·{' '}

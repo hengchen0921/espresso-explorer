@@ -179,7 +179,7 @@ export function CatalogPage() {
 
       {/* ------------------------------------------------------------ Disclosure */}
       <Container className="mt-16">
-        <p className="hairline max-w-[74ch] pt-6 text-[0.82rem] leading-[1.7] text-mist">
+        <p className="hairline max-w-[74ch] pt-6 text-[0.82rem] leading-[1.7] text-muted">
           {HAS_AFFILIATE_LINKS
             ? `${AMAZON_REQUIRED_DISCLOSURE} Product links here are affiliate links and may earn a commission at no extra cost to you. What appears in this catalogue and how it is ordered is decided independently of that.`
             : 'Product links here go to a retailer search. No affiliate tags are configured, so nothing on this page earns a commission.'}{' '}

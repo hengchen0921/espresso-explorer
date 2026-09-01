@@ -47,7 +47,7 @@ export function BuyButton({ machine, className }: { machine: Machine; className?
         </span>
       </a>
 
-      <p className="label text-mist">
+      <p className="label text-muted">
         {HAS_AFFILIATE_LINKS
           ? 'Affiliate link · may earn a commission'
           : 'Retailer search · earns nothing'}
@@ -84,7 +84,7 @@ export function BuyLinks({ machine, className }: { machine: Machine; className?:
             >
               <span>
                 <span className="block text-[0.95rem] text-ink">{link.name}</span>
-                <span className="mt-0.5 block label text-mist">
+                <span className="mt-0.5 block label text-muted">
                   {link.note}
                 </span>
               </span>
@@ -107,7 +107,7 @@ export function BuyLinks({ machine, className }: { machine: Machine; className?:
         ))}
       </ul>
 
-      <p className="mt-5 text-[0.78rem] leading-[1.65] text-mist">
+      <p className="mt-5 text-[0.78rem] leading-[1.65] text-muted">
         {HAS_AFFILIATE_LINKS ? (
           <>
             {AMAZON_REQUIRED_DISCLOSURE} Buy through one of these and this guide may earn a

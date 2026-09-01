@@ -63,7 +63,7 @@ export function ProductCard({ product }: { product: CatalogProduct }) {
         <dl className="space-y-1">
           {product.specs.slice(0, 3).map((spec) => (
             <div key={spec.label} className="flex justify-between gap-3">
-              <dt className="label text-mist">
+              <dt className="label text-muted">
                 {spec.label}
               </dt>
               <dd className="truncate numeric text-[0.72rem] text-stone">{spec.value}</dd>

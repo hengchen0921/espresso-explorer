@@ -17,7 +17,7 @@ export function Footer() {
           </div>
 
           <nav className="lg:col-span-3">
-            <p className="eyebrow text-mist/70">Machines</p>
+            <p className="eyebrow text-mist/80">Machines</p>
             <ul className="mt-5 space-y-2.5">
               {machines.map((machine) => (
                 <li key={machine.id}>
@@ -33,7 +33,7 @@ export function Footer() {
           </nav>
 
           <div className="lg:col-span-3">
-            <p className="eyebrow text-mist/70">Colophon</p>
+            <p className="eyebrow text-mist/80">Colophon</p>
             <p className="mt-5 text-[0.86rem] leading-[1.7] text-crema/60">
               Every machine is built from primitive geometry — cylinders, boxes and extrusions
               measured against the real thing — and rendered live rather than pre-baked. Component
@@ -54,10 +54,10 @@ export function Footer() {
         </div>
 
         <div className="hairline-dark mt-16 flex flex-col gap-3 pt-6 sm:flex-row sm:items-center sm:justify-between">
-          <p className="label text-mist/50">
+          <p className="label text-mist/80">
             Espresso Explorer — an interactive buyer's guide
           </p>
-          <p className="label text-mist/50">
+          <p className="label text-mist/80">
             {machines.length} machines · {parts.length} components
           </p>
         </div>

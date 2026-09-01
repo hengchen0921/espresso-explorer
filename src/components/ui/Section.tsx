@@ -48,7 +48,7 @@ export function SectionHeading({ eyebrow, title, lede, index, className }: Secti
     <header className={cx('hairline pt-6', className)}>
       <div className="flex items-baseline justify-between gap-6">
         {eyebrow && <p className="eyebrow">{eyebrow}</p>}
-        {index && <span className="eyebrow text-mist">{index}</span>}
+        {index && <span className="eyebrow text-muted">{index}</span>}
       </div>
       <div className="mt-6 grid gap-6 lg:grid-cols-12">
         <h2 className="text-[clamp(1.9rem,3.6vw,3.1rem)] leading-[1.02] lg:col-span-7">{title}</h2>

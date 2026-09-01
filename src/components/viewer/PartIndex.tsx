@@ -57,7 +57,7 @@ export function PartIndex({ parts, hoveredPart, onSelect, onHover, className }: 
                   <span className="font-display text-[1.02rem] tracking-display text-ink">
                     {part.name}
                   </span>
-                  <span className="eyebrow shrink-0 text-mist">{part.system}</span>
+                  <span className="eyebrow shrink-0 text-muted">{part.system}</span>
                 </span>
                 <span className="mt-1.5 block truncate label text-stone">
                   {part.spec}

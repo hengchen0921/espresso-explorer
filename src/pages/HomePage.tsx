@@ -128,14 +128,14 @@ export function HomePage() {
 
             <div className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between p-6 lg:p-8">
               <div>
-                <p className="label text-mist/60">
+                <p className="label text-mist/80">
                   Shown
                 </p>
                 <p className="mt-1.5 font-display text-[1.1rem] text-crema">
                   Breville Barista Express
                 </p>
               </div>
-              <p className="label text-mist/50">
+              <p className="label text-mist/80">
                 Drag to rotate
               </p>
             </div>
@@ -227,7 +227,7 @@ export function HomePage() {
       {/* -------------------------------------------------------- Editorial band */}
       <section className="mt-28 bg-espresso py-20 text-crema md:py-28">
         <Container>
-          <p className="eyebrow text-mist/60">Before you look at a single price</p>
+          <p className="eyebrow text-mist/80">Before you look at a single price</p>
           <h2 className="mt-6 max-w-[18ch] text-[clamp(2rem,4.2vw,3.4rem)] leading-[1.02] text-linen">
             Three decisions, and the rest is detail.
           </h2>

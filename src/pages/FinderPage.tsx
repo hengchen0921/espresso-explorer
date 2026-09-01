@@ -128,6 +128,9 @@ export function FinderPage() {
             <label htmlFor="advisor-text" className="sr-only">
               Describe your coffee habits and kitchen
             </label>
+            {/* `bg-surface` is within 1.1:1 of `paper` in both themes, so the
+                border is the only thing that says "input". WCAG 1.4.11 wants
+                3:1 for that, which ink/15 (1.4:1) did not reach. */}
             <textarea
               id="advisor-text"
               value={text}
@@ -138,7 +141,7 @@ export function FinderPage() {
               rows={4}
               maxLength={1200}
               placeholder="Two flat whites every morning, tiny kitchen, about $600 all in…"
-              className="w-full resize-none border border-ink/15 bg-surface p-5 text-[1.02rem] leading-[1.65] text-ink transition-colors duration-300 placeholder:text-stone focus-visible:border-copper focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-copper/40"
+              className="w-full resize-none border border-ink/50 bg-surface p-5 text-[1.02rem] leading-[1.65] text-ink transition-colors duration-300 placeholder:text-stone focus-visible:border-copper focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-copper/40"
             />
 
             <div className="mt-5 flex flex-wrap items-center gap-4">
@@ -155,7 +158,11 @@ export function FinderPage() {
               </button>
             </div>
 
-            {error && <p className="mt-5 text-[0.9rem] text-copper">{error}</p>}
+            {/* The advisor call is async and the button keeps focus, so a
+                failure is otherwise announced to nobody. */}
+            <p role="status" className="mt-5 text-[0.9rem] text-copper empty:hidden">
+              {error}
+            </p>
 
             <div className="mt-12 border-t border-ink/12 pt-6">
               <p className="eyebrow">For example</p>
@@ -411,7 +418,7 @@ function FinderResults({
       )}
 
       <Container className="mt-16">
-        <p className="hairline max-w-[68ch] pt-6 text-[0.82rem] leading-[1.7] text-mist">
+        <p className="hairline max-w-[68ch] pt-6 text-[0.82rem] leading-[1.7] text-muted">
           This is a scoring model, not a language model — the site is static, and an LLM would mean
           shipping an API key to your browser. Every point above comes from a rule you can read in
           <code className="mx-1 numeric text-[0.8rem] text-stone">src/data/finder.ts</code>, which
