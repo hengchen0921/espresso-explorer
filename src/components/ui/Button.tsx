@@ -7,7 +7,7 @@ type Size = 'sm' | 'md'
 
 const BASE =
   'inline-flex items-center justify-center gap-2 rounded-full label ' +
-  'transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] disabled:opacity-40 disabled:pointer-events-none'
+  'transition-[color,background-color,border-color,opacity] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] disabled:opacity-40 disabled:pointer-events-none'
 
 const VARIANTS: Record<Variant, string> = {
   solid: 'bg-ink text-inverse hover:bg-copper hover:text-linen',

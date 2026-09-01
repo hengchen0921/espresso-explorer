@@ -72,7 +72,7 @@ export function CatalogPage() {
                 onClick={() => update({ category: category as CatalogCategory | 'All' })}
                 aria-pressed={filters.category === category}
                 className={cx(
-                  'rounded-full border px-3.5 py-1.5 label transition-all duration-300',
+                  'rounded-full border px-3.5 py-1.5 label transition-colors duration-300',
                   filters.category === category
                     ? 'border-ink bg-stage text-linen'
                     : 'border-ink/15 text-stone hover:border-copper hover:text-copper',
@@ -111,7 +111,7 @@ export function CatalogPage() {
                   }
                   aria-pressed={filters.maxPrice === step}
                   className={cx(
-                    'rounded-full border px-3 py-1.5 numeric text-[10px] transition-all duration-300',
+                    'rounded-full border px-3 py-1.5 numeric text-[10px] transition-colors duration-300',
                     filters.maxPrice === step
                       ? 'border-copper bg-copper text-linen'
                       : 'border-ink/15 text-stone hover:border-copper hover:text-copper',

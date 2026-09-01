@@ -138,7 +138,7 @@ export function FinderPage() {
               rows={4}
               maxLength={1200}
               placeholder="Two flat whites every morning, tiny kitchen, about $600 all in…"
-              className="w-full resize-none border border-ink/15 bg-surface p-5 text-[1.02rem] leading-[1.65] text-ink transition-colors duration-300 placeholder:text-stone focus-visible:border-copper focus-visible:outline-none"
+              className="w-full resize-none border border-ink/15 bg-surface p-5 text-[1.02rem] leading-[1.65] text-ink transition-colors duration-300 placeholder:text-stone focus-visible:border-copper focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-copper/40"
             />
 
             <div className="mt-5 flex flex-wrap items-center gap-4">
@@ -219,7 +219,7 @@ export function FinderPage() {
                     key={option.value}
                     type="button"
                     onClick={() => choose(current.id, option.value)}
-                    className="border border-ink/12 bg-surface px-5 py-4 text-left transition-all duration-300 hover:border-copper hover:bg-raised"
+                    className="border border-ink/12 bg-surface px-5 py-4 text-left transition-colors duration-300 hover:border-copper hover:bg-raised"
                   >
                     <span className="block text-[0.97rem] text-ink">{option.label}</span>
                     <span className="mt-1 block text-[0.85rem] leading-[1.5] text-stone">

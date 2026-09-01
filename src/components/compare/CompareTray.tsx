@@ -17,7 +17,7 @@ export function CompareTray() {
     <div
       className={cx(
         'pointer-events-none fixed inset-x-0 bottom-0 z-40 flex justify-center px-4 pb-5',
-        'transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]',
+        'safe-b safe-x transition-[transform,opacity] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]',
         visible ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0',
       )}
     >

@@ -126,6 +126,11 @@
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     overscroll-behavior-y: none;
+    /* Kills the 300ms double-tap-zoom delay without disabling pinch zoom the
+       way `user-scalable=no` would. Matters more now the site installs to a
+       home screen and gets tapped like an app. */
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
   }
 
   /* Barely-there paper grain. Keeps large cream fields from looking like flat
@@ -347,4 +352,34 @@
 .hotspot-ring-delayed {
   animation: ping-ring 2.8s var(--ease-out-expo) infinite;
   animation-delay: 1.4s;
+}
+
+/* ---------------------------------------------------------------------------
+   Safe areas.
+
+   `viewport-fit=cover` in index.html runs the page edge to edge, which is what
+   we want on a notched phone — and which means anything pinned to an edge sits
+   under the notch or the home indicator unless it says otherwise. Installed as
+   a PWA there is no browser chrome to absorb it, so this is load-bearing
+   rather than cosmetic.
+
+   Applied to the four things that touch an edge: the sticky header, the mobile
+   sheet, the fixed comparison tray and the footer. Anything else new that
+   pins to an edge needs one of these too.
+--------------------------------------------------------------------------- */
+@layer components {
+  .safe-t {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+
+  .safe-b {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  /* Landscape on a notched phone puts the cutout on one side. `max()` keeps
+     the designed gutter as the floor rather than replacing it. */
+  .safe-x {
+    padding-left: max(0px, env(safe-area-inset-left, 0px));
+    padding-right: max(0px, env(safe-area-inset-right, 0px));
+  }
 }

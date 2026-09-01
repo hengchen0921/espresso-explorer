@@ -92,7 +92,7 @@ export function ComparePage() {
                 onClick={() => toggle(machine.id)}
                 aria-pressed={active}
                 className={cx(
-                  'rounded-full border px-3.5 py-1.5 label transition-all duration-300',
+                  'rounded-full border px-3.5 py-1.5 label transition-colors duration-300',
                   active
                     ? 'border-copper bg-copper text-linen'
                     : 'border-ink/15 text-stone hover:border-copper hover:text-copper',

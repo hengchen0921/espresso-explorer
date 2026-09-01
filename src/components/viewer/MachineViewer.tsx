@@ -257,7 +257,7 @@ export function MachineViewer({
         className={cx(
           'absolute bottom-5 right-6 rounded-full border border-crema/20 px-3.5 py-1.5',
           'label text-crema/70 backdrop-blur-sm',
-          'transition-all duration-500 hover:border-copper hover:text-copper',
+          'transition-colors duration-500 hover:border-copper hover:text-copper',
           hasOrbited || activePart ? 'opacity-100' : 'pointer-events-none opacity-0',
         )}
       >

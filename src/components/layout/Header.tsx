@@ -174,7 +174,7 @@ export function Header() {
   return (
     <header
       className={cx(
-        'sticky top-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-500',
+        'sticky top-0 z-50 safe-t safe-x transition-[background-color,border-color,backdrop-filter] duration-500',
         scrolled || open
           ? 'border-b border-ink/10 bg-paper/85 backdrop-blur-xl'
           : 'border-b border-transparent bg-transparent',
@@ -242,7 +242,7 @@ export function Header() {
       {open && (
         <div
           id="mobile-menu"
-          className="animate-fade fixed inset-x-0 top-16 bottom-0 z-40 overflow-y-auto border-t border-ink/10 bg-paper px-5 pt-4 pb-10 md:hidden"
+          className="animate-fade fixed inset-x-0 top-16 bottom-0 z-40 safe-b safe-x overflow-y-auto overscroll-contain border-t border-ink/10 bg-paper px-5 pt-4 pb-10 md:hidden"
         >
           <nav className="flex flex-col">
             {[...NAV, { to: '/lineup', label: 'Lineup', hint: `All ${spellOut(machines.length)} at true scale, on one counter`, end: false }].map(

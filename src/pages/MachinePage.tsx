@@ -139,7 +139,7 @@ function MachineDetail({
               onClick={() => toggle(machine.id)}
               aria-pressed={compared}
               className={cx(
-                'rounded-full border px-4 py-2 label transition-all duration-300',
+                'rounded-full border px-4 py-2 label transition-colors duration-300',
                 compared
                   ? 'border-copper bg-copper text-linen'
                   : 'border-ink/20 text-ink hover:border-copper hover:text-copper',

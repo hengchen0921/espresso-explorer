@@ -91,7 +91,7 @@ export function MachineCard({ machine, index, wide = false }: MachineCardProps) 
               onClick={() => toggle(machine.id)}
               aria-pressed={selected}
               className={cx(
-                'grid h-8 w-8 place-items-center rounded-full border transition-all duration-300',
+                'grid h-8 w-8 place-items-center rounded-full border transition-colors duration-300',
                 selected
                   ? 'border-copper bg-copper text-linen'
                   : 'border-ink/15 text-stone hover:border-copper hover:text-copper',

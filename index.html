@@ -29,13 +29,14 @@
 
     <!-- iOS ignores most of the web app manifest and reads these instead. The
          apple-touch-icon is the home-screen icon; without it Safari screenshots
-         the page and uses that. `black` keeps the status bar opaque: the
-         translucent option looks better but slides content under the notch,
-         and nothing here handles safe-area insets yet. -->
+         the page and uses that. `black-translucent` runs the page under the
+         status bar for a full-bleed app feel — only safe because the header,
+         mobile sheet, tray and footer now pad themselves with
+         env(safe-area-inset-*). Revert to `black` if that padding is removed. -->
     <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="Espresso" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

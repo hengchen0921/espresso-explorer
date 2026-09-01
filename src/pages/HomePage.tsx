@@ -173,7 +173,7 @@ export function HomePage() {
                   onClick={() => setCategory(option)}
                   aria-pressed={category === option}
                   className={cx(
-                    'rounded-full border px-3.5 py-1.5 label transition-all duration-300',
+                    'rounded-full border px-3.5 py-1.5 label transition-colors duration-300',
                     category === option
                       ? 'border-ink bg-stage text-linen'
                       : 'border-ink/15 text-stone hover:border-copper hover:text-copper',
